@@ -23,6 +23,10 @@
 		A6333A201E3197520098171A /* FoursquareUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A1F1E3197520098171A /* FoursquareUsers.swift */; };
 		A6333A231E3197C70098171A /* FoursquareGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A221E3197C70098171A /* FoursquareGroups.swift */; };
 		A6333A251E31990D0098171A /* FoursquareCheckins.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A241E31990D0098171A /* FoursquareCheckins.swift */; };
+		A6333A281E319EDD0098171A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A261E319EDD0098171A /* Realm.framework */; };
+		A6333A291E319EDD0098171A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A261E319EDD0098171A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6333A2A1E319EDD0098171A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A271E319EDD0098171A /* RealmSwift.framework */; };
+		A6333A2B1E319EDD0098171A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A271E319EDD0098171A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */; };
 		A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */; };
 		A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DB1E30F809001B684D /* FoursquareStats.swift */; };
@@ -69,6 +73,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A6333A2B1E319EDD0098171A /* RealmSwift.framework in Embed Frameworks */,
+				A6333A291E319EDD0098171A /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +98,8 @@
 		A6333A1F1E3197520098171A /* FoursquareUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUsers.swift; sourceTree = "<group>"; };
 		A6333A221E3197C70098171A /* FoursquareGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareGroups.swift; sourceTree = "<group>"; };
 		A6333A241E31990D0098171A /* FoursquareCheckins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareCheckins.swift; sourceTree = "<group>"; };
+		A6333A261E319EDD0098171A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		A6333A271E319EDD0098171A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPIClient.swift; sourceTree = "<group>"; };
 		A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenueHeader.swift; sourceTree = "<group>"; };
 		A63EC9DB1E30F809001B684D /* FoursquareStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareStats.swift; sourceTree = "<group>"; };
@@ -138,6 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6333A2A1E319EDD0098171A /* RealmSwift.framework in Frameworks */,
+				A6333A281E319EDD0098171A /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +196,8 @@
 		A697865C1E2EC8EB009CE3B2 = {
 			isa = PBXGroup;
 			children = (
+				A6333A261E319EDD0098171A /* Realm.framework */,
+				A6333A271E319EDD0098171A /* RealmSwift.framework */,
 				A697867A1E2EC983009CE3B2 /* README.MD */,
 				A69786671E2EC8EB009CE3B2 /* NASA */,
 				A69786661E2EC8EB009CE3B2 /* Products */,
@@ -304,6 +316,7 @@
 				A69786621E2EC8EB009CE3B2 /* Frameworks */,
 				A69786631E2EC8EB009CE3B2 /* Resources */,
 				A63EC9D51E30E44B001B684D /* Embed Frameworks */,
+				A6333A2C1E319EFB0098171A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -362,6 +375,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6333A2C1E319EFB0098171A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A69786611E2EC8EB009CE3B2 /* Sources */ = {
