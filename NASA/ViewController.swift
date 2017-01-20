@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         let coord = CLLocationCoordinate2D(latitude: 37.33, longitude: -122.031)
         
-        apiClient.fetch(endpoint: .Venue(endpoint: .search(coordinate: coord, near: nil, query: nil, limit: nil, intent: nil, radius: nil, category: nil))) { (result: APIResult<FoursquareResponseWithArray<VenueHeader>>) in
+        apiClient.fetch(endpoint: .Venue(endpoint: .search(coordinate: coord, near: nil, query: nil, limit: nil, intent: nil, radius: nil, category: nil))) { (result: APIResult<FoursquareResponseWithArray<FoursquareVenueHeader>>) in
             switch result {
             case .Success(let response):
                 response.items.map({print("\($0.debugInfo)")})

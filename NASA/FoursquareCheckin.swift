@@ -69,6 +69,7 @@ class FoursquareCheckin: FoursquareCheckinHeader {
         } else {
             self.score = nil
         }
+        self.event = json["event"] as? String
         
         self.photos = photos
         self.comments = comments

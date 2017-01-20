@@ -40,12 +40,12 @@ class FoursquarePhoto: FoursquarePhotoHeader {
     let checkin: FoursquareCheckinHeader?
     
     enum VisibilityPhoto: String {
-        case public
-        case friends
-        case private
+        case _public
+        case _friends
+        case _private
     }
     
-    init?(with json: JSON) {
+    required init?(with json: JSON) {
         guard
             let id = json["id"] as? String,
             let createdAt = json["createdAt"] as? Double,
@@ -55,7 +55,7 @@ class FoursquarePhoto: FoursquarePhotoHeader {
                 return nil
         }
         
-        let source = json["source"] as? String
+        self.source = json["source"] as? String
         if let userJson = json["user"] as? JSON {
             self.user = FoursquareUserHeader(with: userJson)
         } else {

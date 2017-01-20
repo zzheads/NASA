@@ -19,20 +19,16 @@ class FoursquarePhotoHeader: NSObject, JSONDecodable {
         case x500 = "500x500"
     }
     
-    init(prefix: String, suffix: String) {
-        self.prefix = prefix
-        self.suffix = suffix
-        super.init()
-    }
-    
-    required convenience init?(with json: JSON) {
+    required init?(with json: JSON) {
         guard
             let prefix = json["prefix"] as? String,
             let suffix = json["suffix"] as? String
             else {
                 return nil
         }
-        self.init(prefix: prefix, suffix: suffix)
+        self.prefix = prefix
+        self.suffix = suffix
+        super.init()
     }
     
     func name(size: PhotoSize) -> String {
