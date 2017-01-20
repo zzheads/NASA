@@ -154,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6333A2D1E319F660098171A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A261E319EDD0098171A /* Realm.framework */,
+				A6333A271E319EDD0098171A /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A63EC9D81E30F6DC001B684D /* Venue */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,11 +205,10 @@
 		A697865C1E2EC8EB009CE3B2 = {
 			isa = PBXGroup;
 			children = (
-				A6333A261E319EDD0098171A /* Realm.framework */,
-				A6333A271E319EDD0098171A /* RealmSwift.framework */,
 				A697867A1E2EC983009CE3B2 /* README.MD */,
 				A69786671E2EC8EB009CE3B2 /* NASA */,
 				A69786661E2EC8EB009CE3B2 /* Products */,
+				A6333A2D1E319F660098171A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
