@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 enum NASAEndpoints: Endpoint {
-    case APOD(Date?, Bool?)
+    case APOD(date: Date?, hd: Bool?)
     case Earth(EarthEndpoint)
     case Mars(QueryPhoto)
     

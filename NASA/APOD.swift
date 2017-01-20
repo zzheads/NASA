@@ -11,18 +11,22 @@ import Foundation
 class APOD: NSObject, JSONDecodable {
     let date_string: String
     let explanation: String
-    let hdurl: String
+    let hdurl: String?
     let media_type: String
     let service_version: String
     let title: String
     let url: String
     let copyright: String?
     
+    var secureUrl: String {
+        let secured = self.url.replacingOccurrences(of: "http", with: "https")
+        return secured
+    }
+    
     required init?(with json: JSON) {
         guard
         let date_string = json["date"] as? String,
         let explanation = json["explanation"] as? String,
-        let hdurl = json["hdurl"] as? String,
         let media_type = json["media_type"] as? String,
         let service_version = json["service_version"] as? String,
         let title = json["title"] as? String,
@@ -31,6 +35,7 @@ class APOD: NSObject, JSONDecodable {
                 return nil
         }
         let copyright = json["copyright"] as? String
+        let hdurl = json["hdurl"] as? String
         
         self.date_string = date_string
         self.explanation = explanation
