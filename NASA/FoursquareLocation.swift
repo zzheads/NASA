@@ -46,3 +46,41 @@ class FoursquareLocation: NSObject, JSONDecodable {
         super.init()
     }
 }
+
+extension FoursquareLocation {
+    var debugInfo: String {
+        var info = "\(String(describing: type(of: self))): {"
+        if let address = self.address {
+            info += "\n\t\"address\": \(address),"
+        }
+        if let crossStreet = self.crossStreet {
+            info += "\n\t\"crossStreet\": \(crossStreet),"
+        }
+        if let city = self.city {
+            info += "\n\t\"city\": \(city),"
+        }
+        if let state = self.state {
+            info += "\n\t\"state\": \(state),"
+        }
+        if let postalCode = self.postalCode {
+            info += "\n\t\"postalCode\": \(postalCode),"
+        }
+        if let country = self.country {
+            info += "\n\t\"country\": \(country),"
+        }
+        if let lat = self.lat {
+            info += "\n\t\"lat\": \(lat),"
+        }
+        if let lng = self.lng {
+            info += "\n\t\"lng\": \(lng),"
+        }
+        if let distance = self.distance {
+            info += "\n\t\"distance\": \(distance),"
+        }
+        if let isFuzzed = self.isFuzzed {
+            info += "\n\t\"isFuzzed\": \(isFuzzed),"
+        }
+        info += "\n}"
+        return info
+    }
+}

@@ -1,26 +1,122 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GKA-oG-Idh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="K9H-oi-5ME">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="GKA-oG-Idh" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="qhX-Q3-PMH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1706599593" green="0.2436330914" blue="0.31938448549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.7566004395" green="0.91120022540000001" blue="0.96921712159999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3tX-uP-se3" kind="relationship" relationship="rootViewController" id="2mf-tM-wsU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcI-xh-pCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="138"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="sdu-Sl-Fe5">
+            <objects>
+                <viewController id="3tX-uP-se3" customClass="MapViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="IAE-cv-0DC"/>
+                        <viewControllerLayoutGuide type="bottom" id="y80-fT-yRw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="7wm-rC-Ef2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYy-uz-v39">
+                                <rect key="frame" x="141" y="72" width="218" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gw9-7a-bqc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-Hh-d4w">
+                                <rect key="frame" x="0.0" y="110" width="375" height="517"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUG-7t-gDq">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.0052426555189999998" green="0.29017603400000003" blue="0.4082992077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RyQ-43-HCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <state key="normal" title="Current Location">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="currentLocationPressed" destination="3tX-uP-se3" eventType="touchUpInside" id="EjQ-1K-Gm4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeO-rr-cxs">
+                                <rect key="frame" x="16" y="77" width="117" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="V2h-JQ-E71"/>
+                                    <constraint firstAttribute="height" constant="21" id="zE9-Fa-YMK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CYy-uz-v39" firstAttribute="top" secondItem="IAE-cv-0DC" secondAttribute="bottom" constant="8" id="3g2-gm-Eeb"/>
+                            <constraint firstItem="GUG-7t-gDq" firstAttribute="top" secondItem="9Qw-Hh-d4w" secondAttribute="bottom" id="5WF-ue-bGN"/>
+                            <constraint firstAttribute="trailing" secondItem="9Qw-Hh-d4w" secondAttribute="trailing" id="N22-fM-SEt"/>
+                            <constraint firstItem="GUG-7t-gDq" firstAttribute="leading" secondItem="7wm-rC-Ef2" secondAttribute="leading" id="Zsg-2e-Gg2"/>
+                            <constraint firstItem="9Qw-Hh-d4w" firstAttribute="top" secondItem="CYy-uz-v39" secondAttribute="bottom" constant="8" id="a09-9s-PIR"/>
+                            <constraint firstItem="HeO-rr-cxs" firstAttribute="leading" secondItem="7wm-rC-Ef2" secondAttribute="leading" constant="16" id="fhB-ge-c3t"/>
+                            <constraint firstItem="y80-fT-yRw" firstAttribute="top" secondItem="GUG-7t-gDq" secondAttribute="bottom" id="fiv-Wx-bO5"/>
+                            <constraint firstItem="9Qw-Hh-d4w" firstAttribute="leading" secondItem="7wm-rC-Ef2" secondAttribute="leading" id="lx1-GZ-xCd"/>
+                            <constraint firstItem="HeO-rr-cxs" firstAttribute="top" secondItem="IAE-cv-0DC" secondAttribute="bottom" constant="13" id="qX5-LG-ebv"/>
+                            <constraint firstAttribute="trailing" secondItem="GUG-7t-gDq" secondAttribute="trailing" id="qk6-kp-s1Q"/>
+                            <constraint firstItem="CYy-uz-v39" firstAttribute="leading" secondItem="HeO-rr-cxs" secondAttribute="trailing" constant="8" id="vRv-LK-xlF"/>
+                            <constraint firstAttribute="trailing" secondItem="CYy-uz-v39" secondAttribute="trailing" constant="16" id="w9Z-vs-hCh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Map" id="JCh-ah-E2i">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="4xL-dE-Mu5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="VGX-Ju-hz0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="9Qw-Hh-d4w" id="N1r-Wr-PQt"/>
+                        <outlet property="textField" destination="CYy-uz-v39" id="xsZ-bg-6Bx"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfh-rZ-pye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>

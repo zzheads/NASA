@@ -24,3 +24,9 @@ class FoursquareContact: NSObject, JSONDecodable {
         super.init()
     }
 }
+
+extension FoursquareContact {
+    var debugInfo: String {
+        return "\(String(describing: type(of: self))): {\n\t\"twitter\": \(self.twitter),\n\t\"phone\": \(self.phone),\n\t\"formattedPhone\": \(self.formattedPhone)\n}"
+    }
+}

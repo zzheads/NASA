@@ -8,33 +8,94 @@
 
 import Foundation
 
-class FoursquareResponse<T>: JSONDecodable where T:JSONDecodable {
-    let response: T
+class ResponseBody<T>: NSObject, JSONDecodable where T: JSONDecodable {
+    let confident: Bool
+    let item: T
     
     required init?(with json: JSON) {
         guard
-        let response = json["response"] as? T
+            let confident = json["confident"] as? Bool,
+            let itemJson = json[T.nameOfItemInJson()] as? JSON,
+            let item = T(with: itemJson)
             else {
                 return nil
         }
-        self.response = response
+        self.confident = confident
+        self.item = item
+        super.init()
+    }
+    
+    var debugInfo: String {
+        return "\(self): {\n\t\"confident\": \(self.confident),\n\t\"item\": \(self.item.debugInfo)\n}"
     }
 }
 
-class FoursquareResponseWithArray<T>: JSONDecodable where T:JSONDecodable {
-    let items: [T]
+class ResponseBodyArray<T>: NSObject, JSONDecodable where T: JSONDecodable {
     let confident: Bool
+    let items: [T]
     
     required init?(with json: JSON) {
-        print("\(T.self)")
         guard
-            let response = json["response"] as? JSON,
-            let confident = response["confident"] as? Bool,
-            let items = [T](with: response[T.nameOfArrayInJSON()] as? JSONArray)
+            let confident = json["confident"] as? Bool,
+            let itemsJson = json[T.nameOfArrayInJSON()] as? JSONArray,
+            let items = [T](with: itemsJson)
             else {
                 return nil
         }
         self.confident = confident
         self.items = items
+        super.init()
+    }
+    
+    var debugInfo: String {
+        return "\(self): {\n\t\"confident\": \(self.confident),\n\t\"items\": \(self.items.debugInfo)\n}"
+    }
+}
+
+class FoursquareResponse<T>: JSONDecodable where T:JSONDecodable {
+    let meta: FoursquareMeta
+    let notifications: FoursquareNotifications?
+    let response: ResponseBody<T>
+    
+    required init?(with json: JSON) {
+        guard
+            let metaJson = json["meta"] as? JSON,
+            let meta = FoursquareMeta(with: metaJson),
+            let responseJson = json["response"] as? JSON,
+            let response = ResponseBody<T>(with: responseJson)
+            else {
+                return nil
+        }
+        if let notificationsJson = json["notifications"] as? JSON {
+            self.notifications = FoursquareNotifications(with: notificationsJson)
+        } else {
+            self.notifications = nil
+        }
+        self.meta = meta
+        self.response = response
+    }
+}
+
+class FoursquareResponseWithArray<T>: JSONDecodable where T:JSONDecodable {
+    let meta: FoursquareMeta
+    let notifications: FoursquareNotifications?
+    let response: ResponseBodyArray<T>
+    
+    required init?(with json: JSON) {
+        guard
+            let metaJson = json["meta"] as? JSON,
+            let meta = FoursquareMeta(with: metaJson),
+            let responseJson = json["response"] as? JSON,
+            let response = ResponseBodyArray<T>(with: responseJson)
+            else {
+                return nil
+        }
+        if let notificationsJson = json["notifications"] as? JSON {
+            self.notifications = FoursquareNotifications(with: notificationsJson)
+        } else {
+            self.notifications = nil
+        }
+        self.meta = meta
+        self.response = response
     }
 }

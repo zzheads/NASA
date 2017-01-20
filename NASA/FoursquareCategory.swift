@@ -42,3 +42,9 @@ class FoursquareCategory: NSObject, JSONDecodable {
         super.init()
     }
 }
+
+extension FoursquareCategory {
+    var debugInfo: String {
+        return "\(String(describing: type(of: self))): {\n\t\"id\": \(self.id),\n\t\"name\": \(self.name),\n\t\"pluralName\": \(self.pluralName),\n\t\"shortName\": \(self.shortName),\n\t\"icon\": \(self.icon),\n\t\"primary\": \(self.primary),\n\t\"categories\": \(self.categories)\n}"
+    }
+}

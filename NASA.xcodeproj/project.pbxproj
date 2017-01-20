@@ -27,6 +27,11 @@
 		A6333A291E319EDD0098171A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A261E319EDD0098171A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6333A2A1E319EDD0098171A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A271E319EDD0098171A /* RealmSwift.framework */; };
 		A6333A2B1E319EDD0098171A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6333A271E319EDD0098171A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6333A2F1E31A80B0098171A /* FoursquareMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A2E1E31A80B0098171A /* FoursquareMeta.swift */; };
+		A6333A311E31AB8D0098171A /* FoursquareNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */; };
+		A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */; };
+		A6333A351E31AE0F0098171A /* FoursquareTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A341E31AE0F0098171A /* FoursquareTip.swift */; };
+		A6333A451E3203B20098171A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A441E3203B20098171A /* LocationManager.swift */; };
 		A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */; };
 		A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */; };
 		A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DB1E30F809001B684D /* FoursquareStats.swift */; };
@@ -38,7 +43,7 @@
 		A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E71E310A12001B684D /* FoursquareMenu.swift */; };
 		A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */; };
 		A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */; };
-		A697866B1E2EC8EB009CE3B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697866A1E2EC8EB009CE3B2 /* ViewController.swift */; };
+		A697866B1E2EC8EB009CE3B2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697866A1E2EC8EB009CE3B2 /* MapViewController.swift */; };
 		A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A697866C1E2EC8EB009CE3B2 /* Main.storyboard */; };
 		A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */; };
 		A69786731E2EC8EB009CE3B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */; };
@@ -100,6 +105,20 @@
 		A6333A241E31990D0098171A /* FoursquareCheckins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareCheckins.swift; sourceTree = "<group>"; };
 		A6333A261E319EDD0098171A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		A6333A271E319EDD0098171A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		A6333A2E1E31A80B0098171A /* FoursquareMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareMeta.swift; sourceTree = "<group>"; };
+		A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareNotifications.swift; sourceTree = "<group>"; };
+		A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipHeader.swift; sourceTree = "<group>"; };
+		A6333A341E31AE0F0098171A /* FoursquareTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTip.swift; sourceTree = "<group>"; };
+		A6333A3A1E31FF330098171A /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
+		A6333A3B1E31FF330098171A /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
+		A6333A3C1E31FF330098171A /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		A6333A3D1E31FF330098171A /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
+		A6333A3E1E31FF330098171A /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
+		A6333A3F1E31FF330098171A /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		A6333A401E31FF330098171A /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		A6333A411E31FF330098171A /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
+		A6333A421E31FF330098171A /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		A6333A441E3203B20098171A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPIClient.swift; sourceTree = "<group>"; };
 		A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenueHeader.swift; sourceTree = "<group>"; };
 		A63EC9DB1E30F809001B684D /* FoursquareStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareStats.swift; sourceTree = "<group>"; };
@@ -112,7 +131,7 @@
 		A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
 		A69786651E2EC8EB009CE3B2 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAppDelegate.swift; sourceTree = "<group>"; };
-		A697866A1E2EC8EB009CE3B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A697866A1E2EC8EB009CE3B2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A697866D1E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A69786721E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,7 +182,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A63EC9D81E30F6DC001B684D /* Venue */ = {
+		A6333A361E31FE0F0098171A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A371E31FE170098171A /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A6333A371E31FE170098171A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A3A1E31FF330098171A /* SanFranciscoDisplay-Black.otf */,
+				A6333A3B1E31FF330098171A /* SanFranciscoDisplay-Bold.otf */,
+				A6333A3C1E31FF330098171A /* SanFranciscoDisplay-Heavy.otf */,
+				A6333A3D1E31FF330098171A /* SanFranciscoDisplay-Light.otf */,
+				A6333A3E1E31FF330098171A /* SanFranciscoDisplay-Medium.otf */,
+				A6333A3F1E31FF330098171A /* SanFranciscoDisplay-Regular.otf */,
+				A6333A401E31FF330098171A /* SanFranciscoDisplay-Semibold.otf */,
+				A6333A411E31FF330098171A /* SanFranciscoDisplay-Thin.otf */,
+				A6333A421E31FF330098171A /* SanFranciscoDisplay-Ultralight.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		A6333A431E3203A20098171A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A441E3203B20098171A /* LocationManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		A63EC9D81E30F6DC001B684D /* Foursquare */ = {
 			isa = PBXGroup;
 			children = (
 				A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */,
@@ -198,8 +249,12 @@
 				A6333A1F1E3197520098171A /* FoursquareUsers.swift */,
 				A6333A221E3197C70098171A /* FoursquareGroups.swift */,
 				A6333A241E31990D0098171A /* FoursquareCheckins.swift */,
+				A6333A2E1E31A80B0098171A /* FoursquareMeta.swift */,
+				A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */,
+				A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */,
+				A6333A341E31AE0F0098171A /* FoursquareTip.swift */,
 			);
-			name = Venue;
+			name = Foursquare;
 			sourceTree = "<group>";
 		};
 		A697865C1E2EC8EB009CE3B2 = {
@@ -209,6 +264,7 @@
 				A69786671E2EC8EB009CE3B2 /* NASA */,
 				A69786661E2EC8EB009CE3B2 /* Products */,
 				A6333A2D1E319F660098171A /* Frameworks */,
+				A6333A361E31FE0F0098171A /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +279,7 @@
 		A69786671E2EC8EB009CE3B2 /* NASA */ = {
 			isa = PBXGroup;
 			children = (
+				A6333A431E3203A20098171A /* Managers */,
 				A6C404141E2F8AAD0069D460 /* Controllers */,
 				A6C404091E2F785D0069D460 /* Helpers */,
 				A6C404061E2F6C0B0069D460 /* Model */,
@@ -258,7 +315,7 @@
 		A6C404061E2F6C0B0069D460 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A63EC9D81E30F6DC001B684D /* Venue */,
+				A63EC9D81E30F6DC001B684D /* Foursquare */,
 				A6C404231E3004650069D460 /* LandsatImage */,
 				A6C404221E3004590069D460 /* APOD */,
 				A6C404211E30043C0069D460 /* MarsRover */,
@@ -278,7 +335,7 @@
 		A6C404141E2F8AAD0069D460 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A697866A1E2EC8EB009CE3B2 /* ViewController.swift */,
+				A697866A1E2EC8EB009CE3B2 /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -405,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6333A311E31AB8D0098171A /* FoursquareNotifications.swift in Sources */,
 				A6333A0C1E3187330098171A /* ForesquareFollowersHeader.swift in Sources */,
 				A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */,
 				A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */,
@@ -414,7 +472,7 @@
 				A6333A1E1E3196A80098171A /* FoursquareComments.swift in Sources */,
 				A6333A181E3193780098171A /* FoursquarePhotos.swift in Sources */,
 				A6A3128B1E3122F9004D88C5 /* FoursquarePrice.swift in Sources */,
-				A697866B1E2EC8EB009CE3B2 /* ViewController.swift in Sources */,
+				A697866B1E2EC8EB009CE3B2 /* MapViewController.swift in Sources */,
 				A6333A1C1E3195480098171A /* FoursquareCheckin.swift in Sources */,
 				A6C404111E2F7E580069D460 /* LandsatImageHeader.swift in Sources */,
 				A6333A121E318C090098171A /* FoursquareListMayorships.swift in Sources */,
@@ -422,11 +480,15 @@
 				A6333A231E3197C70098171A /* FoursquareGroups.swift in Sources */,
 				A6C4041A1E2F9E130069D460 /* MarsRover.swift in Sources */,
 				A6C4040F1E2F7E060069D460 /* LandsatImageAsset.swift in Sources */,
+				A6333A2F1E31A80B0098171A /* FoursquareMeta.swift in Sources */,
+				A6333A351E31AE0F0098171A /* FoursquareTip.swift in Sources */,
 				A6C404081E2F6C230069D460 /* APOD.swift in Sources */,
+				A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */,
 				A6C404161E2F9B410069D460 /* MarsRoverPhoto.swift in Sources */,
 				A63EC9E21E30FA0B001B684D /* FoursquareIcon.swift in Sources */,
 				A6A3128F1E312F15004D88C5 /* FoursquareFriend.swift in Sources */,
 				A6333A141E318DA00098171A /* FoursquarePhoto.swift in Sources */,
+				A6333A451E3203B20098171A /* LocationManager.swift in Sources */,
 				A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */,
 				A6333A251E31990D0098171A /* FoursquareCheckins.swift in Sources */,
 				A6A3128D1E312D0B004D88C5 /* FoursquareSpecial.swift in Sources */,

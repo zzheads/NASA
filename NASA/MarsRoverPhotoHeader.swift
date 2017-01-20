@@ -36,14 +36,14 @@ extension MarsRoverPhotoHeader {
     }
 }
 
-extension Array where Element: MarsRoverPhotoHeader {
-    var debugInfo: String {
-        var info = ""
-        var count = 1
-        for element in self {
-            info += "\n\t\t\(count). \(element.self): { \"sol\": \(element.sol), \"total_photos\": \(element.total_photos), \"cameras\": {\n\t\t\t\(element.cameras)} }"
-            count += 1
-        }
-        return info
-    }
-}
+//extension Array where Element: MarsRoverPhotoHeader {
+//    var debugInfo: String {
+//        var info = ""
+//        var count = 1
+//        for element in self {
+//            info += "\n\t\t\(count). \(element.self): { \"sol\": \(element.sol), \"total_photos\": \(element.total_photos), \"cameras\": {\n\t\t\t\(element.cameras)} }"
+//            count += 1
+//        }
+//        return info
+//    }
+//}

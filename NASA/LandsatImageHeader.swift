@@ -31,14 +31,14 @@ extension LandsatImageHeader {
     }
 }
 
-extension Array where Element: LandsatImageHeader {
-    var debugInfo: String {
-        var info = ""
-        var count = 1
-        for element in self {
-            info += "\n\t\t\(count). \(element.self): { \"id\": \(element.id), \"date\": \(element.date) }"
-            count += 1
-        }
-        return info
-    }
-}
+//extension Array where Element: LandsatImageHeader {
+//    var debugInfo: String {
+//        var info = ""
+//        var count = 1
+//        for element in self {
+//            info += "\n\t\t\(count). \(element.self): { \"id\": \(element.id), \"date\": \(element.date) }"
+//            count += 1
+//        }
+//        return info
+//    }
+//}

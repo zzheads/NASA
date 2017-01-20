@@ -63,6 +63,6 @@ class FoursquareVenueHeader: NSObject, JSONDecodable {
 
 extension FoursquareVenueHeader {
     var debugInfo: String {
-        return "\(self): {\n\t\"id\":\(self.id),\n\t\"name\":\(self.name),\n\t\"contact\":\(self.contact),\n\t\"location\":\(self.location),\n\t\"categories\":\(self.categories),\n\t\"verified\":\(self.verified),\n\t\"stats\":\(self.stats),\n\t\"url\":\(self.url),\n\t\"hours\":\(self.hours),\n\t\"popular\":\(self.popular),\n\t\"menu\":\(self.menu)\n}"
+        return "\(String(describing: type(of: self))): {\n\t\"id\":\(self.id),\n\t\"name\":\(self.name),\n\t\"contact\":\(self.contact.debugInfo),\n\t\"location\":\(self.location.debugInfo),\n\t\"categories\":\(self.categories.debugInfo),\n\t\"verified\":\(self.verified),\n\t\"stats\":\(self.stats),\n\t\"url\":\(self.url),\n\t\"hours\":\(self.hours),\n\t\"popular\":\(self.popular),\n\t\"menu\":\(self.menu)\n}"
     }
 }

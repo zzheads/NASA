@@ -13,7 +13,9 @@ enum FoursquareEndpoints: Endpoint {
     
     static let CLIENT_ID = "44Y0RJDWFTW450C4SQD04CR31UERJEXHK1FMO1DYCLDAY5NK"
     static let CLIENT_SECRET = "RQQQ1YDCHO5O0YXIQZUXXJEWYLQ5ERSTYPWNVJWD5RNHMBDM"
+    
     static let VERSION = "20170110"
+    static let MODE = "Foursquare" // Could be Swarm
     
     case Venue(endpoint: VenueEndpoints)
     
