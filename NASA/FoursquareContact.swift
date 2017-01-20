@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VenueContact: NSObject, JSONDecodable {
+class FoursquareContact: NSObject, JSONDecodable {
     let twitter: String?
     let phone: String?
     let formattedPhone: String?

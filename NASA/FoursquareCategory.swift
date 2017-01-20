@@ -8,14 +8,14 @@
 
 import Foundation
 
-class VenueCategory: NSObject, JSONDecodable {
+class FoursquareCategory: NSObject, JSONDecodable {
     let id: String
     let name: String
     let pluralName: String
     let shortName: String
     let icon: FoursquareIcon
     let primary: Bool?
-    let categories: [VenueCategory]?
+    let categories: [FoursquareCategory]?
     
     required init?(with json: JSON) {
         guard
@@ -23,12 +23,13 @@ class VenueCategory: NSObject, JSONDecodable {
             let name = json["name"] as? String,
             let pluralName = json["pluralName"] as? String,
             let shortName = json["shortName"] as? String,
-            let icon = FoursquareIcon(with: json["icon"] as! JSON)
+            let iconJson = json["icon"] as? JSON,
+            let icon = FoursquareIcon(with: iconJson)
             else {
                 return nil
         }
         let primary = json["primary"] as? Bool
-        let categories = [VenueCategory](with: json["categories"] as? JSONArray)
+        let categories = [FoursquareCategory](with: json["categories"] as? JSONArray)
         
         self.id = id
         self.name = name

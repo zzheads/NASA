@@ -35,11 +35,11 @@ import Foundation
 //pings	Whether we receive pings from this user, if we have a relationship.			○
 //requests	Contains count of pending friend requests for this user.			○
 
-class FoursquareMiniHeaderUser: NSObject, JSONDecodable {
+class FoursquareUserMiniHeader: NSObject, JSONDecodable {
     let id: String
     let firstName: String
     let lastName: String
-    let photo: FoursquarePhoto
+    let photo: FoursquarePhotoHeader
     var relationship: Relationship? = nil
     var friends: [FoursquareFriend]? = nil
     var type: UserType? = nil

@@ -8,14 +8,14 @@
 
 import Foundation
 
-class VenueHeader: NSObject, JSONDecodable {
+class FoursquareVenueHeader: NSObject, JSONDecodable {
     let id: String
     let name: String
-    let contact: VenueContact
-    let location: VenueLocation
-    let categories: [VenueCategory]
+    let contact: FoursquareContact
+    let location: FoursquareLocation
+    let categories: [FoursquareCategory]
     let verified: Bool
-    let stats: VenueStats
+    let stats: FoursquareStats
     let url: String?
     var hours: FoursquareHours? = nil
     var popular: FoursquareHours? = nil
@@ -25,11 +25,11 @@ class VenueHeader: NSObject, JSONDecodable {
         guard
             let id = json["id"] as? String,
             let name = json["name"] as? String,
-            let contact = VenueContact(with: json["contact"] as! JSON),
-            let location = VenueLocation(with: json["location"] as! JSON),
-            let categories = [VenueCategory](with: json["categories"] as? JSONArray),
+            let contact = FoursquareContact(with: json["contact"] as! JSON),
+            let location = FoursquareLocation(with: json["location"] as! JSON),
+            let categories = [FoursquareCategory](with: json["categories"] as? JSONArray),
             let verified = json["verified"] as? Bool,
-            let stats = VenueStats(with: json["stats"] as! JSON)
+            let stats = FoursquareStats(with: json["stats"] as! JSON)
             else {
                 return nil
         }
@@ -61,7 +61,7 @@ class VenueHeader: NSObject, JSONDecodable {
     }
 }
 
-extension VenueHeader {
+extension FoursquareVenueHeader {
     var debugInfo: String {
         return "\(self): {\n\t\"id\":\(self.id),\n\t\"name\":\(self.name),\n\t\"contact\":\(self.contact),\n\t\"location\":\(self.location),\n\t\"categories\":\(self.categories),\n\t\"verified\":\(self.verified),\n\t\"stats\":\(self.stats),\n\t\"url\":\(self.url),\n\t\"hours\":\(self.hours),\n\t\"popular\":\(self.popular),\n\t\"menu\":\(self.menu)\n}"
     }

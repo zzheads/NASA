@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VenueStats: NSObject, JSONDecodable {
+class FoursquareStats: NSObject, JSONDecodable {
     let checkinsCount: Int
     let usersCount: Int
     let tipCount: Int

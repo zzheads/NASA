@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VenueLocation: NSObject, JSONDecodable {
+class FoursquareLocation: NSObject, JSONDecodable {
     let address: String?
     let crossStreet: String?
     let city: String?
