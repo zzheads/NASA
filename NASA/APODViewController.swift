@@ -73,6 +73,11 @@ class APODViewController: UIViewController {
 // MARK: - Handle Events
 extension APODViewController {
     @IBAction func savePressed() {
+        if let image = self.apodImageView.image {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        } else {
+            self.showAlert(title: "Save error", message: "There is nothing to save", style: .alert)
+        }
     }
     @IBAction func toggleExplanation() {
         if let apod = self.currentAPOD {
