@@ -18,3 +18,13 @@ enum AppColor {
         }
     }
 }
+
+enum AppFont {
+    case sanFrancisco
+    
+    var font: UIFont? {
+        switch self {
+        case .sanFrancisco: return UIFont(name: "San Francisco Display-Medium", size: 14.0)
+        }
+    }
+}

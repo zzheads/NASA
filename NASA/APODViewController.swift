@@ -8,22 +8,64 @@
 
 import Foundation
 import UIKit
+import AVKit
+import AVFoundation
 
 class APODViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var apodImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var toggleExplanationButton: UIButton!
+    @IBOutlet weak var webView: UIWebView!
     
     let apiClient = NASAAPIClient(config: .default)
-    var explanation: String = ""
+    var currentAPOD: APOD? = nil {
+        willSet {
+            if let newValue = newValue {
+                switch newValue.mediaType {
+                case .image:
+                    self.webView.isHidden = true
+                    self.apodImageView.isHidden = false
+                    if let url = newValue.secureUrl {
+                        self.apodImageView.downloadedFrom(url: url)
+                        self.titleLabel.text = "\(newValue.title)"
+                    } else {
+                        self.showAlert(title: "Error APOD url", message: "Can not make url with path: \(newValue.url)", style: .alert)
+                    }
+                    
+                case .video:
+                    self.webView.isHidden = false
+                    self.apodImageView.isHidden = true
+                    if let url = newValue.secureUrl {
+                        if url.absoluteString.contains("youtube") {
+                            self.webView.loadRequest(URLRequest(url: url))
+                        } else {
+                            let playerViewController = AVPlayerViewController()
+                            playerViewController.player = AVPlayer(url: url)
+                            self.present(playerViewController, animated: true) {
+                                if let validPlayer = playerViewController.player {
+                                    validPlayer.play()
+                                }
+                            }
+                        }
+                    } else {
+                        self.showAlert(title: "Error APOD url", message: "Can not make url with path: \(newValue.url)", style: .alert)
+                    }
+                    
+                case .unknown:
+                    self.showAlert(title: "Error APOD", message: "Format of media is unknown: \(newValue.media_type)", style: .alert)
+                    
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.datePicker.backgroundColor = .clear
         self.datePicker.setValue(UIColor.white, forKey: "textColor")
-        self.datePicker.setDate("2016-12-01".toDate!, animated: true)
+        self.datePicker.sendAction(Selector(("setHighlightsToday:")), to: nil, for: nil)
+        self.datePicker.maximumDate = Date()
         self.datePickerValueChanged()
     }
 }
@@ -33,23 +75,20 @@ extension APODViewController {
     @IBAction func savePressed() {
     }
     @IBAction func toggleExplanation() {
-        showAlert(title: "APOD Explanation", message: self.explanation, style: .actionSheet)
+        if let apod = self.currentAPOD {
+            showAlert(title: "APOD Explanation", message: apod.explanation, style: .actionSheet)
+        }
     }
     @IBAction func datePickerValueChanged() {
         let date = self.datePicker.date
+        if (date > Date()) {
+            showAlert(title: "Incorrect Date", message: "You've choosen incorrect date, there is no APOD's for future dates. Please select date before or equal today.", style: .alert)
+            return
+        }
         self.apiClient.fetch(endpoint: NASAEndpoints.APOD(date: date, hd: true)) { (result: APIResult<APOD>) in
             switch result {
             case .Success(let apod):
-                DispatchQueue.main.async {
-                    if (apod.media_type == "image") {
-                        self.apodImageView.downloadedFrom(link: apod.secureUrl)
-                        self.titleLabel.text = "\(apod.title) (\(apod.date_string))"
-                        self.explanation = apod.explanation
-                    } else {
-                        self.showAlert(title: "Under construction", message: "You can see only images in current version of application, but APOD for selected date is not an image. We'll implement it in release version.", style: .alert)
-                    }
-                }
-                
+                self.currentAPOD = apod
             case .Failure(let error):
                 self.showAlert(title: "API Error", message: "\(error)", style: .alert)
             }
@@ -62,6 +101,6 @@ extension APODViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
-        self.navigationController?.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

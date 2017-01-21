@@ -18,11 +18,29 @@ class APOD: NSObject, JSONDecodable {
     let url: String
     let copyright: String?
     
-    var secureUrl: String {
-        let secured = self.url.replacingOccurrences(of: "http", with: "https")
-        return secured
+    enum MediaType: String {
+        case image
+        case video
+        case unknown
+        
+        init(title: String) {
+            guard let type = MediaType(rawValue: title) else {
+                self = .unknown
+                return
+            }
+            self = type
+        }
     }
     
+    var secureUrl: URL? {
+        let secured = self.url.replacingOccurrences(of: "http", with: "https").replacingOccurrences(of: "httpss", with: "https")
+        return URL(string: secured)
+    }
+    
+    var mediaType: MediaType {
+        return MediaType(title: self.media_type)
+    }
+        
     required init?(with json: JSON) {
         guard
         let date_string = json["date"] as? String,

@@ -92,7 +92,6 @@
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-Ib-9aU">
                                 <rect key="frame" x="0.0" y="547" width="375" height="80"/>
-                                <color key="backgroundColor" red="0.23169690370000001" green="0.63795369859999995" blue="0.81516677140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="UE1-mK-2KW"/>
@@ -104,14 +103,20 @@
                                     <action selector="datePickerValueChanged" destination="lK3-OL-YeA" eventType="valueChanged" id="hhS-yB-UzZ"/>
                                 </connections>
                             </datePicker>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUg-Gh-7AK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xWM-T9-wOp" firstAttribute="top" secondItem="oNg-HU-svS" secondAttribute="bottom" id="07L-Dw-egE"/>
+                            <constraint firstItem="Puw-Ib-9aU" firstAttribute="top" secondItem="vUg-Gh-7AK" secondAttribute="bottom" id="19E-f0-sbk"/>
                             <constraint firstAttribute="trailing" secondItem="Puw-Ib-9aU" secondAttribute="trailing" id="2tw-OQ-3fL"/>
                             <constraint firstAttribute="trailing" secondItem="j5H-nJ-oxU" secondAttribute="trailing" constant="16" id="6f9-IG-TcQ"/>
                             <constraint firstItem="IsR-LY-SuJ" firstAttribute="top" secondItem="KJY-TG-61n" secondAttribute="bottom" id="8w9-2j-9hq"/>
                             <constraint firstItem="j5H-nJ-oxU" firstAttribute="top" secondItem="KJY-TG-61n" secondAttribute="bottom" constant="9" id="9me-Rx-4Pb"/>
+                            <constraint firstAttribute="trailing" secondItem="vUg-Gh-7AK" secondAttribute="trailing" id="Ait-zf-D88"/>
                             <constraint firstItem="IsR-LY-SuJ" firstAttribute="top" secondItem="KJY-TG-61n" secondAttribute="bottom" id="EYQ-4t-zmm"/>
                             <constraint firstAttribute="trailing" secondItem="Puw-Ib-9aU" secondAttribute="trailing" id="Ep8-E7-G69"/>
                             <constraint firstItem="sad-4L-b1t" firstAttribute="top" secondItem="Puw-Ib-9aU" secondAttribute="bottom" id="FJU-Ek-dyi"/>
@@ -124,9 +129,11 @@
                             <constraint firstAttribute="trailing" secondItem="oNg-HU-svS" secondAttribute="trailing" id="cae-QG-gdc"/>
                             <constraint firstItem="oNg-HU-svS" firstAttribute="leading" secondItem="RwF-ZR-i4q" secondAttribute="leading" id="dBX-JC-BxG"/>
                             <constraint firstItem="j5H-nJ-oxU" firstAttribute="leading" secondItem="RwF-ZR-i4q" secondAttribute="leading" constant="16" id="dBu-3G-gO8"/>
+                            <constraint firstItem="vUg-Gh-7AK" firstAttribute="leading" secondItem="RwF-ZR-i4q" secondAttribute="leading" id="f9g-iL-ORz"/>
                             <constraint firstItem="j5H-nJ-oxU" firstAttribute="leading" secondItem="RwF-ZR-i4q" secondAttribute="leading" constant="16" id="gf0-YA-aiS"/>
                             <constraint firstItem="IsR-LY-SuJ" firstAttribute="leading" secondItem="RwF-ZR-i4q" secondAttribute="leading" id="hcp-pJ-B5R"/>
                             <constraint firstItem="Puw-Ib-9aU" firstAttribute="leading" secondItem="RwF-ZR-i4q" secondAttribute="leading" id="izB-nn-utd"/>
+                            <constraint firstItem="vUg-Gh-7AK" firstAttribute="top" secondItem="KJY-TG-61n" secondAttribute="bottom" id="jJl-aZ-JnK"/>
                             <constraint firstAttribute="trailing" secondItem="sad-4L-b1t" secondAttribute="trailing" id="mfq-O0-9Pc"/>
                             <constraint firstItem="xWM-T9-wOp" firstAttribute="top" secondItem="sad-4L-b1t" secondAttribute="bottom" id="nkH-UK-GQL"/>
                             <constraint firstItem="Puw-Ib-9aU" firstAttribute="top" secondItem="IsR-LY-SuJ" secondAttribute="bottom" id="sS5-gZ-T2g"/>
@@ -147,6 +154,7 @@
                         <outlet property="datePicker" destination="Puw-Ib-9aU" id="Mg8-2A-bBP"/>
                         <outlet property="titleLabel" destination="YDw-co-l6l" id="CRf-Jm-JWZ"/>
                         <outlet property="toggleExplanationButton" destination="j5H-nJ-oxU" id="y9f-iP-MM9"/>
+                        <outlet property="webView" destination="vUg-Gh-7AK" id="YpB-j4-qZR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn2-c2-c6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
