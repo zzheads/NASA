@@ -34,6 +34,8 @@ class APODViewController: UIViewController {
                     }
                     
                 case .video:
+                    self.apodImageView.image = nil
+                    self.titleLabel.text = nil
                     self.webView.isHidden = false
                     self.apodImageView.isHidden = true
                     if let url = newValue.secureUrl {
@@ -73,10 +75,18 @@ class APODViewController: UIViewController {
 // MARK: - Handle Events
 extension APODViewController {
     @IBAction func savePressed() {
-        if let image = self.apodImageView.image {
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        } else {
+        guard let apod = self.currentAPOD else {
             self.showAlert(title: "Save error", message: "There is nothing to save", style: .alert)
+            return
+        }
+        if let image = self.apodImageView.image {
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
+        } else {
+            if apod.mediaType == .image {
+                self.showAlert(title: "Save error", message: "There is nothing to save", style: .alert)
+            } else {
+                self.showAlert(title: "Can not save", message: "Can not save \(apod.media_type) media to photo library.", style: .alert)
+            }
         }
     }
     @IBAction func toggleExplanation() {
@@ -98,6 +108,18 @@ extension APODViewController {
                 self.showAlert(title: "API Error", message: "\(error)", style: .alert)
             }
         }
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafeRawPointer) {
+        guard let error = error else {
+            if let apod = self.currentAPOD {
+                self.showAlert(title: "Image saved", message: "Image \(apod.title) successfully saved in photo library.", style: .actionSheet)
+            } else {
+                self.showAlert(title: "Image saved", message: "Unknown Image (?) successfully saved in photo library.", style: .actionSheet)
+            }
+            return
+        }
+        self.showAlert(title: "Error saving", message: "Can not save an image, error: \(error)", style: .alert)
     }
 }
 
