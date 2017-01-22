@@ -58,6 +58,8 @@
 		A63EC9E61E3106D8001B684D /* FoursquareHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E51E3106D8001B684D /* FoursquareHours.swift */; };
 		A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E71E310A12001B684D /* FoursquareMenu.swift */; };
 		A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */; };
+		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
+		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */; };
 		A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A697866C1E2EC8EB009CE3B2 /* Main.storyboard */; };
 		A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */; };
@@ -85,6 +87,93 @@
 		A6C4041C1E2FABB70069D460 /* MarsRoverPhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */; };
 		A6C4041E1E2FACF40069D460 /* MarsRoverPhotoManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A657204E1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C9174901BAE99EE004A7905;
+			remoteInfo = "Nuke iOS";
+		};
+		A65720501E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22DA2C1BCAA220006E1D3B;
+			remoteInfo = "Nuke macOS";
+		};
+		A65720521E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22D9C51BCA9734006E1D3B;
+			remoteInfo = "Nuke watchOS";
+		};
+		A65720541E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC345971BD96CFE005C2DD8;
+			remoteInfo = "Nuke tvOS";
+		};
+		A65720561E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C7C06771BCA882A00089D7F;
+			remoteInfo = "Nuke iOS Tests";
+		};
+		A65720581E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22DA381BCAA22A006E1D3B;
+			remoteInfo = "Nuke macOS Tests";
+		};
+		A657205A1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC345A31BD96D2A005C2DD8;
+			remoteInfo = "Nuke tvOS Tests";
+		};
+		A657205C1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BD01D9DBF1600D12EB7;
+			remoteInfo = "Nuke iOS Tests Host";
+		};
+		A657205E1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BE81D9DC02B00D12EB7;
+			remoteInfo = "Nuke iOS Performance Tests";
+		};
+		A65720621E34857D0016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C91748F1BAE99EE004A7905;
+			remoteInfo = "Nuke iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A65720641E34857D0016E88A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A6333A051E3181300098171A /* FoursquareTipsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsHeader.swift; sourceTree = "<group>"; };
@@ -138,6 +227,7 @@
 		A63EC9E51E3106D8001B684D /* FoursquareHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareHours.swift; sourceTree = "<group>"; };
 		A63EC9E71E310A12001B684D /* FoursquareMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareMenu.swift; sourceTree = "<group>"; };
 		A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
+		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
 		A69786651E2EC8EB009CE3B2 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAppDelegate.swift; sourceTree = "<group>"; };
 		A697866D1E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65720601E34857D0016E88A /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +273,7 @@
 		A6333A2D1E319F660098171A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A65720421E3484890016E88A /* Nuke.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,14 +372,30 @@
 			name = Foursquare;
 			sourceTree = "<group>";
 		};
+		A65720431E3484890016E88A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A657204F1E3484890016E88A /* Nuke.framework */,
+				A65720511E3484890016E88A /* Nuke.framework */,
+				A65720531E3484890016E88A /* Nuke.framework */,
+				A65720551E3484890016E88A /* Nuke.framework */,
+				A65720571E3484890016E88A /* Nuke iOS Tests.xctest */,
+				A65720591E3484890016E88A /* Nuke macOS Tests.xctest */,
+				A657205B1E3484890016E88A /* Nuke tvOS Tests.xctest */,
+				A657205D1E3484890016E88A /* Nuke iOS Tests Host.app */,
+				A657205F1E3484890016E88A /* Nuke iOS Performance Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A697865C1E2EC8EB009CE3B2 = {
 			isa = PBXGroup;
 			children = (
 				A697867A1E2EC983009CE3B2 /* README.MD */,
 				A69786671E2EC8EB009CE3B2 /* NASA */,
 				A69786661E2EC8EB009CE3B2 /* Products */,
-				A6333A2D1E319F660098171A /* Frameworks */,
 				A6333A361E31FE0F0098171A /* Resources */,
+				A6333A2D1E319F660098171A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -410,10 +518,12 @@
 				A69786611E2EC8EB009CE3B2 /* Sources */,
 				A69786621E2EC8EB009CE3B2 /* Frameworks */,
 				A69786631E2EC8EB009CE3B2 /* Resources */,
+				A65720641E34857D0016E88A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A65720631E34857D0016E88A /* PBXTargetDependency */,
 			);
 			name = NASA;
 			productName = NASA;
@@ -448,12 +558,84 @@
 			mainGroup = A697865C1E2EC8EB009CE3B2;
 			productRefGroup = A69786661E2EC8EB009CE3B2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A65720431E3484890016E88A /* Products */;
+					ProjectRef = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A69786641E2EC8EB009CE3B2 /* NASA */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A657204F1E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A657204E1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720511E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A65720501E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720531E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A65720521E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720551E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A65720541E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720571E3484890016E88A /* Nuke iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke iOS Tests.xctest";
+			remoteRef = A65720561E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720591E3484890016E88A /* Nuke macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke macOS Tests.xctest";
+			remoteRef = A65720581E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657205B1E3484890016E88A /* Nuke tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke tvOS Tests.xctest";
+			remoteRef = A657205A1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657205D1E3484890016E88A /* Nuke iOS Tests Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Nuke iOS Tests Host.app";
+			remoteRef = A657205C1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657205F1E3484890016E88A /* Nuke iOS Performance Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke iOS Performance Tests.xctest";
+			remoteRef = A657205E1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A69786631E2EC8EB009CE3B2 /* Resources */ = {
@@ -552,6 +734,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A65720631E34857D0016E88A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nuke iOS";
+			targetProxy = A65720621E34857D0016E88A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A697866C1E2EC8EB009CE3B2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -612,7 +802,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -656,7 +846,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -668,6 +858,7 @@
 		A69786781E2EC8EB009CE3B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -687,6 +878,7 @@
 		A69786791E2EC8EB009CE3B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
 				FRAMEWORK_SEARCH_PATHS = (

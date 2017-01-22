@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3B6E48FC4984C20ECE55C9FC6C3E2371ADC82FD7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3B6E48FC4984C20ECE55C9FC6C3E2371ADC82FD7" : 9223372036854775807,
+    "9E4C3D1EA9BD93A413D6EB83081E083E64D2372C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6832A4E1-C53C-4C93-BF36-A7E70FC2AB17",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3B6E48FC4984C20ECE55C9FC6C3E2371ADC82FD7" : "NASA\/",
+    "9E4C3D1EA9BD93A413D6EB83081E083E64D2372C" : "NASA\/Nuke\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NASA",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NASA.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zzheads\/NASA.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B6E48FC4984C20ECE55C9FC6C3E2371ADC82FD7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kean\/Nuke.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E4C3D1EA9BD93A413D6EB83081E083E64D2372C"
+    }
+  ]
+}
