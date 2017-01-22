@@ -123,7 +123,8 @@ extension APODViewController {
     }
 }
 
-extension APODViewController {
+// MARK: - Simple method for handling errors/warnings
+extension UIViewController {
     func showAlert(title: String, message: String, style: UIAlertControllerStyle) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)

@@ -10,10 +10,24 @@ import Foundation
 import Nuke
 import UIKit
 
+protocol ManifestsChangedObserverType {
+    func manifests(didChanged manifests: [MarsRoverPhotoManifest])
+}
+
 class RoversDataSource: NSObject {
     let apiClient = NASAAPIClient()
-    var manifests: [MarsRoverPhotoManifest] = []
+    var manifests: [MarsRoverPhotoManifest] = [] {
+        didSet {
+            if (self.isInitialized) {
+                if let delegate = self.delegate {
+                    delegate.manifests(didChanged: self.manifests)
+                }
+            }
+        }
+    }
+    let delegate: ManifestsChangedObserverType?
     var rovers: [NASAEndpoints.Rover] = [.Curiosity, .Opportunity, .Spirit]
+    var validDates: [NASAEndpoints.Rover: [Int]] = [:]
     var pics: [MarsRoverPhoto] = [] {
         didSet {
             self.collectionView.reloadData()
@@ -24,8 +38,9 @@ class RoversDataSource: NSObject {
     }
     let collectionView: UICollectionView
     
-    init(collectionView: UICollectionView) {
+    init(collectionView: UICollectionView, manifestsObserver: ManifestsChangedObserverType?) {
         self.collectionView = collectionView
+        self.delegate = manifestsObserver
         super.init()
         self.collectionView.dataSource = self
         for rover in self.rovers {
@@ -40,13 +55,15 @@ class RoversDataSource: NSObject {
         }
     }
     
-    func fetchPics(for rover: NASAEndpoints.Rover, sol: Int, camera: NASAEndpoints.Rover.Camera?) {
+    func fetchPics(for rover: NASAEndpoints.Rover, sol: Int, camera: NASAEndpoints.Rover.Camera?, errorHandler: ((Error?) -> Void)?) {
         apiClient.fetch(endpoint: .Mars(.Sol(rover, sol: sol, camera: camera))) { (result: APIResult<MarsRoverResponseWithArray<MarsRoverPhoto>>) in
             switch result {
             case .Success(let response):
                 self.pics = response.results
             case .Failure(let error):
-                print("\(error)")
+                if let handler = errorHandler {
+                    handler(error)
+                }
             }
         }
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public let ZZHNetworkingErrorDomain = "com.zzheads.ApiAwakens.NetworkingError"
+public let ZZHNetworkingErrorDomain = "com.zzheads.NASAApp.NetworkingError"
 public let MissingHTTPResponseError: Int = 10
 public let UnexpectedResponseError: Int = 20
 

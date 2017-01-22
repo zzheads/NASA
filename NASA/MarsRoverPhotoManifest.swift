@@ -51,3 +51,14 @@ extension MarsRoverPhotoManifest {
         return "\(self): {\n\t\"name\": \(self.name),\n\t\"landing_date\": \(self.landing_date),\n\t\"launch_date\": \(self.launch_date),\n\t\"status\": \(self.status)\n\t\"max_sol\": \(self.max_sol),\n\t\"max_date\": \(self.max_date),\n\t\"total_photos\": \(self.total_photos),\n\t\"photos\": \(self.photos.debugInfo)\n}"
     }
 }
+
+extension MarsRoverPhotoManifest {
+    func getPhotoHeader(for sol: Int) -> MarsRoverPhotoHeader? {
+        for photoHeader in self.photos {
+            if (photoHeader.sol == sol) {
+                return photoHeader
+            }
+        }
+        return nil
+    }    
+}

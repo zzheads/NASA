@@ -11,7 +11,7 @@ import Foundation
 class MarsRoverPhoto: NSObject, Responsable {
     static let INSECURE_LOADS_DOMAIN = "mars.nasa.gov"
     
-    static let nameOfItem: String = ""
+    static let nameOfItem: String = "photo" //?
     static let nameOfArray: String = "photos"
     
     let id: Int
@@ -22,7 +22,7 @@ class MarsRoverPhoto: NSObject, Responsable {
     let rover: MarsRover
     
     var title: String {
-        return "\(self.rover.name)(\(self.camera.name)) by \(self.sol)(\(self.earth_date))"
+        return "Rover: \(self.rover.name), Camera: \(self.camera.name), Sol: \(self.sol), EarthDate: \(self.earth_date)"
     }
     
     var securedUrl: URL? {
