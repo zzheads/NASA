@@ -15,7 +15,6 @@ class RoverViewController: UIViewController {
     @IBOutlet weak var roverImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let apiClient = NASAAPIClient(config: .default)
     let rovers: [NASAEndpoints.Rover] = [.Curiosity, .Opportunity, .Spirit]
     var currentRover: NASAEndpoints.Rover? {
         didSet {
@@ -32,25 +31,20 @@ class RoverViewController: UIViewController {
         return currentRover.cameras
     }
     var currentCamera: NASAEndpoints.Rover.Camera?
-    var photos: [MarsRoverPhoto] = [] {
-        didSet {
-            self.collectionView.reloadData()
-        }
-    }
+    var dataSource: RoversDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pickerView.dataSource = self
         self.pickerView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        
+        self.dataSource = RoversDataSource(collectionView: self.collectionView)
+        //self.collectionView.delegate = self
         self.currentRover = self.rovers.first
         self.currentCamera = self.cameras.first
         self.pickerView.reloadComponent(1)
     }
 }
-
-typealias MarsRoverPhotoArray = [MarsRoverPhoto]
 
 // MARK: - Handle Events
 extension RoverViewController {
@@ -58,35 +52,13 @@ extension RoverViewController {
         guard
             let rover = self.currentRover,
             let camera = self.currentCamera,
-            let dateString = self.dateTextField.text
+            let dateString = self.dateTextField.text,
+            let sol = Int(dateString)
             else {
                 return
         }
-        let date = dateString.toDate
-
-        apiClient.fetch(endpoint: .Mars(.Earth(rover, date: date, camera: camera, page: nil))) { (result: APIResult<MarsRoverResponseWithArray<MarsRoverPhoto>>) in
-            switch result {
-            case .Success(let response):
-                self.photos = response.results
-            case .Failure(let error):
-                print("\(error)")
-            }
-        }
-    }
-    
-    @IBAction func manifestPressed() {
-        guard let rover = self.currentRover else {
-            return
-        }
-        apiClient.fetch(endpoint: .Mars(.Manifest(rover))) { (result: APIResult<MarsRoverPhotoManifest>) in
-            switch result {
-            case .Success(let manifest):
-                print("\(manifest.debugInfo)")
-            case .Failure(let error):
-                print("\(error)")
-            }
-        }
-    }
+        self.dataSource.fetchPics(for: rover, sol: sol, camera: camera)
+    }    
 }
 
 extension RoverViewController: UIPickerViewDataSource {
@@ -132,27 +104,18 @@ extension RoverViewController: UIPickerViewDelegate {
     }
 }
 
-extension RoverViewController: UICollectionViewDataSource {
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photos.count
-    }
-    
-    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "MarsRoverPhotoCell", for: indexPath) as! MarsRoverPhotoCell
-        let photo = self.photos[indexPath.row]
-        guard let url = photo.securedUrl else {
-            return cell
+extension RoverViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "editSelectedPhoto") {
+            guard
+                let indexPaths = self.collectionView.indexPathsForSelectedItems,
+                let indexPath = indexPaths.first
+                else {
+                    return
+            }
+            let selectedPhoto = self.dataSource.pics[indexPath.row]
+            let controller = segue.destination as! RoverPostcardDetailsViewController
+            controller.photo = selectedPhoto
         }
-        cell.imageView.downloadedFrom(url: url)
-        return cell
     }
-    
-    public func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-}
-
-extension RoverViewController: UICollectionViewDelegate {
-    
 }

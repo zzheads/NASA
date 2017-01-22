@@ -9,8 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class NASAAppDelegate: UIResponder, UIApplicationDelegate {
-
+class NASAAppDelegate: UIResponder, UIApplicationDelegate {    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

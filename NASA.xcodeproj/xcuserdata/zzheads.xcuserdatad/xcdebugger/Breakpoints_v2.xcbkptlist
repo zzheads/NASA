@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NASA/MarsRoverPhoto.swift"
-            timestampString = "506701077.715449"
+            timestampString = "506776918.405697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "nameOfArrayInJSON()"
             landmarkType = "7">
          </BreakpointContent>

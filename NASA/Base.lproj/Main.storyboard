@@ -20,7 +20,7 @@
                 <navigationController id="GKA-oG-Idh" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="qhX-Q3-PMH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="qhX-Q3-PMH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,21 +269,11 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Xfn-mP-jrU" id="w7P-3T-O7N"/>
-                                            <segue destination="86x-iW-QA6" kind="show" id="I7g-kP-FQZ"/>
+                                            <segue destination="86x-iW-QA6" kind="show" identifier="editSelectedPhoto" id="I7g-kP-FQZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1A-95-FXz">
-                                <rect key="frame" x="16" y="101" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Manifest Button">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="manifestPressed" destination="Q04-bi-PaJ" eventType="touchUpInside" id="yFc-iD-Sk9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -324,7 +314,7 @@
         <!--Rover Postcard Details-->
         <scene sceneID="svE-bg-TeX">
             <objects>
-                <viewController id="86x-iW-QA6" sceneMemberID="viewController">
+                <viewController id="86x-iW-QA6" customClass="RoverPostcardDetailsViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZFb-q1-k68"/>
                         <viewControllerLayoutGuide type="bottom" id="i1o-QS-ab8"/>
@@ -357,6 +347,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rover Postcard Details" id="xLG-ge-rkV"/>
+                    <connections>
+                        <outlet property="imageView" destination="b2O-8x-ybB" id="H5T-mK-96E"/>
+                        <outlet property="titleLabel" destination="dce-GF-IUU" id="cp5-V5-YJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uk-7x-iPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

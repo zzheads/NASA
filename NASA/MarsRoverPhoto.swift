@@ -9,6 +9,8 @@
 import Foundation
 
 class MarsRoverPhoto: NSObject, Responsable {
+    static let INSECURE_LOADS_DOMAIN = "mars.nasa.gov"
+    
     static let nameOfItem: String = ""
     static let nameOfArray: String = "photos"
     
@@ -19,9 +21,17 @@ class MarsRoverPhoto: NSObject, Responsable {
     let earth_date: String
     let rover: MarsRover
     
+    var title: String {
+        return "\(self.rover.name)(\(self.camera.name)) by \(self.sol)(\(self.earth_date))"
+    }
+    
     var securedUrl: URL? {
         let securedPath = self.img_src.replacingOccurrences(of: "http", with: "https").replacingOccurrences(of: "httpss", with: "https")
-        return URL(string: securedPath)
+        if (img_src.contains(MarsRoverPhoto.INSECURE_LOADS_DOMAIN)) {
+            return URL(string: self.img_src)
+        } else {
+            return URL(string: securedPath)
+        }
     }
     
     required init?(with json: JSON) {

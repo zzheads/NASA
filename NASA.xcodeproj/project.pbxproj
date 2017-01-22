@@ -86,6 +86,8 @@
 		A6C4041A1E2F9E130069D460 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404191E2F9E130069D460 /* MarsRover.swift */; };
 		A6C4041C1E2FABB70069D460 /* MarsRoverPhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */; };
 		A6C4041E1E2FACF40069D460 /* MarsRoverPhotoManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */; };
+		A6EAA9D81E348CE2008D742B /* RoversDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAA9D71E348CE2008D742B /* RoversDataSource.swift */; };
+		A6EAA9E21E34AB36008D742B /* RoverPostcardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +258,8 @@
 		A6C404191E2F9E130069D460 /* MarsRover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
 		A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoHeader.swift; sourceTree = "<group>"; };
 		A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoManifest.swift; sourceTree = "<group>"; };
+		A6EAA9D71E348CE2008D742B /* RoversDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversDataSource.swift; sourceTree = "<group>"; };
+		A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverPostcardDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +360,7 @@
 		A65720651E34889F0016E88A /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				A6EAA9D71E348CE2008D742B /* RoversDataSource.swift */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -415,7 +420,6 @@
 				A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */,
 				A697866C1E2EC8EB009CE3B2 /* Main.storyboard */,
 				A69786741E2EC8EB009CE3B2 /* Info.plist */,
-				A6333A651E339B660098171A /* Responsable.swift */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
@@ -446,6 +450,7 @@
 				A6C404221E3004590069D460 /* APOD */,
 				A6C404211E30043C0069D460 /* MarsRover */,
 				A6C404121E2F87770069D460 /* JSON.swift */,
+				A6333A651E339B660098171A /* Responsable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				A6333A4D1E3374AA0098171A /* RoverViewController.swift */,
 				A6333A4F1E3375AB0098171A /* EyeViewController.swift */,
 				A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */,
+				A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -666,6 +672,7 @@
 				A6333A0C1E3187330098171A /* ForesquareFollowersHeader.swift in Sources */,
 				A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */,
 				A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */,
+				A6EAA9E21E34AB36008D742B /* RoverPostcardDetailsViewController.swift in Sources */,
 				A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */,
 				A6C404131E2F87770069D460 /* JSON.swift in Sources */,
 				A63EC9E61E3106D8001B684D /* FoursquareHours.swift in Sources */,
@@ -718,6 +725,7 @@
 				A6333A471E321B9B0098171A /* APODViewController.swift in Sources */,
 				A6A312931E3132DC004D88C5 /* FoursquareUserMiniHeader.swift in Sources */,
 				A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */,
+				A6EAA9D81E348CE2008D742B /* RoversDataSource.swift in Sources */,
 				A6C4040D1E2F7A9C0069D460 /* LandsatImage.swift in Sources */,
 				A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */,
 				A6C4041C1E2FABB70069D460 /* MarsRoverPhotoHeader.swift in Sources */,

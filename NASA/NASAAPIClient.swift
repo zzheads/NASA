@@ -44,8 +44,8 @@ enum NASAEndpoints: Endpoint {
     }
 
     enum QueryPhoto {
-        case Sol(_: Rover, sol: Int?, camera: Rover.Camera?, page: Int?)
-        case Earth(_: Rover, date: Date?, camera: Rover.Camera?, page: Int?)
+        case Sol(_: Rover, sol: Int, camera: Rover.Camera?)
+        case Earth(_: Rover, date: Date, camera: Rover.Camera?)
         case Manifest(_: Rover)
     }
 
@@ -129,32 +129,22 @@ enum NASAEndpoints: Endpoint {
             return "/planetary/earth\(earthEndpoint.path)&\(NASAEndpoints.NASA_KEY)"
         case .Mars(let query):
             switch query {
-            case .Earth(let rover, let date, let camera, let page):
-                var path = "/mars-photos/api/v1/rovers/\(rover.name)/photos?\(NASAEndpoints.NASA_KEY)"
-                if let date = date {
-                    path += "&earth_date=\(date.toString)"
-                } else {
-                    path += "&sol=1000"
-                }
+            case .Earth(let rover, let date, let camera):
+                var path = "/mars-photos/api/v1/rovers/\(rover.name)/photos?earth_date=\(date.toString)"
                 if let camera = camera {
                     if (camera != .ALL_CAMERAS) {
                         path += "&camera=\(camera.name)"
                     }
                 }
-                if let page = page {
-                    path += "&page=\(page)"
-                }
+                path += "&\(NASAEndpoints.NASA_KEY)"
                 return path
                 
-            case .Sol(let rover, let sol, let camera, let page):
+            case .Sol(let rover, let sol, let camera):
                 var path = "/mars-photos/api/v1/rovers/\(rover.name)/photos?sol=\(sol)"
                 if let camera = camera {
                     if (camera != .ALL_CAMERAS) {
                         path += "&camera=\(camera.name)"
                     }
-                }
-                if let page = page {
-                    path += "&page=\(page)"
                 }
                 path += "&\(NASAEndpoints.NASA_KEY)"
                 return path
