@@ -33,18 +33,6 @@
 		A6333A4C1E324B780098171A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4B1E324B780098171A /* AppColor.swift */; };
 		A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4D1E3374AA0098171A /* RoverViewController.swift */; };
 		A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4F1E3375AB0098171A /* EyeViewController.swift */; };
-		A6333A511E3382490098171A /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3A1E31FF330098171A /* SanFranciscoDisplay-Black.otf */; };
-		A6333A521E3382490098171A /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3B1E31FF330098171A /* SanFranciscoDisplay-Bold.otf */; };
-		A6333A531E3382490098171A /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3C1E31FF330098171A /* SanFranciscoDisplay-Heavy.otf */; };
-		A6333A541E3382490098171A /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3D1E31FF330098171A /* SanFranciscoDisplay-Light.otf */; };
-		A6333A551E3382490098171A /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3E1E31FF330098171A /* SanFranciscoDisplay-Medium.otf */; };
-		A6333A561E3382490098171A /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3F1E31FF330098171A /* SanFranciscoDisplay-Regular.otf */; };
-		A6333A571E3382490098171A /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A401E31FF330098171A /* SanFranciscoDisplay-Semibold.otf */; };
-		A6333A581E3382490098171A /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A411E31FF330098171A /* SanFranciscoDisplay-Thin.otf */; };
-		A6333A591E3382490098171A /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A421E31FF330098171A /* SanFranciscoDisplay-Ultralight.otf */; };
-		A6333A5F1E3387020098171A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6333A5B1E3387020098171A /* curiosity.jpg */; };
-		A6333A611E3387020098171A /* opportunity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6333A5D1E3387020098171A /* opportunity.jpg */; };
-		A6333A621E3387020098171A /* spirit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6333A5E1E3387020098171A /* spirit.jpg */; };
 		A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */; };
 		A6333A661E339B660098171A /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A651E339B660098171A /* Responsable.swift */; };
 		A6333A681E33A1930098171A /* MarsRoverPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */; };
@@ -60,6 +48,18 @@
 		A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */; };
 		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
 		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A65720A71E348A740016E88A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208E1E348A350016E88A /* curiosity.jpg */; };
+		A65720A81E348A740016E88A /* opportunity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208F1E348A350016E88A /* opportunity.jpg */; };
+		A65720A91E348A740016E88A /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */; };
+		A65720AA1E348A740016E88A /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720911E348A350016E88A /* SanFranciscoDisplay-Bold.otf */; };
+		A65720AB1E348A740016E88A /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720921E348A350016E88A /* SanFranciscoDisplay-Heavy.otf */; };
+		A65720AC1E348A740016E88A /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720931E348A350016E88A /* SanFranciscoDisplay-Light.otf */; };
+		A65720AD1E348A740016E88A /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720941E348A350016E88A /* SanFranciscoDisplay-Medium.otf */; };
+		A65720AE1E348A740016E88A /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720951E348A350016E88A /* SanFranciscoDisplay-Regular.otf */; };
+		A65720AF1E348A740016E88A /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720961E348A350016E88A /* SanFranciscoDisplay-Semibold.otf */; };
+		A65720B01E348A740016E88A /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720971E348A350016E88A /* SanFranciscoDisplay-Thin.otf */; };
+		A65720B11E348A740016E88A /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720981E348A350016E88A /* SanFranciscoDisplay-Ultralight.otf */; };
+		A65720B21E348A740016E88A /* spirit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A65720991E348A350016E88A /* spirit.jpg */; };
 		A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */; };
 		A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A697866C1E2EC8EB009CE3B2 /* Main.storyboard */; };
 		A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */; };
@@ -196,24 +196,12 @@
 		A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareNotifications.swift; sourceTree = "<group>"; };
 		A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipHeader.swift; sourceTree = "<group>"; };
 		A6333A341E31AE0F0098171A /* FoursquareTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTip.swift; sourceTree = "<group>"; };
-		A6333A3A1E31FF330098171A /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
-		A6333A3B1E31FF330098171A /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
-		A6333A3C1E31FF330098171A /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
-		A6333A3D1E31FF330098171A /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
-		A6333A3E1E31FF330098171A /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
-		A6333A3F1E31FF330098171A /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
-		A6333A401E31FF330098171A /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
-		A6333A411E31FF330098171A /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
-		A6333A421E31FF330098171A /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
 		A6333A441E3203B20098171A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A6333A461E321B9B0098171A /* APODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
 		A6333A481E3242C50098171A /* UIImage +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage +.swift"; sourceTree = "<group>"; };
 		A6333A4B1E324B780098171A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		A6333A4D1E3374AA0098171A /* RoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverViewController.swift; sourceTree = "<group>"; };
 		A6333A4F1E3375AB0098171A /* EyeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeViewController.swift; sourceTree = "<group>"; };
-		A6333A5B1E3387020098171A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
-		A6333A5D1E3387020098171A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
-		A6333A5E1E3387020098171A /* spirit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spirit.jpg; sourceTree = "<group>"; };
 		A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverResponseWithArray.swift; sourceTree = "<group>"; };
 		A6333A651E339B660098171A /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
 		A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoCell.swift; sourceTree = "<group>"; };
@@ -228,6 +216,18 @@
 		A63EC9E71E310A12001B684D /* FoursquareMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareMenu.swift; sourceTree = "<group>"; };
 		A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
 		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
+		A657208E1E348A350016E88A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
+		A657208F1E348A350016E88A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
+		A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
+		A65720911E348A350016E88A /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
+		A65720921E348A350016E88A /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		A65720931E348A350016E88A /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
+		A65720941E348A350016E88A /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
+		A65720951E348A350016E88A /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		A65720961E348A350016E88A /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		A65720971E348A350016E88A /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
+		A65720981E348A350016E88A /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		A65720991E348A350016E88A /* spirit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spirit.jpg; sourceTree = "<group>"; };
 		A69786651E2EC8EB009CE3B2 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAppDelegate.swift; sourceTree = "<group>"; };
 		A697866D1E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,31 +278,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A6333A361E31FE0F0098171A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A6333A5A1E3386B00098171A /* RoversImages */,
-				A6333A371E31FE170098171A /* Fonts */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		A6333A371E31FE170098171A /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				A6333A3A1E31FF330098171A /* SanFranciscoDisplay-Black.otf */,
-				A6333A3B1E31FF330098171A /* SanFranciscoDisplay-Bold.otf */,
-				A6333A3C1E31FF330098171A /* SanFranciscoDisplay-Heavy.otf */,
-				A6333A3D1E31FF330098171A /* SanFranciscoDisplay-Light.otf */,
-				A6333A3E1E31FF330098171A /* SanFranciscoDisplay-Medium.otf */,
-				A6333A3F1E31FF330098171A /* SanFranciscoDisplay-Regular.otf */,
-				A6333A401E31FF330098171A /* SanFranciscoDisplay-Semibold.otf */,
-				A6333A411E31FF330098171A /* SanFranciscoDisplay-Thin.otf */,
-				A6333A421E31FF330098171A /* SanFranciscoDisplay-Ultralight.otf */,
-			);
-			name = Fonts;
-			sourceTree = "<group>";
-		};
 		A6333A431E3203A20098171A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,16 +292,6 @@
 				A6333A4B1E324B780098171A /* AppColor.swift */,
 			);
 			name = AppConstants;
-			sourceTree = "<group>";
-		};
-		A6333A5A1E3386B00098171A /* RoversImages */ = {
-			isa = PBXGroup;
-			children = (
-				A6333A5B1E3387020098171A /* curiosity.jpg */,
-				A6333A5D1E3387020098171A /* opportunity.jpg */,
-				A6333A5E1E3387020098171A /* spirit.jpg */,
-			);
-			name = RoversImages;
 			sourceTree = "<group>";
 		};
 		A63EC9D81E30F6DC001B684D /* Foursquare */ = {
@@ -388,14 +353,41 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A65720651E34889F0016E88A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		A657209A1E348A350016E88A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A657208E1E348A350016E88A /* curiosity.jpg */,
+				A657208F1E348A350016E88A /* opportunity.jpg */,
+				A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */,
+				A65720911E348A350016E88A /* SanFranciscoDisplay-Bold.otf */,
+				A65720921E348A350016E88A /* SanFranciscoDisplay-Heavy.otf */,
+				A65720931E348A350016E88A /* SanFranciscoDisplay-Light.otf */,
+				A65720941E348A350016E88A /* SanFranciscoDisplay-Medium.otf */,
+				A65720951E348A350016E88A /* SanFranciscoDisplay-Regular.otf */,
+				A65720961E348A350016E88A /* SanFranciscoDisplay-Semibold.otf */,
+				A65720971E348A350016E88A /* SanFranciscoDisplay-Thin.otf */,
+				A65720981E348A350016E88A /* SanFranciscoDisplay-Ultralight.otf */,
+				A65720991E348A350016E88A /* spirit.jpg */,
+			);
+			name = Resources;
+			path = NASA/Resources;
+			sourceTree = "<group>";
+		};
 		A697865C1E2EC8EB009CE3B2 = {
 			isa = PBXGroup;
 			children = (
 				A697867A1E2EC983009CE3B2 /* README.MD */,
 				A69786671E2EC8EB009CE3B2 /* NASA */,
 				A69786661E2EC8EB009CE3B2 /* Products */,
-				A6333A361E31FE0F0098171A /* Resources */,
 				A6333A2D1E319F660098171A /* Frameworks */,
+				A657209A1E348A350016E88A /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -410,6 +402,7 @@
 		A69786671E2EC8EB009CE3B2 /* NASA */ = {
 			isa = PBXGroup;
 			children = (
+				A65720651E34889F0016E88A /* DataSources */,
 				A6333A4A1E324B670098171A /* AppConstants */,
 				A6333A431E3203A20098171A /* Managers */,
 				A6C404141E2F8AAD0069D460 /* Controllers */,
@@ -642,22 +635,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6333A511E3382490098171A /* SanFranciscoDisplay-Black.otf in Resources */,
-				A6333A5F1E3387020098171A /* curiosity.jpg in Resources */,
-				A6333A521E3382490098171A /* SanFranciscoDisplay-Bold.otf in Resources */,
-				A6333A531E3382490098171A /* SanFranciscoDisplay-Heavy.otf in Resources */,
-				A6333A541E3382490098171A /* SanFranciscoDisplay-Light.otf in Resources */,
-				A6333A611E3387020098171A /* opportunity.jpg in Resources */,
-				A6333A551E3382490098171A /* SanFranciscoDisplay-Medium.otf in Resources */,
-				A6333A561E3382490098171A /* SanFranciscoDisplay-Regular.otf in Resources */,
-				A6333A571E3382490098171A /* SanFranciscoDisplay-Semibold.otf in Resources */,
-				A6333A581E3382490098171A /* SanFranciscoDisplay-Thin.otf in Resources */,
-				A6333A591E3382490098171A /* SanFranciscoDisplay-Ultralight.otf in Resources */,
+				A65720A71E348A740016E88A /* curiosity.jpg in Resources */,
+				A65720A81E348A740016E88A /* opportunity.jpg in Resources */,
+				A65720A91E348A740016E88A /* SanFranciscoDisplay-Black.otf in Resources */,
+				A65720AA1E348A740016E88A /* SanFranciscoDisplay-Bold.otf in Resources */,
+				A65720AB1E348A740016E88A /* SanFranciscoDisplay-Heavy.otf in Resources */,
+				A65720AC1E348A740016E88A /* SanFranciscoDisplay-Light.otf in Resources */,
+				A65720AD1E348A740016E88A /* SanFranciscoDisplay-Medium.otf in Resources */,
+				A65720AE1E348A740016E88A /* SanFranciscoDisplay-Regular.otf in Resources */,
+				A65720AF1E348A740016E88A /* SanFranciscoDisplay-Semibold.otf in Resources */,
+				A65720B01E348A740016E88A /* SanFranciscoDisplay-Thin.otf in Resources */,
+				A65720B11E348A740016E88A /* SanFranciscoDisplay-Ultralight.otf in Resources */,
+				A65720B21E348A740016E88A /* spirit.jpg in Resources */,
 				A697867B1E2EC983009CE3B2 /* README.MD in Resources */,
 				A69786731E2EC8EB009CE3B2 /* LaunchScreen.storyboard in Resources */,
 				A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */,
 				A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */,
-				A6333A621E3387020098171A /* spirit.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
