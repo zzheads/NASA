@@ -35,6 +35,23 @@
 		A6333A471E321B9B0098171A /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A461E321B9B0098171A /* APODViewController.swift */; };
 		A6333A491E3242C50098171A /* UIImage +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A481E3242C50098171A /* UIImage +.swift */; };
 		A6333A4C1E324B780098171A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4B1E324B780098171A /* AppColor.swift */; };
+		A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4D1E3374AA0098171A /* RoverViewController.swift */; };
+		A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4F1E3375AB0098171A /* EyeViewController.swift */; };
+		A6333A511E3382490098171A /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3A1E31FF330098171A /* SanFranciscoDisplay-Black.otf */; };
+		A6333A521E3382490098171A /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3B1E31FF330098171A /* SanFranciscoDisplay-Bold.otf */; };
+		A6333A531E3382490098171A /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3C1E31FF330098171A /* SanFranciscoDisplay-Heavy.otf */; };
+		A6333A541E3382490098171A /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3D1E31FF330098171A /* SanFranciscoDisplay-Light.otf */; };
+		A6333A551E3382490098171A /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3E1E31FF330098171A /* SanFranciscoDisplay-Medium.otf */; };
+		A6333A561E3382490098171A /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A3F1E31FF330098171A /* SanFranciscoDisplay-Regular.otf */; };
+		A6333A571E3382490098171A /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A401E31FF330098171A /* SanFranciscoDisplay-Semibold.otf */; };
+		A6333A581E3382490098171A /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A411E31FF330098171A /* SanFranciscoDisplay-Thin.otf */; };
+		A6333A591E3382490098171A /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6333A421E31FF330098171A /* SanFranciscoDisplay-Ultralight.otf */; };
+		A6333A5F1E3387020098171A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6333A5B1E3387020098171A /* curiosity.jpg */; };
+		A6333A611E3387020098171A /* opportunity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6333A5D1E3387020098171A /* opportunity.jpg */; };
+		A6333A621E3387020098171A /* spirit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6333A5E1E3387020098171A /* spirit.jpg */; };
+		A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */; };
+		A6333A661E339B660098171A /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A651E339B660098171A /* Responsable.swift */; };
+		A6333A681E33A1930098171A /* MarsRoverPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */; };
 		A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */; };
 		A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */; };
 		A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DB1E30F809001B684D /* FoursquareStats.swift */; };
@@ -46,7 +63,6 @@
 		A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E71E310A12001B684D /* FoursquareMenu.swift */; };
 		A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */; };
 		A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */; };
-		A697866B1E2EC8EB009CE3B2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A697866A1E2EC8EB009CE3B2 /* MapViewController.swift */; };
 		A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A697866C1E2EC8EB009CE3B2 /* Main.storyboard */; };
 		A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */; };
 		A69786731E2EC8EB009CE3B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */; };
@@ -125,6 +141,14 @@
 		A6333A461E321B9B0098171A /* APODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
 		A6333A481E3242C50098171A /* UIImage +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage +.swift"; sourceTree = "<group>"; };
 		A6333A4B1E324B780098171A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		A6333A4D1E3374AA0098171A /* RoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverViewController.swift; sourceTree = "<group>"; };
+		A6333A4F1E3375AB0098171A /* EyeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeViewController.swift; sourceTree = "<group>"; };
+		A6333A5B1E3387020098171A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
+		A6333A5D1E3387020098171A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
+		A6333A5E1E3387020098171A /* spirit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spirit.jpg; sourceTree = "<group>"; };
+		A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverResponseWithArray.swift; sourceTree = "<group>"; };
+		A6333A651E339B660098171A /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
+		A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoCell.swift; sourceTree = "<group>"; };
 		A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPIClient.swift; sourceTree = "<group>"; };
 		A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenueHeader.swift; sourceTree = "<group>"; };
 		A63EC9DB1E30F809001B684D /* FoursquareStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareStats.swift; sourceTree = "<group>"; };
@@ -137,7 +161,6 @@
 		A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
 		A69786651E2EC8EB009CE3B2 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAppDelegate.swift; sourceTree = "<group>"; };
-		A697866A1E2EC8EB009CE3B2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A697866D1E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A69786721E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -191,6 +214,7 @@
 		A6333A361E31FE0F0098171A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A6333A5A1E3386B00098171A /* RoversImages */,
 				A6333A371E31FE170098171A /* Fonts */,
 			);
 			name = Resources;
@@ -226,6 +250,16 @@
 				A6333A4B1E324B780098171A /* AppColor.swift */,
 			);
 			name = AppConstants;
+			sourceTree = "<group>";
+		};
+		A6333A5A1E3386B00098171A /* RoversImages */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A5B1E3387020098171A /* curiosity.jpg */,
+				A6333A5D1E3387020098171A /* opportunity.jpg */,
+				A6333A5E1E3387020098171A /* spirit.jpg */,
+			);
+			name = RoversImages;
 			sourceTree = "<group>";
 		};
 		A63EC9D81E30F6DC001B684D /* Foursquare */ = {
@@ -305,6 +339,7 @@
 				A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */,
 				A697866C1E2EC8EB009CE3B2 /* Main.storyboard */,
 				A69786741E2EC8EB009CE3B2 /* Info.plist */,
+				A6333A651E339B660098171A /* Responsable.swift */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
@@ -351,8 +386,10 @@
 		A6C404141E2F8AAD0069D460 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A697866A1E2EC8EB009CE3B2 /* MapViewController.swift */,
 				A6333A461E321B9B0098171A /* APODViewController.swift */,
+				A6333A4D1E3374AA0098171A /* RoverViewController.swift */,
+				A6333A4F1E3375AB0098171A /* EyeViewController.swift */,
+				A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +402,7 @@
 				A6C404191E2F9E130069D460 /* MarsRover.swift */,
 				A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */,
 				A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */,
+				A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */,
 			);
 			name = MarsRover;
 			sourceTree = "<group>";
@@ -449,10 +487,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6333A511E3382490098171A /* SanFranciscoDisplay-Black.otf in Resources */,
+				A6333A5F1E3387020098171A /* curiosity.jpg in Resources */,
+				A6333A521E3382490098171A /* SanFranciscoDisplay-Bold.otf in Resources */,
+				A6333A531E3382490098171A /* SanFranciscoDisplay-Heavy.otf in Resources */,
+				A6333A541E3382490098171A /* SanFranciscoDisplay-Light.otf in Resources */,
+				A6333A611E3387020098171A /* opportunity.jpg in Resources */,
+				A6333A551E3382490098171A /* SanFranciscoDisplay-Medium.otf in Resources */,
+				A6333A561E3382490098171A /* SanFranciscoDisplay-Regular.otf in Resources */,
+				A6333A571E3382490098171A /* SanFranciscoDisplay-Semibold.otf in Resources */,
+				A6333A581E3382490098171A /* SanFranciscoDisplay-Thin.otf in Resources */,
+				A6333A591E3382490098171A /* SanFranciscoDisplay-Ultralight.otf in Resources */,
 				A697867B1E2EC983009CE3B2 /* README.MD in Resources */,
 				A69786731E2EC8EB009CE3B2 /* LaunchScreen.storyboard in Resources */,
 				A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */,
 				A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */,
+				A6333A621E3387020098171A /* spirit.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +530,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6333A311E31AB8D0098171A /* FoursquareNotifications.swift in Sources */,
+				A6333A681E33A1930098171A /* MarsRoverPhotoCell.swift in Sources */,
 				A6333A0C1E3187330098171A /* ForesquareFollowersHeader.swift in Sources */,
+				A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */,
 				A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */,
 				A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */,
 				A6C404131E2F87770069D460 /* JSON.swift in Sources */,
@@ -491,8 +543,8 @@
 				A6333A181E3193780098171A /* FoursquarePhotos.swift in Sources */,
 				A6A3128B1E3122F9004D88C5 /* FoursquarePrice.swift in Sources */,
 				A6333A4C1E324B780098171A /* AppColor.swift in Sources */,
-				A697866B1E2EC8EB009CE3B2 /* MapViewController.swift in Sources */,
 				A6333A1C1E3195480098171A /* FoursquareCheckin.swift in Sources */,
+				A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */,
 				A6C404111E2F7E580069D460 /* LandsatImageHeader.swift in Sources */,
 				A6333A121E318C090098171A /* FoursquareListMayorships.swift in Sources */,
 				A6A312951E313403004D88C5 /* FoursquarePhotoHeader.swift in Sources */,
@@ -514,7 +566,9 @@
 				A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */,
 				A63EC9DE1E30F8D2001B684D /* FoursquareContact.swift in Sources */,
 				A6C4041E1E2FACF40069D460 /* MarsRoverPhotoManifest.swift in Sources */,
+				A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */,
 				A6333A161E318FE70098171A /* FoursquareCheckinHeader.swift in Sources */,
+				A6333A661E339B660098171A /* Responsable.swift in Sources */,
 				A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */,
 				A6333A101E318ACA0098171A /* FoursquareUser.swift in Sources */,
 				A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */,

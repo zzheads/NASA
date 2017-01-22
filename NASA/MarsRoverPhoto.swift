@@ -8,13 +8,21 @@
 
 import Foundation
 
-class MarsRoverPhoto: NSObject, JSONDecodable {
+class MarsRoverPhoto: NSObject, Responsable {
+    static let nameOfItem: String = ""
+    static let nameOfArray: String = "photos"
+    
     let id: Int
     let sol: Int
     let camera: MarsRoverCamera
     let img_src: String
     let earth_date: String
     let rover: MarsRover
+    
+    var securedUrl: URL? {
+        let securedPath = self.img_src.replacingOccurrences(of: "http", with: "https").replacingOccurrences(of: "httpss", with: "https")
+        return URL(string: securedPath)
+    }
     
     required init?(with json: JSON) {
         guard
@@ -42,5 +50,9 @@ class MarsRoverPhoto: NSObject, JSONDecodable {
 extension MarsRoverPhoto {
     var debugInfo: String {
         return "\(self): {\n\t\"id\": \(self.id),\n\t\"sol\": \(self.sol),\n\t\"camera\": \(self.camera.debugInfo),\n\t\"img_src\": \(self.img_src)\n\t\"earth_date\": \(self.earth_date),\n\t\"rover\": \(self.rover.debugInfo)\n}"
+    }
+    
+    func nameOfArrayInJSON() -> String {
+        return "photos"
     }
 }

@@ -16,18 +16,10 @@ typealias JSONTaskCompletion = (JSON?, HTTPURLResponse?, Error?) -> Void
 
 protocol JSONDecodable {
     init?(with json: JSON)
-    static func nameOfArrayInJSON() -> String
-    static func nameOfItemInJson() -> String
     var debugInfo: String { get }
 }
 
 extension JSONDecodable {
-    static func nameOfArrayInJSON() -> String {
-        return "\(self)".lowercased()
-    }
-    static func nameOfItemInJson() -> String {
-        return "\(self)".lowercased()
-    }
     var debugInfo: String {
         return "\(self)"
     }

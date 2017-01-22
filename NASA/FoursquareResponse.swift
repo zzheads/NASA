@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ResponseBody<T>: NSObject, JSONDecodable where T: JSONDecodable {
+class ResponseBody<T>: NSObject, JSONDecodable where T: Responsable {
     let confident: Bool
     let item: T
     
     required init?(with json: JSON) {
         guard
             let confident = json["confident"] as? Bool,
-            let itemJson = json[T.nameOfItemInJson()] as? JSON,
+            let itemJson = json[T.nameOfItem] as? JSON,
             let item = T(with: itemJson)
             else {
                 return nil
@@ -30,14 +30,14 @@ class ResponseBody<T>: NSObject, JSONDecodable where T: JSONDecodable {
     }
 }
 
-class ResponseBodyArray<T>: NSObject, JSONDecodable where T: JSONDecodable {
+class ResponseBodyArray<T>: NSObject, JSONDecodable where T: Responsable {
     let confident: Bool
     let items: [T]
     
     required init?(with json: JSON) {
         guard
             let confident = json["confident"] as? Bool,
-            let itemsJson = json[T.nameOfArrayInJSON()] as? JSONArray,
+            let itemsJson = json[T.nameOfArray] as? JSONArray,
             let items = [T](with: itemsJson)
             else {
                 return nil
@@ -52,7 +52,7 @@ class ResponseBodyArray<T>: NSObject, JSONDecodable where T: JSONDecodable {
     }
 }
 
-class FoursquareResponse<T>: JSONDecodable where T:JSONDecodable {
+class FoursquareResponse<T>: JSONDecodable where T:Responsable {
     let meta: FoursquareMeta
     let notifications: FoursquareNotifications?
     let response: ResponseBody<T>
@@ -76,7 +76,7 @@ class FoursquareResponse<T>: JSONDecodable where T:JSONDecodable {
     }
 }
 
-class FoursquareResponseWithArray<T>: JSONDecodable where T:JSONDecodable {
+class FoursquareResponseWithArray<T>: JSONDecodable where T:Responsable {
     let meta: FoursquareMeta
     let notifications: FoursquareNotifications?
     let response: ResponseBodyArray<T>

@@ -38,5 +38,10 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Application needs location services</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SanFranciscoDisplay-Regular.otf</string>
+		<string>SanFranciscoDisplay-Medium.otf</string>
+	</array>
 </dict>
 </plist>

@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 enum NASAEndpoints: Endpoint {
     case APOD(date: Date?, hd: Bool?)
@@ -43,15 +44,23 @@ enum NASAEndpoints: Endpoint {
     }
 
     enum QueryPhoto {
-        case Sol(_: Rover, sol: Int, camera: Rover.Camera?, page: Int?)
-        case Earth(_: Rover, date: Date, camera: Rover.Camera?, page: Int?)
+        case Sol(_: Rover, sol: Int?, camera: Rover.Camera?, page: Int?)
+        case Earth(_: Rover, date: Date?, camera: Rover.Camera?, page: Int?)
         case Manifest(_: Rover)
     }
-    
+
     enum Rover: String {
         case Curiosity
         case Opportunity
         case Spirit
+        
+        var photo: UIImage {
+            switch self {
+            case .Curiosity: return #imageLiteral(resourceName: "curiosity.jpg")
+            case .Opportunity: return #imageLiteral(resourceName: "opportunity.jpg")
+            case .Spirit: return #imageLiteral(resourceName: "spirit.jpg")
+            }
+        }
         
         var name: String {
             return self.rawValue.lowercased()
@@ -67,6 +76,7 @@ enum NASAEndpoints: Endpoint {
             case NAVCAM
             case PANCAM
             case MINITES
+            case ALL_CAMERAS
             
             var name: String {
                 return self.rawValue.lowercased()
@@ -83,14 +93,15 @@ enum NASAEndpoints: Endpoint {
                 case .NAVCAM: return "Navigation Camera"
                 case .PANCAM: return "Panoramic Camera"
                 case .MINITES: return "Miniature Thermal Emission Spectrometer (Mini-TES)"
+                case .ALL_CAMERAS: return "Results from all cameras of that rover"
                 }
             }
         }
         
         var cameras: [Camera] {
             switch self {
-            case .Curiosity: return [.FHAZ, .RHAZ, .MAST, .CHEMCAM, .MAHLI, .MARDI, .NAVCAM]
-            case .Opportunity, .Spirit: return [.FHAZ, .RHAZ, .NAVCAM, .PANCAM, .MINITES]
+            case .Curiosity: return [.FHAZ, .RHAZ, .MAST, .CHEMCAM, .MAHLI, .MARDI, .NAVCAM, .ALL_CAMERAS]
+            case .Opportunity, .Spirit: return [.FHAZ, .RHAZ, .NAVCAM, .PANCAM, .MINITES, .ALL_CAMERAS]
             }
         }
     }
@@ -119,20 +130,28 @@ enum NASAEndpoints: Endpoint {
         case .Mars(let query):
             switch query {
             case .Earth(let rover, let date, let camera, let page):
-                var path = "/mars-photos/api/v1/rovers/\(rover.name)/photos?earth_date=\(date.toString)"
+                var path = "/mars-photos/api/v1/rovers/\(rover.name)/photos?\(NASAEndpoints.NASA_KEY)"
+                if let date = date {
+                    path += "&earth_date=\(date.toString)"
+                } else {
+                    path += "&sol=1000"
+                }
                 if let camera = camera {
-                    path += "&camera=\(camera.name)"
+                    if (camera != .ALL_CAMERAS) {
+                        path += "&camera=\(camera.name)"
+                    }
                 }
                 if let page = page {
                     path += "&page=\(page)"
                 }
-                path += "&\(NASAEndpoints.NASA_KEY)"
                 return path
                 
             case .Sol(let rover, let sol, let camera, let page):
                 var path = "/mars-photos/api/v1/rovers/\(rover.name)/photos?sol=\(sol)"
                 if let camera = camera {
-                    path += "&camera=\(camera.name)"
+                    if (camera != .ALL_CAMERAS) {
+                        path += "&camera=\(camera.name)"
+                    }
                 }
                 if let page = page {
                     path += "&page=\(page)"
@@ -170,7 +189,7 @@ final class NASAAPIClient: APIClient {
     
     func fetch<T>(endpoint: NASAEndpoints, completion: @escaping (APIResult<T>) -> Void) where T: JSONDecodable {
         let request = endpoint.request
-        //print("Request: \(request)")
+        print("Request: \(request)")
         fetch(request: request, parse: { json -> T? in
             let value = T(with: json)
             //print("Parsed to \(T.self): \(value)")
