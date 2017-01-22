@@ -32,7 +32,6 @@ protocol APIClient {
 }
 
 extension APIClient {
-    
     func JSONTaskWithRequest(request: URLRequest, completion: @escaping JSONTaskCompletion) -> JSONTask {
         let task = session.dataTask(with: request) { data, response, error in
             //print("Request in JSONTask: \(request)")

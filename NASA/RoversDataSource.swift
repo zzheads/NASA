@@ -15,7 +15,8 @@ protocol ManifestsChangedObserverType {
 }
 
 class RoversDataSource: NSObject {
-    let apiClient = NASAAPIClient()
+    let config = URLSessionConfiguration()
+    let apiClient: NASAAPIClient
     var manifests: [MarsRoverPhotoManifest] = [] {
         didSet {
             if (self.isInitialized) {
@@ -40,6 +41,7 @@ class RoversDataSource: NSObject {
     
     init(collectionView: UICollectionView, manifestsObserver: ManifestsChangedObserverType?) {
         self.collectionView = collectionView
+        self.apiClient = NASAAPIClient(config: .default)
         self.delegate = manifestsObserver
         super.init()
         self.collectionView.dataSource = self

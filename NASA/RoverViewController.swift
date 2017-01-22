@@ -130,7 +130,7 @@ extension RoverViewController: UIPickerViewDataSource {
 extension RoverViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
-        label.font = UIFont(name: "SanFranciscoDisplay-Medium", size: 13.0)
+        label.font = AppFont.sanFranciscoMedium(size: 14.0).font
         label.textColor = AppColor.magentaLighten.color
         label.textAlignment = .center
         switch component {
