@@ -10,7 +10,6 @@
 		A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */; };
 		A61497421E366C1500690D31 /* Preheat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A614973F1E366BFE00690D31 /* Preheat.framework */; };
 		A61497431E366C1500690D31 /* Preheat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A614973F1E366BFE00690D31 /* Preheat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A61497481E36CC7B00690D31 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A69786741E2EC8EB009CE3B2 /* Info.plist */; };
 		A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A051E3181300098171A /* FoursquareTipsHeader.swift */; };
 		A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A071E3181ED0098171A /* FoursquareTips.swift */; };
 		A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A091E31838E0098171A /* FoursquareTipsItem.swift */; };
@@ -707,7 +706,6 @@
 				A65720AE1E348A740016E88A /* SanFranciscoDisplay-Regular.otf in Resources */,
 				A65720AF1E348A740016E88A /* SanFranciscoDisplay-Semibold.otf in Resources */,
 				A65720B01E348A740016E88A /* SanFranciscoDisplay-Thin.otf in Resources */,
-				A61497481E36CC7B00690D31 /* Info.plist in Resources */,
 				A65720B11E348A740016E88A /* SanFranciscoDisplay-Ultralight.otf in Resources */,
 				A65720B21E348A740016E88A /* spirit.jpg in Resources */,
 				A697867B1E2EC983009CE3B2 /* README.MD in Resources */,
