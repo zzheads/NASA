@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */; };
+		A61497421E366C1500690D31 /* Preheat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A614973F1E366BFE00690D31 /* Preheat.framework */; };
+		A61497431E366C1500690D31 /* Preheat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A614973F1E366BFE00690D31 /* Preheat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A051E3181300098171A /* FoursquareTipsHeader.swift */; };
 		A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A071E3181ED0098171A /* FoursquareTips.swift */; };
 		A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A091E31838E0098171A /* FoursquareTipsItem.swift */; };
@@ -36,7 +38,6 @@
 		A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4F1E3375AB0098171A /* EyeViewController.swift */; };
 		A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */; };
 		A6333A661E339B660098171A /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A651E339B660098171A /* Responsable.swift */; };
-		A6333A681E33A1930098171A /* MarsRoverPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */; };
 		A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */; };
 		A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */; };
 		A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DB1E30F809001B684D /* FoursquareStats.swift */; };
@@ -92,6 +93,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A614973E1E366BFE00690D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CD20B151CA45C1E006BA4B9;
+			remoteInfo = "Preheat iOS";
+		};
+		A61497401E366BFE00690D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C2A20A91CA5A605008C0D4C;
+			remoteInfo = "Preheat tvOS";
+		};
+		A61497441E366C1500690D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CD20B141CA45C1E006BA4B9;
+			remoteInfo = "Preheat iOS";
+		};
 		A657204E1E3484890016E88A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
@@ -171,6 +193,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A61497431E366C1500690D31 /* Preheat.framework in Embed Frameworks */,
 				A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -180,6 +203,7 @@
 
 /* Begin PBXFileReference section */
 		A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		A61497391E366BFE00690D31 /* Preheat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Preheat.xcodeproj; path = ../Preheat/Preheat.xcodeproj; sourceTree = "<group>"; };
 		A6333A051E3181300098171A /* FoursquareTipsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsHeader.swift; sourceTree = "<group>"; };
 		A6333A071E3181ED0098171A /* FoursquareTips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTips.swift; sourceTree = "<group>"; };
 		A6333A091E31838E0098171A /* FoursquareTipsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsItem.swift; sourceTree = "<group>"; };
@@ -208,7 +232,6 @@
 		A6333A4F1E3375AB0098171A /* EyeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeViewController.swift; sourceTree = "<group>"; };
 		A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverResponseWithArray.swift; sourceTree = "<group>"; };
 		A6333A651E339B660098171A /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
-		A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoCell.swift; sourceTree = "<group>"; };
 		A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPIClient.swift; sourceTree = "<group>"; };
 		A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenueHeader.swift; sourceTree = "<group>"; };
 		A63EC9DB1E30F809001B684D /* FoursquareStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareStats.swift; sourceTree = "<group>"; };
@@ -269,6 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A61497421E366C1500690D31 /* Preheat.framework in Frameworks */,
 				A65720601E34857D0016E88A /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +300,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A614973A1E366BFE00690D31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A614973F1E366BFE00690D31 /* Preheat.framework */,
+				A61497411E366BFE00690D31 /* Preheat.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A6333A2D1E319F660098171A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A61497391E366BFE00690D31 /* Preheat.xcodeproj */,
 				A65720421E3484890016E88A /* Nuke.xcodeproj */,
 			);
 			name = Frameworks;
@@ -472,7 +506,6 @@
 				A6333A461E321B9B0098171A /* APODViewController.swift */,
 				A6333A4D1E3374AA0098171A /* RoverViewController.swift */,
 				A6333A4F1E3375AB0098171A /* EyeViewController.swift */,
-				A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */,
 				A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */,
 				A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */,
 			);
@@ -526,6 +559,7 @@
 			);
 			dependencies = (
 				A65720631E34857D0016E88A /* PBXTargetDependency */,
+				A61497451E366C1500690D31 /* PBXTargetDependency */,
 			);
 			name = NASA;
 			productName = NASA;
@@ -565,6 +599,10 @@
 					ProductGroup = A65720431E3484890016E88A /* Products */;
 					ProjectRef = A65720421E3484890016E88A /* Nuke.xcodeproj */;
 				},
+				{
+					ProductGroup = A614973A1E366BFE00690D31 /* Products */;
+					ProjectRef = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -574,6 +612,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		A614973F1E366BFE00690D31 /* Preheat.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Preheat.framework;
+			remoteRef = A614973E1E366BFE00690D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A61497411E366BFE00690D31 /* Preheat.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Preheat.framework;
+			remoteRef = A61497401E366BFE00690D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A657204F1E3484890016E88A /* Nuke.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -671,7 +723,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6333A311E31AB8D0098171A /* FoursquareNotifications.swift in Sources */,
-				A6333A681E33A1930098171A /* MarsRoverPhotoCell.swift in Sources */,
 				A6333A0C1E3187330098171A /* ForesquareFollowersHeader.swift in Sources */,
 				A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */,
 				A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */,
@@ -740,6 +791,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A61497451E366C1500690D31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Preheat iOS";
+			targetProxy = A61497441E366C1500690D31 /* PBXContainerItemProxy */;
+		};
 		A65720631E34857D0016E88A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Nuke iOS";

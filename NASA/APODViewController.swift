@@ -69,6 +69,9 @@ class APODViewController: UIViewController {
         
         self.datePicker.setValue(UIColor.white, forKey: "textColor")
         self.datePicker.sendAction(Selector(("setHighlightsToday:")), to: nil, for: nil)
+        if let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) {
+            self.datePicker.setDate(yesterday, animated: true)
+        }
         self.datePicker.maximumDate = Date()
         self.saveButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
         self.explanationButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
@@ -94,6 +97,7 @@ extension APODViewController {
             }
         }
     }
+    
     @IBAction func explanationPressed(_ sender: Any) {
         if let apod = self.currentAPOD {
             showAlert(title: "APOD Explanation", message: apod.explanation, style: .actionSheet, sender: self.apodImageView)
@@ -137,9 +141,7 @@ extension UIViewController {
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
-}
 
-extension APODViewController {
     func showAlert(title: String, message: String, style: UIAlertControllerStyle, sender: UIView) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -150,5 +152,29 @@ extension APODViewController {
             presenter.sourceRect = sender.bounds
         }
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showPrompt(title: String?, message: String?, placeholder: String?, completion: @escaping (String?) -> Void) {
+        let promptController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        promptController.addTextField() { textField in
+            if let placeholder = placeholder {
+                textField.text = placeholder
+            }
+        }
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+            guard
+                let textFields = promptController.textFields,
+                let first = textFields.first,
+                let text = first.text
+                else {
+                    completion(nil)
+                    return
+            }
+            completion(text)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        promptController.addAction(okAction)
+        promptController.addAction(cancelAction)
+        self.present(promptController, animated: true, completion: nil)
     }
 }
