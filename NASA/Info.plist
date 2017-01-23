@@ -56,5 +56,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need access to photo library for saving images</string>
 </dict>
 </plist>

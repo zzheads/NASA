@@ -11,7 +11,6 @@ import UIKit
 import Nuke
 import Preheat
 
-
 private var loggingEnabled = false
 
 class RoverPhotosCollectionViewController: UICollectionViewController {
