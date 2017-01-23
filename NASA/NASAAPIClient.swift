@@ -163,10 +163,10 @@ enum NASAEndpoints: Endpoint {
 }
 
 final class NASAAPIClient: APIClient {
+    
     let configuration: URLSessionConfiguration
     lazy var session: URLSession = {
-        let session = URLSession(configuration: .default)
-        return session
+        return URLSession(configuration: self.configuration)
     }()
     
     init(config: URLSessionConfiguration) {
@@ -182,9 +182,20 @@ final class NASAAPIClient: APIClient {
         print("Request: \(request)")
         fetch(request: request, parse: { json -> T? in
             let value = T(with: json)
-            
             //print("Parsed to \(T.self): \(value)")
             return value
         }, completion: completion)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

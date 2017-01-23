@@ -24,13 +24,11 @@ enum AppColor {
 }
 
 enum AppFont {
-    case sanFranciscoRegular(size: CGFloat)
-    case sanFranciscoMedium(size: CGFloat)
+    case sanFrancisco
     
-    var font: UIFont {
+    var font: UIFont? {
         switch self {
-        case .sanFranciscoRegular(let size): return UIFont(name: "SanFranciscoDisplay-Regular", size: size)!
-        case .sanFranciscoMedium(let size): return UIFont(name: "SanFranciscoDisplay-Medium", size: size)!
+        case .sanFrancisco: return UIFont(name: "San Francisco Display-Medium", size: 14.0)
         }
     }
 }
