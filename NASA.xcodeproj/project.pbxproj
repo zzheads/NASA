@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */; };
 		A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A051E3181300098171A /* FoursquareTipsHeader.swift */; };
 		A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A071E3181ED0098171A /* FoursquareTips.swift */; };
 		A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A091E31838E0098171A /* FoursquareTipsItem.swift */; };
@@ -178,6 +179,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverPhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		A6333A051E3181300098171A /* FoursquareTipsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsHeader.swift; sourceTree = "<group>"; };
 		A6333A071E3181ED0098171A /* FoursquareTips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTips.swift; sourceTree = "<group>"; };
 		A6333A091E31838E0098171A /* FoursquareTipsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsItem.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				A6333A4F1E3375AB0098171A /* EyeViewController.swift */,
 				A6333A671E33A1930098171A /* MarsRoverPhotoCell.swift */,
 				A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */,
+				A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				A6333A2F1E31A80B0098171A /* FoursquareMeta.swift in Sources */,
 				A6333A351E31AE0F0098171A /* FoursquareTip.swift in Sources */,
 				A6C404081E2F6C230069D460 /* APOD.swift in Sources */,
+				A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */,
 				A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */,
 				A6C404161E2F9B410069D460 /* MarsRoverPhoto.swift in Sources */,
 				A63EC9E21E30FA0B001B684D /* FoursquareIcon.swift in Sources */,

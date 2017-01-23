@@ -70,7 +70,8 @@ class APODViewController: UIViewController {
         self.datePicker.setValue(UIColor.white, forKey: "textColor")
         self.datePicker.sendAction(Selector(("setHighlightsToday:")), to: nil, for: nil)
         self.datePicker.maximumDate = Date()
-        self.saveButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFrancisco], for: .normal)
+        self.saveButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
+        self.explanationButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
         self.datePickerValueChanged()
     }
 }

@@ -1,3 +1,6 @@
 [submodule "Nuke"]
 	path = Nuke
 	url = https://github.com/kean/Nuke.git
+[submodule "Preheat"]
+	path = Preheat
+	url = https://github.com/kean/Preheat.git

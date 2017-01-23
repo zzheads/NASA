@@ -10,22 +10,9 @@ import Foundation
 import Nuke
 import UIKit
 
-protocol ManifestsChangedObserverType {
-    func manifests(didChanged manifests: [MarsRoverPhotoManifest])
-}
-
 class RoversDataSource: NSObject {
     let apiClient = NASAAPIClient()
-    var manifests: [MarsRoverPhotoManifest] = [] {
-        didSet {
-            if (self.isInitialized) {
-                if let delegate = self.delegate {
-                    delegate.manifests(didChanged: self.manifests)
-                }
-            }
-        }
-    }
-    let delegate: ManifestsChangedObserverType?
+    var manifests: [MarsRoverPhotoManifest] = []
     var rovers: [NASAEndpoints.Rover] = [.Curiosity, .Opportunity, .Spirit]
     var validDates: [NASAEndpoints.Rover: [Int]] = [:]
     var pics: [MarsRoverPhoto] = [] {
@@ -38,9 +25,8 @@ class RoversDataSource: NSObject {
     }
     let collectionView: UICollectionView
     
-    init(collectionView: UICollectionView, manifestsObserver: ManifestsChangedObserverType?) {
+    init(collectionView: UICollectionView) {
         self.collectionView = collectionView
-        self.delegate = manifestsObserver
         super.init()
         self.collectionView.dataSource = self
         for rover in self.rovers {
