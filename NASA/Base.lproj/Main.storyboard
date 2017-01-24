@@ -20,6 +20,8 @@
         <scene sceneID="Drp-qE-7O3">
             <objects>
                 <navigationController id="m7U-09-392" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="BWp-gg-Ccq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,13 +54,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipad_background_port_x2" translatesAutoresizingMaskIntoConstraints="NO" id="E54-Wj-Ox2">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="2732"/>
                             </imageView>
+                            <webView hidden="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="67c-yK-eKB">
+                                <rect key="frame" x="16" y="80" width="992" height="506"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="61m-dg-LoI">
                                 <rect key="frame" x="16" y="80" width="992" height="506"/>
                             </imageView>
-                            <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="67c-yK-eKB">
-                                <rect key="frame" x="16" y="80" width="992" height="506"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOI-Jn-0qa">
                                 <rect key="frame" x="16" y="594" width="992" height="130"/>
                                 <constraints>
@@ -186,8 +189,11 @@
                                     <constraint firstAttribute="height" constant="150" id="Pn5-iS-1ta"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQV-uP-XJB">
-                                <rect key="frame" x="20" y="291" width="984" height="457"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading rover info..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQV-uP-XJB">
+                                <rect key="frame" x="20" y="291" width="150" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="JK5-SL-LTU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -211,10 +217,8 @@
                             <constraint firstItem="kQV-uP-XJB" firstAttribute="leading" secondItem="pdL-LZ-kg0" secondAttribute="leading" constant="20" id="5uL-F0-EIk"/>
                             <constraint firstItem="yhZ-CK-RdV" firstAttribute="top" secondItem="8gQ-SS-rfs" secondAttribute="bottom" id="70R-xb-22i"/>
                             <constraint firstItem="4fU-Cw-BtU" firstAttribute="leading" secondItem="HuH-ba-knh" secondAttribute="trailing" constant="20" id="7hP-ZJ-YKB"/>
-                            <constraint firstItem="QFA-GH-atV" firstAttribute="top" secondItem="kQV-uP-XJB" secondAttribute="bottom" constant="20" id="CrB-d4-PMR"/>
                             <constraint firstItem="QFA-GH-atV" firstAttribute="top" secondItem="yhZ-CK-RdV" secondAttribute="bottom" id="Exd-X1-MRb"/>
                             <constraint firstItem="TGg-Fe-6TY" firstAttribute="leading" secondItem="bJG-rf-WTT" secondAttribute="trailing" constant="20" id="FVm-CH-ASd"/>
-                            <constraint firstAttribute="trailing" secondItem="kQV-uP-XJB" secondAttribute="trailing" constant="20" id="HkJ-hv-y58"/>
                             <constraint firstItem="bJG-rf-WTT" firstAttribute="leading" secondItem="pdL-LZ-kg0" secondAttribute="leading" constant="20" id="ItH-xe-fBC"/>
                             <constraint firstItem="bJG-rf-WTT" firstAttribute="top" secondItem="8gQ-SS-rfs" secondAttribute="bottom" constant="20" id="NR7-fz-JAs"/>
                             <constraint firstItem="4fU-Cw-BtU" firstAttribute="top" secondItem="TGg-Fe-6TY" secondAttribute="bottom" constant="13" id="POq-oU-a43"/>
@@ -253,7 +257,7 @@
         <scene sceneID="reY-It-ZSA">
             <objects>
                 <collectionViewController id="I0v-vS-5xY" customClass="RoverPhotosCollectionViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3Gv-q5-3A1">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="3Gv-q5-3A1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.071670390665531158" green="0.05870046466588974" blue="0.16767171025276184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -313,19 +317,19 @@
                                     <constraint firstAttribute="height" constant="44" id="eUx-x1-XSF"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Save to gallery" width="126.5" id="maf-aw-guq">
+                                    <barButtonItem title="Save to gallery" id="maf-aw-guq">
                                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="savePressed:" destination="86x-iW-QA6" id="2vL-KK-utD"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Add text" width="83" id="jBO-mm-0fQ">
+                                    <barButtonItem title="Add text" id="jBO-mm-0fQ">
                                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="addTextPressed:" destination="86x-iW-QA6" id="eyZ-2d-APC"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Send email" width="97" id="Ate-Ux-Bch">
+                                    <barButtonItem title="Send email" id="Ate-Ux-Bch">
                                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="sendEmailPressed:" destination="86x-iW-QA6" id="QCp-aQ-Iif"/>

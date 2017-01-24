@@ -74,6 +74,7 @@
 		A6A312931E3132DC004D88C5 /* FoursquareUserMiniHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312921E3132DC004D88C5 /* FoursquareUserMiniHeader.swift */; };
 		A6A312951E313403004D88C5 /* FoursquarePhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */; };
 		A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */; };
+		A6C1E9CC1E372C3600EA3BB4 /* UIViewController +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */; };
 		A6C404001E2F46B80069D460 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C403FF1E2F46B80069D460 /* APIClient.swift */; };
 		A6C404031E2F48DD0069D460 /* HTTPStatusCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */; };
 		A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404041E2F494D0069D460 /* NASAAPIClient.swift */; };
@@ -269,6 +270,7 @@
 		A6A312921E3132DC004D88C5 /* FoursquareUserMiniHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUserMiniHeader.swift; sourceTree = "<group>"; };
 		A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquarePhotoHeader.swift; sourceTree = "<group>"; };
 		A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUserHeader.swift; sourceTree = "<group>"; };
+		A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController +.swift"; sourceTree = "<group>"; };
 		A6C403FF1E2F46B80069D460 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodeError.swift; sourceTree = "<group>"; };
 		A6C404041E2F494D0069D460 /* NASAAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 			children = (
 				A6C4040A1E2F78820069D460 /* String + Date + Bool.swift */,
 				A6333A481E3242C50098171A /* UIImage +.swift */,
+				A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				A6C404081E2F6C230069D460 /* APOD.swift in Sources */,
 				A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */,
 				A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */,
+				A6C1E9CC1E372C3600EA3BB4 /* UIViewController +.swift in Sources */,
 				A6C404161E2F9B410069D460 /* MarsRoverPhoto.swift in Sources */,
 				A63EC9E21E30FA0B001B684D /* FoursquareIcon.swift in Sources */,
 				A6A3128F1E312F15004D88C5 /* FoursquareFriend.swift in Sources */,

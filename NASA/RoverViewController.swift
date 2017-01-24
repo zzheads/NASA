@@ -41,6 +41,7 @@ class RoverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.manifestLabel.sizeToFit()
         for rover in self.rovers {
             self.apiClient.fetch(endpoint: NASAEndpoints.Mars(NASAEndpoints.QueryPhoto.Manifest(rover))) { (result: APIResult<MarsRoverPhotoManifest>) in
                 switch result {
@@ -62,6 +63,7 @@ class RoverViewController: UIViewController {
         self.currentRover = self.rovers.first
         self.pickerView.reloadComponent(1)
         self.pickerView.selectRow(self.cameras.count - 1, inComponent: 1, animated: true)
+        self.currentCamera = self.cameras.last
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,8 +71,10 @@ class RoverViewController: UIViewController {
             let collectionViewController = segue.destination as! RoverPhotosCollectionViewController
             collectionViewController.rover = self.currentRover
             collectionViewController.camera = self.currentCamera
-            if let enteredSol = self.dateTextField.text {
-                collectionViewController.sol = Int(enteredSol)
+            if let enteredSol = self.dateTextField.text, let sol = Int(enteredSol) {
+                collectionViewController.sol = sol
+            } else {
+                collectionViewController.sol = 0
             }
         }
     }

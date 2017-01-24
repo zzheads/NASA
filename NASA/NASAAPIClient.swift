@@ -93,7 +93,7 @@ enum NASAEndpoints: Endpoint {
                 case .NAVCAM: return "Navigation Camera"
                 case .PANCAM: return "Panoramic Camera"
                 case .MINITES: return "Miniature Thermal Emission Spectrometer (Mini-TES)"
-                case .ALL_CAMERAS: return "Results from all cameras of that rover"
+                case .ALL_CAMERAS: return "All cameras"
                 }
             }
         }

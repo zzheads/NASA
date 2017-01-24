@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Nuke
+import MessageUI
 
 class RoverPostcardDetailsViewController: UIViewController {
     var photo: MarsRoverPhoto?
@@ -44,12 +45,24 @@ extension RoverPostcardDetailsViewController {
             guard let text = text else {
                 return
             }
-            let newImage = self.imageView.image?.addText(text, font: AppFont.sanFranciscoMedium(size: 25.0).font, color: .white, atPoint: CGPoint(x: 10, y: 10))
+            let newImage = self.imageView.image?.addText(text, font: AppFont.sanFranciscoMedium(size: 20.0).font, color: .white, atPoint: CGPoint(x: 10, y: 10))
             self.imageView.image = newImage
         }
     }
     
     @IBAction func sendEmailPressed(_ sender: Any) {
+        guard
+            let fileName = self.photo?.title,
+            let image = self.imageView.image,
+            let data = UIImagePNGRepresentation(image)
+            else {
+                return
+        }
+        let mailController = MFMailComposeViewController()
+        mailController.addAttachmentData(data, mimeType: "image/png", fileName: fileName)
+        mailController.setMessageBody("This image was created by NASA App.", isHTML: false)
+        mailController.setSubject("Image of Mars Rover \(fileName)")
+        self.present(mailController, animated: true, completion: nil)
     }
     
     @IBAction func undoPressed(_ sender: Any?) {

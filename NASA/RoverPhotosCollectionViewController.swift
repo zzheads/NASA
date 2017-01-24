@@ -14,16 +14,30 @@ import Preheat
 private var loggingEnabled = false
 
 class RoverPhotosCollectionViewController: UICollectionViewController {
-    var rover: NASAEndpoints.Rover?
-    var camera: NASAEndpoints.Rover.Camera?
-    var sol: Int?
+    var rover: NASAEndpoints.Rover!
+    var camera: NASAEndpoints.Rover.Camera!
+    var sol: Int!
     var preheater: Preheater!
     var preheatController: Preheat.Controller<UICollectionView>!
     var dataSource: RoversDataSource!
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        indicator.hidesWhenStopped = true
+        indicator.isHidden = false
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.addSubview(self.activityIndicator)
+        NSLayoutConstraint.activate([
+            self.activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
+        self.activityIndicator.startAnimating()
+        self.navigationItem.title = "Pics Downloading..."
         self.dataSource = RoversDataSource(collectionView: self.collectionView!)
         self.collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ipad_background_port_x2"))
         preheater = Preheater()
@@ -36,13 +50,17 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: self.dataSource.cellReuseIdentifier)
         guard
             let rover = self.rover,
-            let sol = self.sol
+            let sol = self.sol,
+            let camera = self.camera
             else {
                 self.showAlert(title: "Loading images error", message: "Insufficient information, you have to choose rover and sol. Can not load images.", style: .alert)
                 return
         }
-        self.dataSource.fetchPics(for: rover, sol: sol, camera: self.camera) { (pics, error) in
-            guard let pics = pics else {
+        self.dataSource.fetchPics(for: rover, sol: sol, camera: camera) { (pics, error) in
+            guard
+                let pics = pics,
+                let firstPic = pics.first
+                else {
                 if let error = error {
                     self.showAlert(title: "Loading images for \(rover) rover", message: "\(error)", style: .alert)
                 } else {
@@ -50,13 +68,12 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
                 }
                 return
             }
-            var title = "\(pics.count) pics of Rover: \(rover.rawValue), sol: \(sol)"
-            if let camera = self.camera {
-                title += ", camera: \(camera.rawValue):"
+            if sol != 0 {
+                self.navigationItem.title = "\(pics.count) pics of \(camera) of \(rover.rawValue) taken \(firstPic.earth_date) (Sol: \(sol)):"
             } else {
-                title += ":"
+                self.navigationItem.title = "All \(pics.count) pics of \(camera) of \(rover.rawValue):"
             }
-            self.navigationItem.title = title
+            self.activityIndicator.stopAnimating()
         }
     }
     
