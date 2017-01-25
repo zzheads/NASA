@@ -29,6 +29,13 @@ extension LandsatImageHeader {
     var debugInfo: String {
         return "\(self): {\n\t\"id\": \(self.id),\n\t\"date\": \(self.date)\n\t}"
     }
+    
+    var dateWithoutTime: String {
+        let components = self.date.characters.split(separator: "T").map { (subsequence) -> String in
+            return String(subsequence).replacingOccurrences(of: " ", with: "")
+        }
+        return components.first!
+    }
 }
 
 //extension Array where Element: LandsatImageHeader {

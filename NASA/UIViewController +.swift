@@ -53,4 +53,17 @@ extension UIViewController {
         promptController.addAction(cancelAction)
         self.present(promptController, animated: true, completion: nil)
     }
+
+    func showAlertAndDismiss(title: String, message: String, style: UIAlertControllerStyle) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true) {
+            self.dismiss(animated: true)
+        }
+    }
+    
+    func dismiss(animated: Bool) {
+        _ = navigationController?.popViewController(animated: animated)
+    }
 }

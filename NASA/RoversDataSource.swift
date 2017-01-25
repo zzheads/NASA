@@ -57,7 +57,7 @@ extension RoversDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellReuseIdentifier, for: indexPath)
-        cell.backgroundColor = AppColor.blueCorrect.color
+        cell.backgroundColor = .gray
         
         let imageView = self.imageView(for: cell)
         let imageURL = self.pics[indexPath.row].securedUrl!

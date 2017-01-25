@@ -14,6 +14,12 @@ extension Date {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return "\(dateFormatter.string(from: self))"
     }
+    
+    var toShortLocalString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM, yyyy"
+        return "\(dateFormatter.string(from: self))"
+    }
 }
 
 extension Bool {

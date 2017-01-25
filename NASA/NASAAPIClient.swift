@@ -15,8 +15,12 @@ enum NASAEndpoints: Endpoint {
     case Earth(EarthEndpoint)
     case Mars(QueryPhoto)
     
+    var rawValue: String {
+        return self.request.description
+    }
+    
     enum EarthEndpoint {
-        case Imagery(CLLocationCoordinate2D, Date?, Bool?)
+        case Imagery(CLLocationCoordinate2D, String?, Bool?)
         case Asset(CLLocationCoordinate2D, Date?, Date?)
         
         var path: String {
@@ -24,7 +28,7 @@ enum NASAEndpoints: Endpoint {
             case .Imagery(let coordinate, let date, let cloud_score):
                 var path = "/imagery?lon=\(coordinate.longitude)&lat=\(coordinate.latitude)"
                 if let date = date {
-                    path += "&date=\(date.toString)"
+                    path += "&date=\(date)"
                 }
                 if let cloud_score = cloud_score {
                     path += "&cloud_score=\(cloud_score.toString)"
@@ -107,8 +111,10 @@ enum NASAEndpoints: Endpoint {
     }
     
     static let basePath = "https://api.nasa.gov"
-    static let NASA_KEY = "api_key=QzjlaXgOqA2ndpUfmLN6f8QBSMtkKx8SRptHevNO"
-    
+    static let NASA_KEY_3 = "api_key=QzjlaXgOqA2ndpUfmLN6f8QBSMtkKx8SRptHevNO"
+    static let NASA_KEY = "api_key=TDU5YvbqFysrFepeYXZInSxpIWbSQuYEKDkt2nPL"
+    static let NASA_KEY_2 = "api_key=zWgiWkxGZ693SKtOwsbpuPdTk5tRQoJvPDYw9lnL"
+        
     var baseURL: URL {
         let baseURL = URL(string: NASAEndpoints.basePath)
         return baseURL!
@@ -162,6 +168,11 @@ enum NASAEndpoints: Endpoint {
     }
 }
 
+protocol ProgressShowing {
+    func set(progress: Double)
+    func update<T>(newItem: T) where T: JSONDecodable
+}
+
 final class NASAAPIClient: APIClient {
     
     let configuration: URLSessionConfiguration
@@ -178,13 +189,39 @@ final class NASAAPIClient: APIClient {
     }
     
     func fetch<T>(endpoint: NASAEndpoints, completion: @escaping (APIResult<T>) -> Void) where T: JSONDecodable {
-        let request = endpoint.request
-        print("Request: \(request)")
-        fetch(request: request, parse: { json -> T? in
-            let value = T(with: json)
-            //print("Parsed to \(T.self): \(value)")
-            return value
-        }, completion: completion)
+        fetch(request: endpoint.request, parse: { json -> T? in return T(with: json) }, completion: completion)
+    }
+
+    func fetch<T>(endpoints: [NASAEndpoints], delay: UInt32, progressShowing: ProgressShowing?, completion: @escaping (APIResultArray<T>) -> Void) where T: JSONDecodable {
+        var results: [T] = []
+        var errors: [Error] = []
+        
+        for endpoint in endpoints {
+            print("Sending request: \(endpoint.request)...")
+            fetch(endpoint: endpoint) { (result: APIResult<T>) in
+                switch result {
+                case .Success(let item):
+                    results.append(item)
+                    if let progressShowing = progressShowing {
+                        progressShowing.set(progress: Double(results.count + errors.count)/Double(endpoints.count))
+                    }
+                case .Failure(let error):
+                    errors.append(error)
+                    if let progressShowing = progressShowing {
+                        progressShowing.set(progress: Double(results.count + errors.count)/Double(endpoints.count))
+                    }
+                }
+                if (endpoints.count == results.count + errors.count) {
+                    if (errors.isEmpty) {
+                        completion(APIResultArray<T>.Success(results))
+                    } else {
+                        completion(APIResultArray<T>.Failure(results, errors))
+                    }
+                    return 
+                }
+            }
+            usleep(delay)
+        }
     }
 }
 

@@ -17,6 +17,11 @@ enum APIResult<T> {
     case Failure(Error)
 }
 
+enum APIResultArray<T> {
+    case Success([T])
+    case Failure([T], [Error])
+}
+
 protocol Endpoint {
     var baseURL: URL { get }
     var path: String { get }
@@ -75,7 +80,6 @@ extension APIClient {
     
     func fetch<T>(request: URLRequest, parse: @escaping (JSON) -> T?, completion: @escaping (APIResult<T>) -> Void) {
         let task = JSONTaskWithRequest(request: request) { json, response, error in
-            
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {

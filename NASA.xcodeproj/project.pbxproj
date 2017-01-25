@@ -48,6 +48,8 @@
 		A63EC9E61E3106D8001B684D /* FoursquareHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E51E3106D8001B684D /* FoursquareHours.swift */; };
 		A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E71E310A12001B684D /* FoursquareMenu.swift */; };
 		A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */; };
+		A64FEEFA1E38C5190094B54E /* LandsatAssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEEF91E38C5190094B54E /* LandsatAssetTableViewController.swift */; };
+		A64FEEFC1E38D4A80094B54E /* LandsatImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEEFB1E38D4A80094B54E /* LandsatImageViewController.swift */; };
 		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
 		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A65720A71E348A740016E88A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208E1E348A350016E88A /* curiosity.jpg */; };
@@ -75,6 +77,8 @@
 		A6A312951E313403004D88C5 /* FoursquarePhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */; };
 		A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */; };
 		A6C1E9CC1E372C3600EA3BB4 /* UIViewController +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */; };
+		A6C1E9D71E3758E500EA3BB4 /* MKMapView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9D61E3758E500EA3BB4 /* MKMapView +.swift */; };
+		A6C1E9D91E37656100EA3BB4 /* CLPlacemark +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9D81E37656100EA3BB4 /* CLPlacemark +.swift */; };
 		A6C404001E2F46B80069D460 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C403FF1E2F46B80069D460 /* APIClient.swift */; };
 		A6C404031E2F48DD0069D460 /* HTTPStatusCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */; };
 		A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404041E2F494D0069D460 /* NASAAPIClient.swift */; };
@@ -243,6 +247,8 @@
 		A63EC9E51E3106D8001B684D /* FoursquareHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareHours.swift; sourceTree = "<group>"; };
 		A63EC9E71E310A12001B684D /* FoursquareMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareMenu.swift; sourceTree = "<group>"; };
 		A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
+		A64FEEF91E38C5190094B54E /* LandsatAssetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatAssetTableViewController.swift; sourceTree = "<group>"; };
+		A64FEEFB1E38D4A80094B54E /* LandsatImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatImageViewController.swift; sourceTree = "<group>"; };
 		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
 		A657208E1E348A350016E88A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
 		A657208F1E348A350016E88A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
@@ -271,6 +277,8 @@
 		A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquarePhotoHeader.swift; sourceTree = "<group>"; };
 		A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUserHeader.swift; sourceTree = "<group>"; };
 		A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController +.swift"; sourceTree = "<group>"; };
+		A6C1E9D61E3758E500EA3BB4 /* MKMapView +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView +.swift"; sourceTree = "<group>"; };
+		A6C1E9D81E37656100EA3BB4 /* CLPlacemark +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLPlacemark +.swift"; sourceTree = "<group>"; };
 		A6C403FF1E2F46B80069D460 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodeError.swift; sourceTree = "<group>"; };
 		A6C404041E2F494D0069D460 /* NASAAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
@@ -499,6 +507,8 @@
 				A6C4040A1E2F78820069D460 /* String + Date + Bool.swift */,
 				A6333A481E3242C50098171A /* UIImage +.swift */,
 				A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */,
+				A6C1E9D61E3758E500EA3BB4 /* MKMapView +.swift */,
+				A6C1E9D81E37656100EA3BB4 /* CLPlacemark +.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -511,6 +521,8 @@
 				A6333A4F1E3375AB0098171A /* EyeViewController.swift */,
 				A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */,
 				A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */,
+				A64FEEF91E38C5190094B54E /* LandsatAssetTableViewController.swift */,
+				A64FEEFB1E38D4A80094B54E /* LandsatImageViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -749,6 +761,7 @@
 				A6C4040F1E2F7E060069D460 /* LandsatImageAsset.swift in Sources */,
 				A6333A2F1E31A80B0098171A /* FoursquareMeta.swift in Sources */,
 				A6333A351E31AE0F0098171A /* FoursquareTip.swift in Sources */,
+				A64FEEFC1E38D4A80094B54E /* LandsatImageViewController.swift in Sources */,
 				A6C404081E2F6C230069D460 /* APOD.swift in Sources */,
 				A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */,
 				A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */,
@@ -762,6 +775,7 @@
 				A6333A251E31990D0098171A /* FoursquareCheckins.swift in Sources */,
 				A6A3128D1E312D0B004D88C5 /* FoursquareSpecial.swift in Sources */,
 				A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */,
+				A6C1E9D71E3758E500EA3BB4 /* MKMapView +.swift in Sources */,
 				A63EC9DE1E30F8D2001B684D /* FoursquareContact.swift in Sources */,
 				A6C4041E1E2FACF40069D460 /* MarsRoverPhotoManifest.swift in Sources */,
 				A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */,
@@ -777,6 +791,7 @@
 				A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */,
 				A63EC9E41E30FDE4001B684D /* FoursquareLocation.swift in Sources */,
 				A6C404031E2F48DD0069D460 /* HTTPStatusCodeError.swift in Sources */,
+				A64FEEFA1E38C5190094B54E /* LandsatAssetTableViewController.swift in Sources */,
 				A6333A201E3197520098171A /* FoursquareUsers.swift in Sources */,
 				A6C404001E2F46B80069D460 /* APIClient.swift in Sources */,
 				A6A312911E3131A8004D88C5 /* FoursquareHereNow.swift in Sources */,
@@ -786,6 +801,7 @@
 				A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */,
 				A6EAA9D81E348CE2008D742B /* RoversDataSource.swift in Sources */,
 				A6C4040D1E2F7A9C0069D460 /* LandsatImage.swift in Sources */,
+				A6C1E9D91E37656100EA3BB4 /* CLPlacemark +.swift in Sources */,
 				A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */,
 				A6C4041C1E2FABB70069D460 /* MarsRoverPhotoHeader.swift in Sources */,
 				A63EC9E01E30F95D001B684D /* FoursquareCategory.swift in Sources */,

@@ -30,4 +30,8 @@ extension LandsatImage {
     override var debugInfo: String {
         return "\(self): {\n\t\"id\": \(self.id),\n\t\"date\": \(self.date),\n\t\"url\": \(self.url),\n\t\"cloud_score\": \(self.cloud_score)\n}"
     }
+    
+    var securedUrl: URL {
+        return URL(string: self.url.replacingOccurrences(of: "http", with: "https").replacingOccurrences(of: "httpss", with: "https"))!
+    }
 }
