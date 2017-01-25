@@ -14,6 +14,7 @@ enum NASAEndpoints: Endpoint {
     case APOD(date: Date?, hd: Bool?)
     case Earth(EarthEndpoint)
     case Mars(QueryPhoto)
+    case Sounds(search: String, limit: Int?)
     
     var rawValue: String {
         return self.request.description
@@ -158,6 +159,13 @@ enum NASAEndpoints: Endpoint {
             case .Manifest(let rover):
                 return "/mars-photos/api/v1/manifests/\(rover.name)?\(NASAEndpoints.NASA_KEY)"
             }
+        case .Sounds(let search, let limit):
+            var path = "/planetary/sounds?q=\(search)"
+            if let limit = limit {
+                path += "&limit=\(limit)"
+            }
+            path += "&\(NASAEndpoints.NASA_KEY)"
+            return path
         }
     }
     
