@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import Nuke
 
 class LandsatAssetTableViewController: UITableViewController {
     private let cellReuseIdentifier = "LandsatAssetHeaderCell"
@@ -21,7 +22,9 @@ class LandsatAssetTableViewController: UITableViewController {
         guard let asset = self.asset else {
             return []
         }
-        return asset.results
+        return asset.results.sorted(by: { (leftHeader, rightHeader) -> Bool in
+            return leftHeader.date < rightHeader.date
+        })
     }
     
     override func viewDidLoad() {

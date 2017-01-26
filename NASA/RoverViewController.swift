@@ -48,7 +48,7 @@ class RoverViewController: UIViewController {
                 case .Success(let manifest):
                     self.manifests.append(manifest)
                 case .Failure(let error):
-                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingManifest(rover.name, error).message, style: .alert)
+                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingManifest(rover.rawValue, error).message, style: .alert)
                 }
             }
         }
@@ -59,11 +59,13 @@ class RoverViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.pickerView.selectRow(0, inComponent: 0, animated: true)
-        self.currentRover = self.rovers.first
-        self.pickerView.reloadComponent(1)
-        self.pickerView.selectRow(self.cameras.count - 1, inComponent: 1, animated: true)
-        self.currentCamera = self.cameras.last
+        if (self.currentRover == nil) {
+            self.pickerView.selectRow(0, inComponent: 0, animated: true)
+            self.currentRover = self.rovers.first
+            self.pickerView.reloadComponent(1)
+            self.pickerView.selectRow(self.cameras.count - 1, inComponent: 1, animated: true)
+            self.currentCamera = self.cameras.last
+        }
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,14 +92,14 @@ class RoverViewController: UIViewController {
             if let enteredDateText = self.dateTextField.text, let sol = Int(enteredDateText) {
                 if let photoHeader = manifest.getPhotoHeader(for: sol) {
                     text += "Number of pics for entered sol: \(photoHeader.total_photos)\n"
+                } else {
+                    text += "No photos for entered date"
                 }
+            } else {
+                text += "Incorrect date"
             }
             self.manifestLabel.text = text
         }
-    }
-    
-    private func showNumberOfPhotos(for sol: Int) {
-        
     }
 }
 

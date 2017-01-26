@@ -20,6 +20,7 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
     var preheater: Preheater!
     var preheatController: Preheat.Controller<UICollectionView>!
     var dataSource: RoversDataSource!
+    let apiClient = NASAAPIClient(delegate: nil, delegateQueue: nil)
     lazy var activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         indicator.hidesWhenStopped = true
@@ -61,12 +62,8 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
                 let pics = pics,
                 let firstPic = pics.first
                 else {
-                if let error = error {
-                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingImages(rover.name, error).message, style: .alert)
-                } else {
-                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingImages(rover.name, nil).message, style: .alert)
-                }
-                return
+                    self.showAlertAndDismiss(title: MarsRoverError.title, message: MarsRoverError.loadingImages(rover.rawValue, error).message, style: .alert)
+                    return
             }
             if sol != 0 {
                 self.navigationItem.title = "\(pics.count) pics of \(camera) of \(rover.rawValue) taken \(firstPic.earth_date) (Sol: \(sol)):"
@@ -127,7 +124,7 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photo = self.dataSource.pics[indexPath.row]
-        performSegue(withIdentifier: "showRoverPhotoDetails", sender: photo)
+        performSegue(withIdentifier: "showRoverPic", sender: photo)
     }
 }
 

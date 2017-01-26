@@ -56,11 +56,11 @@ extension UIViewController {
 
     func showAlertAndDismiss(title: String, message: String, style: UIAlertControllerStyle) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true) {
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
             self.dismiss(animated: true)
         }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func dismiss(animated: Bool) {

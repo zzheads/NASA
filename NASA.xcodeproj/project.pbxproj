@@ -56,6 +56,8 @@
 		A64FEF051E39CE880094B54E /* APODError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF041E39CE880094B54E /* APODError.swift */; };
 		A64FEF071E39D24A0094B54E /* MarsRoverError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF061E39D24A0094B54E /* MarsRoverError.swift */; };
 		A64FEF091E39D8860094B54E /* LandsatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF081E39D8860094B54E /* LandsatError.swift */; };
+		A64FEF111E39DCEB0094B54E /* NASATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF101E39DCEB0094B54E /* NASATests.swift */; };
+		A64FEF191E3A94C30094B54E /* ErrorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF181E3A94C30094B54E /* ErrorCase.swift */; };
 		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
 		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A65720A71E348A740016E88A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208E1E348A350016E88A /* curiosity.jpg */; };
@@ -124,6 +126,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0CD20B141CA45C1E006BA4B9;
 			remoteInfo = "Preheat iOS";
+		};
+		A64FEF131E39DCEB0094B54E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A697865D1E2EC8EB009CE3B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A69786641E2EC8EB009CE3B2;
+			remoteInfo = NASA;
 		};
 		A657204E1E3484890016E88A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -261,6 +270,10 @@
 		A64FEF041E39CE880094B54E /* APODError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODError.swift; sourceTree = "<group>"; };
 		A64FEF061E39D24A0094B54E /* MarsRoverError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverError.swift; sourceTree = "<group>"; };
 		A64FEF081E39D8860094B54E /* LandsatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatError.swift; sourceTree = "<group>"; };
+		A64FEF0E1E39DCEA0094B54E /* NASATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64FEF101E39DCEB0094B54E /* NASATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASATests.swift; sourceTree = "<group>"; };
+		A64FEF121E39DCEB0094B54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A64FEF181E3A94C30094B54E /* ErrorCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCase.swift; sourceTree = "<group>"; };
 		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
 		A657208E1E348A350016E88A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
 		A657208F1E348A350016E88A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
@@ -310,6 +323,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A64FEF0B1E39DCEA0094B54E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69786621E2EC8EB009CE3B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +428,15 @@
 			name = SpaceSound;
 			sourceTree = "<group>";
 		};
+		A64FEF0F1E39DCEB0094B54E /* NASATests */ = {
+			isa = PBXGroup;
+			children = (
+				A64FEF101E39DCEB0094B54E /* NASATests.swift */,
+				A64FEF121E39DCEB0094B54E /* Info.plist */,
+			);
+			path = NASATests;
+			sourceTree = "<group>";
+		};
 		A65720431E3484890016E88A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +489,7 @@
 				A69786661E2EC8EB009CE3B2 /* Products */,
 				A6333A2D1E319F660098171A /* Frameworks */,
 				A657209A1E348A350016E88A /* Resources */,
+				A64FEF0F1E39DCEB0094B54E /* NASATests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -467,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				A69786651E2EC8EB009CE3B2 /* NASA.app */,
+				A64FEF0E1E39DCEA0094B54E /* NASATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -562,6 +593,7 @@
 				A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */,
 				A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */,
 				A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */,
+				A64FEF181E3A94C30094B54E /* ErrorCase.swift */,
 			);
 			name = MarsRover;
 			sourceTree = "<group>";
@@ -587,6 +619,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A64FEF0D1E39DCEA0094B54E /* NASATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A64FEF151E39DCEB0094B54E /* Build configuration list for PBXNativeTarget "NASATests" */;
+			buildPhases = (
+				A64FEF0A1E39DCEA0094B54E /* Sources */,
+				A64FEF0B1E39DCEA0094B54E /* Frameworks */,
+				A64FEF0C1E39DCEA0094B54E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A64FEF141E39DCEB0094B54E /* PBXTargetDependency */,
+			);
+			name = NASATests;
+			productName = NASATests;
+			productReference = A64FEF0E1E39DCEA0094B54E /* NASATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A69786641E2EC8EB009CE3B2 /* NASA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69786771E2EC8EB009CE3B2 /* Build configuration list for PBXNativeTarget "NASA" */;
@@ -617,6 +667,12 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = zzheads;
 				TargetAttributes = {
+					A64FEF0D1E39DCEA0094B54E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RS93W547X8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A69786641E2EC8EB009CE3B2;
+					};
 					A69786641E2EC8EB009CE3B2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = RS93W547X8;
@@ -648,6 +704,7 @@
 			projectRoot = "";
 			targets = (
 				A69786641E2EC8EB009CE3B2 /* NASA */,
+				A64FEF0D1E39DCEA0094B54E /* NASATests */,
 			);
 		};
 /* End PBXProject section */
@@ -733,6 +790,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A64FEF0C1E39DCEA0094B54E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69786631E2EC8EB009CE3B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -759,6 +823,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A64FEF0A1E39DCEA0094B54E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64FEF111E39DCEB0094B54E /* NASATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69786611E2EC8EB009CE3B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -816,6 +888,7 @@
 				A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */,
 				A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */,
 				A6C4040B1E2F78820069D460 /* String + Date + Bool.swift in Sources */,
+				A64FEF191E3A94C30094B54E /* ErrorCase.swift in Sources */,
 				A64FEF071E39D24A0094B54E /* MarsRoverError.swift in Sources */,
 				A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */,
 				A6333A0E1E3187680098171A /* ForesquareFollowers.swift in Sources */,
@@ -848,6 +921,11 @@
 			name = "Preheat iOS";
 			targetProxy = A61497441E366C1500690D31 /* PBXContainerItemProxy */;
 		};
+		A64FEF141E39DCEB0094B54E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A69786641E2EC8EB009CE3B2 /* NASA */;
+			targetProxy = A64FEF131E39DCEB0094B54E /* PBXContainerItemProxy */;
+		};
 		A65720631E34857D0016E88A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Nuke iOS";
@@ -875,6 +953,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A64FEF161E39DCEB0094B54E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = RS93W547X8;
+				INFOPLIST_FILE = NASATests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.NASATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA.app/NASA";
+			};
+			name = Debug;
+		};
+		A64FEF171E39DCEB0094B54E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = RS93W547X8;
+				INFOPLIST_FILE = NASATests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.NASATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA.app/NASA";
+			};
+			name = Release;
+		};
 		A69786751E2EC8EB009CE3B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1011,6 +1119,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A64FEF151E39DCEB0094B54E /* Build configuration list for PBXNativeTarget "NASATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A64FEF161E39DCEB0094B54E /* Debug */,
+				A64FEF171E39DCEB0094B54E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A69786601E2EC8EB009CE3B2 /* Build configuration list for PBXProject "NASA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

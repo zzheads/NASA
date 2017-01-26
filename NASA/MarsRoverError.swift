@@ -24,8 +24,12 @@ enum MarsRoverError: Error {
         case .savingError(let error): return "Can not save an image, error: \(error)"
         case .noInfo: return "Can not load images: insufficient information, you have to choose rover and sol"
         case .loadingImages(let rover, let error):
-            if let error = error {
-                return "Loading images for \(rover) rover error: \(error)"
+            if let error = error as? NSError {
+                if let failureReason = error.localizedFailureReason {
+                    return "Loading images for \(rover) rover error: \(failureReason)"
+                } else {
+                    return "Loading images for \(rover) rover error: \(error.localizedDescription)"
+                }
             } else {
                 return "Unknown error loading images for \(rover) rover"
             }

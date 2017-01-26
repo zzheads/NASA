@@ -185,11 +185,9 @@ final class NASAAPIClient: NSObject, APIClient {
     let configuration: URLSessionConfiguration
     let delegate: URLSessionDelegate?
     let delegateQueue: OperationQueue?
-    var response: URLResponse?
     
     lazy var session: URLSession = {
-        let queue = OperationQueue.main
-        let session = URLSession(configuration: self.configuration, delegate: self, delegateQueue: queue)
+        let session = URLSession(configuration: self.configuration, delegate: self.delegate, delegateQueue: self.delegateQueue)
         return session
     }()
     
@@ -205,6 +203,7 @@ final class NASAAPIClient: NSObject, APIClient {
     
     func fetch<T>(endpoint: NASAEndpoints, completion: @escaping (APIResult<T>) -> Void) where T: JSONDecodable {
         fetch(request: endpoint.request, parse: { json -> T? in return T(with: json) }, completion: completion)
+        print("Fetching \(endpoint.request) to \(T.self)")
     }
 
     func fetch<T>(endpoints: [NASAEndpoints], delay: UInt32, progressShowing: ProgressShowing?, completion: @escaping (APIResultArray<T>) -> Void) where T: JSONDecodable {
@@ -212,7 +211,6 @@ final class NASAAPIClient: NSObject, APIClient {
         var errors: [Error] = []
         
         for endpoint in endpoints {
-            print("Sending request: \(endpoint.request)...")
             fetch(endpoint: endpoint) { (result: APIResult<T>) in
                 switch result {
                 case .Success(let item):
@@ -239,14 +237,6 @@ final class NASAAPIClient: NSObject, APIClient {
         }
     }
 }
-
-extension NASAAPIClient: URLSessionDelegate {
-    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Swift.Void) {
-        self.response = response
-        print("\(response)")
-    }
-}
-
 
 
 

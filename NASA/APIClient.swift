@@ -67,8 +67,23 @@ extension APIClient {
                     if let err = HTTPStatusCodeError(rawValue: HTTPResponse.statusCode) {
                         httpError = err
                     }
+                    var userInfo = [NSLocalizedDescriptionKey: NSLocalizedString(httpError.description, comment: "")]
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject]
+                        if let json = json {
+                            if let errorCase = ErrorCase(with: json) {
+                                if let reason = errorCase.errors {
+                                    userInfo.updateValue(reason, forKey: NSLocalizedFailureReasonErrorKey)
+                                }
+                                if let reason = errorCase.msg {
+                                    userInfo.updateValue(reason, forKey: NSLocalizedFailureReasonErrorKey)
+                                }
+                            }
+                        }
+                    } catch {
+                        print("\(error)")
+                    }
                     
-                    let userInfo = [NSLocalizedDescriptionKey: NSLocalizedString(httpError.description, comment: "")]
                     let error = NSError(domain: ZZHNetworkingErrorDomain, code: httpError.rawValue, userInfo: userInfo)
                     completion(nil, HTTPResponse, error)
                     return
