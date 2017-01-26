@@ -38,7 +38,7 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
             ])
         self.activityIndicator.startAnimating()
         self.navigationItem.title = "Pics Downloading..."
-        self.dataSource = RoversDataSource(collectionView: self.collectionView!)
+        self.dataSource = RoversDataSource(collectionView: self.collectionView!, delegate: nil)
         self.collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ipad_background_port_x2"))
         preheater = Preheater()
         preheatController = Preheat.Controller(view: collectionView!)
@@ -53,7 +53,7 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
             let sol = self.sol,
             let camera = self.camera
             else {
-                self.showAlert(title: "Loading images error", message: "Insufficient information, you have to choose rover and sol. Can not load images.", style: .alert)
+                self.showAlert(title: MarsRoverError.title, message: MarsRoverError.noInfo.message, style: .alert)
                 return
         }
         self.dataSource.fetchPics(for: rover, sol: sol, camera: camera) { (pics, error) in
@@ -62,9 +62,9 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
                 let firstPic = pics.first
                 else {
                 if let error = error {
-                    self.showAlert(title: "Loading images for \(rover) rover", message: "\(error)", style: .alert)
+                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingImages(rover.name, error).message, style: .alert)
                 } else {
-                    self.showAlert(title: "Loading images for \(rover) rover", message: "Unknown error", style: .alert)
+                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingImages(rover.name, nil).message, style: .alert)
                 }
                 return
             }

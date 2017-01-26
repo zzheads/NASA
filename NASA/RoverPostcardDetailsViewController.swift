@@ -36,7 +36,7 @@ extension RoverPostcardDetailsViewController {
         if let image = self.imageView.image {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
         } else {
-            self.showAlert(title: "Save error", message: "There is nothing to save", style: .alert)
+            self.showAlert(title: MarsRoverError.title, message: MarsRoverError.nothingToSave.message, style: .alert)
         }
     }
     
@@ -86,6 +86,6 @@ extension RoverPostcardDetailsViewController {
             }
             return
         }
-        self.showAlert(title: "Error saving", message: "Can not save an image, error: \(error)", style: .alert)
+        self.showAlert(title: MarsRoverError.title, message: MarsRoverError.savingError(error).message, style: .alert)
     }
 }

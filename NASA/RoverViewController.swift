@@ -15,7 +15,7 @@ class RoverViewController: UIViewController {
     @IBOutlet weak var roverImageView: UIImageView!
     @IBOutlet weak var manifestLabel: UILabel!
     
-    let apiClient = NASAAPIClient()
+    let apiClient = NASAAPIClient(delegate: nil, delegateQueue: nil)
     let rovers: [NASAEndpoints.Rover] = [.Curiosity, .Opportunity, .Spirit]
     var manifests: [MarsRoverPhotoManifest] = [] {
         didSet {
@@ -48,7 +48,7 @@ class RoverViewController: UIViewController {
                 case .Success(let manifest):
                     self.manifests.append(manifest)
                 case .Failure(let error):
-                    self.showAlert(title: "Loading Rover \(rover) Manifest", message: "\(error)", style: .alert)
+                    self.showAlert(title: MarsRoverError.title, message: MarsRoverError.loadingManifest(rover.name, error).message, style: .alert)
                 }
             }
         }
@@ -65,7 +65,7 @@ class RoverViewController: UIViewController {
         self.pickerView.selectRow(self.cameras.count - 1, inComponent: 1, animated: true)
         self.currentCamera = self.cameras.last
     }
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "getPhotos") {
             let collectionViewController = segue.destination as! RoverPhotosCollectionViewController
@@ -101,7 +101,6 @@ class RoverViewController: UIViewController {
     }
 }
 
-// MARK: - Handle Events
 extension RoverViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2

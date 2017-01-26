@@ -16,7 +16,7 @@ class LandsatAssetTableViewController: UITableViewController {
     var placemarkName: String?
     var addressName: String?
     var asset: LandsatImageAsset?
-    let apiClient = NASAAPIClient()
+    let apiClient = NASAAPIClient(delegate: nil, delegateQueue: nil)
     var headers: [LandsatImageHeader] {
         guard let asset = self.asset else {
             return []
@@ -47,7 +47,7 @@ class LandsatAssetTableViewController: UITableViewController {
                 self.tableView.reloadData()
                 
             case .Failure(let error):
-                self.showAlertAndDismiss(title: "Loading asset for \(self.location) error", message: "\(error)", style: .alert)
+                self.showAlertAndDismiss(title: LandsatError.title, message: LandsatError.loadingAsset("\(self.location)", error).message, style: .alert)
             }
         }
     }

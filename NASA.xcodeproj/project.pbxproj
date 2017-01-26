@@ -33,7 +33,7 @@
 		A6333A451E3203B20098171A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A441E3203B20098171A /* LocationManager.swift */; };
 		A6333A471E321B9B0098171A /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A461E321B9B0098171A /* APODViewController.swift */; };
 		A6333A491E3242C50098171A /* UIImage +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A481E3242C50098171A /* UIImage +.swift */; };
-		A6333A4C1E324B780098171A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4B1E324B780098171A /* AppColor.swift */; };
+		A6333A4C1E324B780098171A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4B1E324B780098171A /* AppConstants.swift */; };
 		A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4D1E3374AA0098171A /* RoverViewController.swift */; };
 		A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4F1E3375AB0098171A /* EyeViewController.swift */; };
 		A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */; };
@@ -53,6 +53,9 @@
 		A64FEEFF1E38DEC40094B54E /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEEFE1E38DEC40094B54E /* Sound.swift */; };
 		A64FEF011E38E43F0094B54E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF001E38E43F0094B54E /* Response.swift */; };
 		A64FEF031E38E5670094B54E /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF021E38E5670094B54E /* SoundsViewController.swift */; };
+		A64FEF051E39CE880094B54E /* APODError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF041E39CE880094B54E /* APODError.swift */; };
+		A64FEF071E39D24A0094B54E /* MarsRoverError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF061E39D24A0094B54E /* MarsRoverError.swift */; };
+		A64FEF091E39D8860094B54E /* LandsatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF081E39D8860094B54E /* LandsatError.swift */; };
 		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
 		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A65720A71E348A740016E88A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208E1E348A350016E88A /* curiosity.jpg */; };
@@ -235,7 +238,7 @@
 		A6333A441E3203B20098171A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A6333A461E321B9B0098171A /* APODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
 		A6333A481E3242C50098171A /* UIImage +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage +.swift"; sourceTree = "<group>"; };
-		A6333A4B1E324B780098171A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		A6333A4B1E324B780098171A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		A6333A4D1E3374AA0098171A /* RoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverViewController.swift; sourceTree = "<group>"; };
 		A6333A4F1E3375AB0098171A /* EyeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeViewController.swift; sourceTree = "<group>"; };
 		A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverResponseWithArray.swift; sourceTree = "<group>"; };
@@ -255,6 +258,9 @@
 		A64FEEFE1E38DEC40094B54E /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		A64FEF001E38E43F0094B54E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A64FEF021E38E5670094B54E /* SoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		A64FEF041E39CE880094B54E /* APODError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODError.swift; sourceTree = "<group>"; };
+		A64FEF061E39D24A0094B54E /* MarsRoverError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverError.swift; sourceTree = "<group>"; };
+		A64FEF081E39D8860094B54E /* LandsatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatError.swift; sourceTree = "<group>"; };
 		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
 		A657208E1E348A350016E88A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
 		A657208F1E348A350016E88A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
@@ -345,7 +351,7 @@
 		A6333A4A1E324B670098171A /* AppConstants */ = {
 			isa = PBXGroup;
 			children = (
-				A6333A4B1E324B780098171A /* AppColor.swift */,
+				A6333A4B1E324B780098171A /* AppConstants.swift */,
 			);
 			name = AppConstants;
 			sourceTree = "<group>";
@@ -499,6 +505,9 @@
 			isa = PBXGroup;
 			children = (
 				A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */,
+				A64FEF041E39CE880094B54E /* APODError.swift */,
+				A64FEF061E39D24A0094B54E /* MarsRoverError.swift */,
+				A64FEF081E39D8860094B54E /* LandsatError.swift */,
 			);
 			name = Errors;
 			sourceTree = "<group>";
@@ -760,6 +769,7 @@
 				A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */,
 				A6EAA9E21E34AB36008D742B /* RoverPostcardDetailsViewController.swift in Sources */,
 				A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */,
+				A64FEF091E39D8860094B54E /* LandsatError.swift in Sources */,
 				A6C404131E2F87770069D460 /* JSON.swift in Sources */,
 				A63EC9E61E3106D8001B684D /* FoursquareHours.swift in Sources */,
 				A6333A491E3242C50098171A /* UIImage +.swift in Sources */,
@@ -767,7 +777,7 @@
 				A6333A1E1E3196A80098171A /* FoursquareComments.swift in Sources */,
 				A6333A181E3193780098171A /* FoursquarePhotos.swift in Sources */,
 				A6A3128B1E3122F9004D88C5 /* FoursquarePrice.swift in Sources */,
-				A6333A4C1E324B780098171A /* AppColor.swift in Sources */,
+				A6333A4C1E324B780098171A /* AppConstants.swift in Sources */,
 				A6333A1C1E3195480098171A /* FoursquareCheckin.swift in Sources */,
 				A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */,
 				A6C404111E2F7E580069D460 /* LandsatImageHeader.swift in Sources */,
@@ -802,9 +812,11 @@
 				A64FEF011E38E43F0094B54E /* Response.swift in Sources */,
 				A6333A101E318ACA0098171A /* FoursquareUser.swift in Sources */,
 				A64FEEFF1E38DEC40094B54E /* Sound.swift in Sources */,
+				A64FEF051E39CE880094B54E /* APODError.swift in Sources */,
 				A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */,
 				A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */,
 				A6C4040B1E2F78820069D460 /* String + Date + Bool.swift in Sources */,
+				A64FEF071E39D24A0094B54E /* MarsRoverError.swift in Sources */,
 				A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */,
 				A6333A0E1E3187680098171A /* ForesquareFollowers.swift in Sources */,
 				A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */,

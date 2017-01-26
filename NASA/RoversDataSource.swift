@@ -13,7 +13,7 @@ import UIKit
 class RoversDataSource: NSObject {
     let cellReuseIdentifier = "RoverPhotoCell"
     
-    let apiClient = NASAAPIClient()
+    var apiClient: NASAAPIClient!
     var rovers: [NASAEndpoints.Rover] = [.Curiosity, .Opportunity, .Spirit]
     var validDates: [NASAEndpoints.Rover: [Int]] = [:]
     var pics: [MarsRoverPhoto] = [] {
@@ -23,14 +23,15 @@ class RoversDataSource: NSObject {
     }
     let collectionView: UICollectionView
     
-    init(collectionView: UICollectionView) {
+    init(collectionView: UICollectionView, delegate: URLSessionDelegate?) {
         self.collectionView = collectionView
         super.init()
         self.collectionView.dataSource = self
+        self.apiClient = NASAAPIClient(delegate: delegate, delegateQueue: nil)
     }
     
     func fetchPics(for rover: NASAEndpoints.Rover, sol: Int, camera: NASAEndpoints.Rover.Camera?, completionHandler: (([MarsRoverPhoto]?, Error?) -> Void)?) {
-        apiClient.fetch(endpoint: .Mars(.Sol(rover, sol: sol, camera: camera))) { (result: APIResult<MarsRoverResponseWithArray<MarsRoverPhoto>>) in
+        self.apiClient.fetch(endpoint: .Mars(.Sol(rover, sol: sol, camera: camera))) { (result: APIResult<MarsRoverResponseWithArray<MarsRoverPhoto>>) in
             switch result {
             case .Success(let response):
                 self.pics = response.results

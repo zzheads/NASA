@@ -26,7 +26,7 @@ class LandsatImageViewController: UIViewController {
         return "Landsat8Image of (\(location.latitude),\(location.longitude)) taken \(date.toShortLocalString)"
     }
     
-    let apiClient = NASAAPIClient()
+    let apiClient = NASAAPIClient(delegate: nil, delegateQueue: nil)
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -42,7 +42,7 @@ class LandsatImageViewController: UIViewController {
             let header = self.header,
             let location = self.location
             else {
-                self.showAlertAndDismiss(title: "Loading Landsat8 Image error", message: "Can not load image, DO NOT get any location and date.", style: .alert)
+                self.showAlertAndDismiss(title: LandsatError.title, message: LandsatError.noInfo.message, style: .alert)
                 return
         }
         let endpoint = NASAEndpoints.Earth(NASAEndpoints.EarthEndpoint.Imagery(location, header.dateWithoutTime, false))
@@ -52,7 +52,7 @@ class LandsatImageViewController: UIViewController {
                 Nuke.loadImage(with: image.securedUrl, into: self.imageView)
                 self.navigationItem.title = self.picTitle
             case .Failure(let error):
-                self.showAlertAndDismiss(title: "Loading image error", message: "\(error)", style: .alert)
+                self.showAlertAndDismiss(title: LandsatError.title, message: LandsatError.loadingImage(error).message, style: .alert)
             }
         }
     }
@@ -64,7 +64,7 @@ extension LandsatImageViewController {
         if let image = self.imageView.image {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
         } else {
-            self.showAlert(title: "Save error", message: "There is nothing to save", style: .alert)
+            self.showAlert(title: LandsatError.title, message: LandsatError.nothingToSave.message, style: .alert)
         }
     }
     
@@ -87,6 +87,6 @@ extension LandsatImageViewController {
             self.showAlert(title: "Image saved", message: "\(self.picTitle) successfully saved in photo library.", style: .actionSheet, sender: self.imageView)
             return
         }
-        self.showAlert(title: "Error saving", message: "Can not save an image, error: \(error)", style: .alert)
+        self.showAlert(title: LandsatError.title, message: LandsatError.savingImage(error).message, style: .alert)
     }
 }

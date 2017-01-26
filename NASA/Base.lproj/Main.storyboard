@@ -23,7 +23,7 @@
                 <navigationController id="m7U-09-392" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" id="BWp-gg-Ccq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="BWp-gg-Ccq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -372,7 +372,7 @@
         <scene sceneID="reY-It-ZSA">
             <objects>
                 <collectionViewController id="I0v-vS-5xY" customClass="RoverPhotosCollectionViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="3Gv-q5-3A1">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3Gv-q5-3A1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.071670390665531158" green="0.05870046466588974" blue="0.16767171025276184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -391,7 +391,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
                                 <connections>
-                                    <segue destination="86x-iW-QA6" kind="show" identifier="showRoverPhotoDetails" id="CqO-V4-q7i"/>
+                                    <segue destination="86x-iW-QA6" kind="show" identifier="showRoverPic" id="gbX-wc-iTv"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

@@ -12,7 +12,7 @@ import AVFoundation
 
 class SoundsViewController: UIViewController {
     fileprivate let cellReuseIdentifier = "SoundCell"
-    let apiClient = NASAAPIClient()
+    let apiClient = NASAAPIClient(delegate: nil, delegateQueue: nil)
     var sounds: [Sound] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!

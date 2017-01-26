@@ -16,7 +16,6 @@ enum HTTPStatusCodeError: Int, Error {
     case NotModified = 304
     case UseProxy = 305
     case TemporaryRedirect = 307
-    
     case BadRequest = 400
     case Unauthorized = 401
     case PaymentRequired = 402
@@ -47,7 +46,6 @@ enum HTTPStatusCodeError: Int, Error {
     case NotStandartCode = 444
     case RetryWith = 449
     case UnavailableForLegalReasons = 451
-    
     case InternalServerError = 500
     case NotImplemented = 501
     case BadGateway = 502
@@ -60,7 +58,6 @@ enum HTTPStatusCodeError: Int, Error {
     case BandwidthLimitExceeded = 509
     case NotExtended = 510
     case NetworkAuthenticationRequired = 511
-    
     case UnknownHTTPStatusCode = 1000
     
     var description: String {
@@ -72,7 +69,6 @@ enum HTTPStatusCodeError: Int, Error {
         case .NotModified: return "Not Modified"
         case .UseProxy: return "Use Proxy"
         case .TemporaryRedirect: return "Temporary Redirect"
-            
         case .BadRequest: return "Bad Request"
         case .Unauthorized: return "Unauthorized"
         case .PaymentRequired: return "Payment Required"
@@ -103,7 +99,6 @@ enum HTTPStatusCodeError: Int, Error {
         case .NotStandartCode: return "Not Standart Code"
         case .RetryWith: return "Retry With"
         case .UnavailableForLegalReasons: return "Unavailable For Legal Reasons"
-            
         case .InternalServerError: return "Internal Server Error"
         case .NotImplemented: return "Not Implemented"
         case .BadGateway: return "Bad Gateway"
@@ -116,7 +111,6 @@ enum HTTPStatusCodeError: Int, Error {
         case .BandwidthLimitExceeded: return "Bandwidth Limit Exceeded"
         case .NotExtended: return "Not Extended"
         case .NetworkAuthenticationRequired: return "Network Authentication Required"
-            
         case .UnknownHTTPStatusCode: return "Unknown HTTPS Status Code"
         }
     }

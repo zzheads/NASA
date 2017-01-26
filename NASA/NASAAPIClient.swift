@@ -181,19 +181,26 @@ protocol ProgressShowing {
     func update<T>(newItem: T) where T: JSONDecodable
 }
 
-final class NASAAPIClient: APIClient {
-    
+final class NASAAPIClient: NSObject, APIClient {
     let configuration: URLSessionConfiguration
+    let delegate: URLSessionDelegate?
+    let delegateQueue: OperationQueue?
+    var response: URLResponse?
+    
     lazy var session: URLSession = {
-        return URLSession(configuration: self.configuration)
+        let queue = OperationQueue.main
+        let session = URLSession(configuration: self.configuration, delegate: self, delegateQueue: queue)
+        return session
     }()
     
-    init(config: URLSessionConfiguration) {
+    init(config: URLSessionConfiguration, delegate: URLSessionDelegate?, delegateQueue: OperationQueue?) {
         self.configuration = config
+        self.delegate = delegate
+        self.delegateQueue = delegateQueue
     }
     
-    convenience init() {
-        self.init(config: .default)
+    convenience init(delegate: URLSessionDelegate?, delegateQueue: OperationQueue?) {
+        self.init(config: .default, delegate: delegate, delegateQueue: delegateQueue)
     }
     
     func fetch<T>(endpoint: NASAEndpoints, completion: @escaping (APIResult<T>) -> Void) where T: JSONDecodable {
@@ -233,6 +240,12 @@ final class NASAAPIClient: APIClient {
     }
 }
 
+extension NASAAPIClient: URLSessionDelegate {
+    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Swift.Void) {
+        self.response = response
+        print("\(response)")
+    }
+}
 
 
 
