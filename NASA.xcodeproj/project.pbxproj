@@ -1,0 +1,1155 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */; };
+		A61497421E366C1500690D31 /* Preheat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A614973F1E366BFE00690D31 /* Preheat.framework */; };
+		A61497431E366C1500690D31 /* Preheat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A614973F1E366BFE00690D31 /* Preheat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A051E3181300098171A /* FoursquareTipsHeader.swift */; };
+		A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A071E3181ED0098171A /* FoursquareTips.swift */; };
+		A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A091E31838E0098171A /* FoursquareTipsItem.swift */; };
+		A6333A0C1E3187330098171A /* ForesquareFollowersHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A0B1E3187330098171A /* ForesquareFollowersHeader.swift */; };
+		A6333A0E1E3187680098171A /* ForesquareFollowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A0D1E3187680098171A /* ForesquareFollowers.swift */; };
+		A6333A101E318ACA0098171A /* FoursquareUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A0F1E318ACA0098171A /* FoursquareUser.swift */; };
+		A6333A121E318C090098171A /* FoursquareListMayorships.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A111E318C090098171A /* FoursquareListMayorships.swift */; };
+		A6333A141E318DA00098171A /* FoursquarePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A131E318DA00098171A /* FoursquarePhoto.swift */; };
+		A6333A161E318FE70098171A /* FoursquareCheckinHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A151E318FE70098171A /* FoursquareCheckinHeader.swift */; };
+		A6333A181E3193780098171A /* FoursquarePhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A171E3193780098171A /* FoursquarePhotos.swift */; };
+		A6333A1A1E3194510098171A /* FoursquareScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A191E3194510098171A /* FoursquareScores.swift */; };
+		A6333A1C1E3195480098171A /* FoursquareCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A1B1E3195480098171A /* FoursquareCheckin.swift */; };
+		A6333A1E1E3196A80098171A /* FoursquareComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A1D1E3196A80098171A /* FoursquareComments.swift */; };
+		A6333A201E3197520098171A /* FoursquareUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A1F1E3197520098171A /* FoursquareUsers.swift */; };
+		A6333A231E3197C70098171A /* FoursquareGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A221E3197C70098171A /* FoursquareGroups.swift */; };
+		A6333A251E31990D0098171A /* FoursquareCheckins.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A241E31990D0098171A /* FoursquareCheckins.swift */; };
+		A6333A2F1E31A80B0098171A /* FoursquareMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A2E1E31A80B0098171A /* FoursquareMeta.swift */; };
+		A6333A311E31AB8D0098171A /* FoursquareNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */; };
+		A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */; };
+		A6333A351E31AE0F0098171A /* FoursquareTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A341E31AE0F0098171A /* FoursquareTip.swift */; };
+		A6333A451E3203B20098171A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A441E3203B20098171A /* LocationManager.swift */; };
+		A6333A471E321B9B0098171A /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A461E321B9B0098171A /* APODViewController.swift */; };
+		A6333A491E3242C50098171A /* UIImage +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A481E3242C50098171A /* UIImage +.swift */; };
+		A6333A4C1E324B780098171A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4B1E324B780098171A /* AppConstants.swift */; };
+		A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4D1E3374AA0098171A /* RoverViewController.swift */; };
+		A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A4F1E3375AB0098171A /* EyeViewController.swift */; };
+		A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */; };
+		A6333A661E339B660098171A /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6333A651E339B660098171A /* Responsable.swift */; };
+		A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */; };
+		A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */; };
+		A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DB1E30F809001B684D /* FoursquareStats.swift */; };
+		A63EC9DE1E30F8D2001B684D /* FoursquareContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DD1E30F8D2001B684D /* FoursquareContact.swift */; };
+		A63EC9E01E30F95D001B684D /* FoursquareCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9DF1E30F95D001B684D /* FoursquareCategory.swift */; };
+		A63EC9E21E30FA0B001B684D /* FoursquareIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E11E30FA0B001B684D /* FoursquareIcon.swift */; };
+		A63EC9E41E30FDE4001B684D /* FoursquareLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E31E30FDE4001B684D /* FoursquareLocation.swift */; };
+		A63EC9E61E3106D8001B684D /* FoursquareHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E51E3106D8001B684D /* FoursquareHours.swift */; };
+		A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9E71E310A12001B684D /* FoursquareMenu.swift */; };
+		A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */; };
+		A64FEEFA1E38C5190094B54E /* LandsatAssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEEF91E38C5190094B54E /* LandsatAssetTableViewController.swift */; };
+		A64FEEFC1E38D4A80094B54E /* LandsatImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEEFB1E38D4A80094B54E /* LandsatImageViewController.swift */; };
+		A64FEEFF1E38DEC40094B54E /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEEFE1E38DEC40094B54E /* Sound.swift */; };
+		A64FEF011E38E43F0094B54E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF001E38E43F0094B54E /* Response.swift */; };
+		A64FEF031E38E5670094B54E /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF021E38E5670094B54E /* SoundsViewController.swift */; };
+		A64FEF051E39CE880094B54E /* APODError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF041E39CE880094B54E /* APODError.swift */; };
+		A64FEF071E39D24A0094B54E /* MarsRoverError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF061E39D24A0094B54E /* MarsRoverError.swift */; };
+		A64FEF091E39D8860094B54E /* LandsatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF081E39D8860094B54E /* LandsatError.swift */; };
+		A64FEF111E39DCEB0094B54E /* NASATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF101E39DCEB0094B54E /* NASATests.swift */; };
+		A64FEF191E3A94C30094B54E /* ErrorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF181E3A94C30094B54E /* ErrorCase.swift */; };
+		A64FEF4A1E3B23B40094B54E /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = A64FEF491E3B23B40094B54E /* Screenshots */; };
+		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
+		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A65720A71E348A740016E88A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208E1E348A350016E88A /* curiosity.jpg */; };
+		A65720A81E348A740016E88A /* opportunity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208F1E348A350016E88A /* opportunity.jpg */; };
+		A65720A91E348A740016E88A /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */; };
+		A65720AA1E348A740016E88A /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720911E348A350016E88A /* SanFranciscoDisplay-Bold.otf */; };
+		A65720AB1E348A740016E88A /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720921E348A350016E88A /* SanFranciscoDisplay-Heavy.otf */; };
+		A65720AC1E348A740016E88A /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720931E348A350016E88A /* SanFranciscoDisplay-Light.otf */; };
+		A65720AD1E348A740016E88A /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720941E348A350016E88A /* SanFranciscoDisplay-Medium.otf */; };
+		A65720AE1E348A740016E88A /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720951E348A350016E88A /* SanFranciscoDisplay-Regular.otf */; };
+		A65720AF1E348A740016E88A /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720961E348A350016E88A /* SanFranciscoDisplay-Semibold.otf */; };
+		A65720B01E348A740016E88A /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720971E348A350016E88A /* SanFranciscoDisplay-Thin.otf */; };
+		A65720B11E348A740016E88A /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A65720981E348A350016E88A /* SanFranciscoDisplay-Ultralight.otf */; };
+		A65720B21E348A740016E88A /* spirit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A65720991E348A350016E88A /* spirit.jpg */; };
+		A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */; };
+		A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A697866C1E2EC8EB009CE3B2 /* Main.storyboard */; };
+		A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */; };
+		A69786731E2EC8EB009CE3B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */; };
+		A697867B1E2EC983009CE3B2 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = A697867A1E2EC983009CE3B2 /* README.MD */; };
+		A6A3128B1E3122F9004D88C5 /* FoursquarePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3128A1E3122F9004D88C5 /* FoursquarePrice.swift */; };
+		A6A3128D1E312D0B004D88C5 /* FoursquareSpecial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3128C1E312D0B004D88C5 /* FoursquareSpecial.swift */; };
+		A6A3128F1E312F15004D88C5 /* FoursquareFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3128E1E312F15004D88C5 /* FoursquareFriend.swift */; };
+		A6A312911E3131A8004D88C5 /* FoursquareHereNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312901E3131A8004D88C5 /* FoursquareHereNow.swift */; };
+		A6A312931E3132DC004D88C5 /* FoursquareUserMiniHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312921E3132DC004D88C5 /* FoursquareUserMiniHeader.swift */; };
+		A6A312951E313403004D88C5 /* FoursquarePhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */; };
+		A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */; };
+		A6C1E9CC1E372C3600EA3BB4 /* UIViewController +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */; };
+		A6C1E9D71E3758E500EA3BB4 /* MKMapView +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9D61E3758E500EA3BB4 /* MKMapView +.swift */; };
+		A6C1E9D91E37656100EA3BB4 /* CLPlacemark +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C1E9D81E37656100EA3BB4 /* CLPlacemark +.swift */; };
+		A6C404001E2F46B80069D460 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C403FF1E2F46B80069D460 /* APIClient.swift */; };
+		A6C404031E2F48DD0069D460 /* HTTPStatusCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */; };
+		A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404041E2F494D0069D460 /* NASAAPIClient.swift */; };
+		A6C404081E2F6C230069D460 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404071E2F6C230069D460 /* APOD.swift */; };
+		A6C4040B1E2F78820069D460 /* String + Date + Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4040A1E2F78820069D460 /* String + Date + Bool.swift */; };
+		A6C4040D1E2F7A9C0069D460 /* LandsatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4040C1E2F7A9C0069D460 /* LandsatImage.swift */; };
+		A6C4040F1E2F7E060069D460 /* LandsatImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4040E1E2F7E060069D460 /* LandsatImageAsset.swift */; };
+		A6C404111E2F7E580069D460 /* LandsatImageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404101E2F7E580069D460 /* LandsatImageHeader.swift */; };
+		A6C404131E2F87770069D460 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404121E2F87770069D460 /* JSON.swift */; };
+		A6C404161E2F9B410069D460 /* MarsRoverPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404151E2F9B410069D460 /* MarsRoverPhoto.swift */; };
+		A6C404181E2F9C2B0069D460 /* MarsRoverCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404171E2F9C2B0069D460 /* MarsRoverCamera.swift */; };
+		A6C4041A1E2F9E130069D460 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C404191E2F9E130069D460 /* MarsRover.swift */; };
+		A6C4041C1E2FABB70069D460 /* MarsRoverPhotoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */; };
+		A6C4041E1E2FACF40069D460 /* MarsRoverPhotoManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */; };
+		A6EAA9D81E348CE2008D742B /* RoversDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAA9D71E348CE2008D742B /* RoversDataSource.swift */; };
+		A6EAA9E21E34AB36008D742B /* RoverPostcardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A614973E1E366BFE00690D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CD20B151CA45C1E006BA4B9;
+			remoteInfo = "Preheat iOS";
+		};
+		A61497401E366BFE00690D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C2A20A91CA5A605008C0D4C;
+			remoteInfo = "Preheat tvOS";
+		};
+		A61497441E366C1500690D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CD20B141CA45C1E006BA4B9;
+			remoteInfo = "Preheat iOS";
+		};
+		A64FEF131E39DCEB0094B54E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A697865D1E2EC8EB009CE3B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A69786641E2EC8EB009CE3B2;
+			remoteInfo = NASA;
+		};
+		A657204E1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C9174901BAE99EE004A7905;
+			remoteInfo = "Nuke iOS";
+		};
+		A65720501E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22DA2C1BCAA220006E1D3B;
+			remoteInfo = "Nuke macOS";
+		};
+		A65720521E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22D9C51BCA9734006E1D3B;
+			remoteInfo = "Nuke watchOS";
+		};
+		A65720541E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC345971BD96CFE005C2DD8;
+			remoteInfo = "Nuke tvOS";
+		};
+		A65720561E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C7C06771BCA882A00089D7F;
+			remoteInfo = "Nuke iOS Tests";
+		};
+		A65720581E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22DA381BCAA22A006E1D3B;
+			remoteInfo = "Nuke macOS Tests";
+		};
+		A657205A1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC345A31BD96D2A005C2DD8;
+			remoteInfo = "Nuke tvOS Tests";
+		};
+		A657205C1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BD01D9DBF1600D12EB7;
+			remoteInfo = "Nuke iOS Tests Host";
+		};
+		A657205E1E3484890016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BE81D9DC02B00D12EB7;
+			remoteInfo = "Nuke iOS Performance Tests";
+		};
+		A65720621E34857D0016E88A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C91748F1BAE99EE004A7905;
+			remoteInfo = "Nuke iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A65720641E34857D0016E88A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A61497431E366C1500690D31 /* Preheat.framework in Embed Frameworks */,
+				A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		A61497391E366BFE00690D31 /* Preheat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Preheat.xcodeproj; path = ../Preheat/Preheat.xcodeproj; sourceTree = "<group>"; };
+		A6333A051E3181300098171A /* FoursquareTipsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsHeader.swift; sourceTree = "<group>"; };
+		A6333A071E3181ED0098171A /* FoursquareTips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTips.swift; sourceTree = "<group>"; };
+		A6333A091E31838E0098171A /* FoursquareTipsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipsItem.swift; sourceTree = "<group>"; };
+		A6333A0B1E3187330098171A /* ForesquareFollowersHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForesquareFollowersHeader.swift; sourceTree = "<group>"; };
+		A6333A0D1E3187680098171A /* ForesquareFollowers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForesquareFollowers.swift; sourceTree = "<group>"; };
+		A6333A0F1E318ACA0098171A /* FoursquareUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUser.swift; sourceTree = "<group>"; };
+		A6333A111E318C090098171A /* FoursquareListMayorships.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareListMayorships.swift; sourceTree = "<group>"; };
+		A6333A131E318DA00098171A /* FoursquarePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquarePhoto.swift; sourceTree = "<group>"; };
+		A6333A151E318FE70098171A /* FoursquareCheckinHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareCheckinHeader.swift; sourceTree = "<group>"; };
+		A6333A171E3193780098171A /* FoursquarePhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquarePhotos.swift; sourceTree = "<group>"; };
+		A6333A191E3194510098171A /* FoursquareScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareScores.swift; sourceTree = "<group>"; };
+		A6333A1B1E3195480098171A /* FoursquareCheckin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareCheckin.swift; sourceTree = "<group>"; };
+		A6333A1D1E3196A80098171A /* FoursquareComments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareComments.swift; sourceTree = "<group>"; };
+		A6333A1F1E3197520098171A /* FoursquareUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUsers.swift; sourceTree = "<group>"; };
+		A6333A221E3197C70098171A /* FoursquareGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareGroups.swift; sourceTree = "<group>"; };
+		A6333A241E31990D0098171A /* FoursquareCheckins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareCheckins.swift; sourceTree = "<group>"; };
+		A6333A2E1E31A80B0098171A /* FoursquareMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareMeta.swift; sourceTree = "<group>"; };
+		A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareNotifications.swift; sourceTree = "<group>"; };
+		A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTipHeader.swift; sourceTree = "<group>"; };
+		A6333A341E31AE0F0098171A /* FoursquareTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTip.swift; sourceTree = "<group>"; };
+		A6333A441E3203B20098171A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A6333A461E321B9B0098171A /* APODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
+		A6333A481E3242C50098171A /* UIImage +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage +.swift"; sourceTree = "<group>"; };
+		A6333A4B1E324B780098171A /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		A6333A4D1E3374AA0098171A /* RoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverViewController.swift; sourceTree = "<group>"; };
+		A6333A4F1E3375AB0098171A /* EyeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeViewController.swift; sourceTree = "<group>"; };
+		A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverResponseWithArray.swift; sourceTree = "<group>"; };
+		A6333A651E339B660098171A /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
+		A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPIClient.swift; sourceTree = "<group>"; };
+		A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenueHeader.swift; sourceTree = "<group>"; };
+		A63EC9DB1E30F809001B684D /* FoursquareStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareStats.swift; sourceTree = "<group>"; };
+		A63EC9DD1E30F8D2001B684D /* FoursquareContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareContact.swift; sourceTree = "<group>"; };
+		A63EC9DF1E30F95D001B684D /* FoursquareCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareCategory.swift; sourceTree = "<group>"; };
+		A63EC9E11E30FA0B001B684D /* FoursquareIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareIcon.swift; sourceTree = "<group>"; };
+		A63EC9E31E30FDE4001B684D /* FoursquareLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareLocation.swift; sourceTree = "<group>"; };
+		A63EC9E51E3106D8001B684D /* FoursquareHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareHours.swift; sourceTree = "<group>"; };
+		A63EC9E71E310A12001B684D /* FoursquareMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareMenu.swift; sourceTree = "<group>"; };
+		A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareResponse.swift; sourceTree = "<group>"; };
+		A64FEEF91E38C5190094B54E /* LandsatAssetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatAssetTableViewController.swift; sourceTree = "<group>"; };
+		A64FEEFB1E38D4A80094B54E /* LandsatImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatImageViewController.swift; sourceTree = "<group>"; };
+		A64FEEFE1E38DEC40094B54E /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		A64FEF001E38E43F0094B54E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		A64FEF021E38E5670094B54E /* SoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		A64FEF041E39CE880094B54E /* APODError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODError.swift; sourceTree = "<group>"; };
+		A64FEF061E39D24A0094B54E /* MarsRoverError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverError.swift; sourceTree = "<group>"; };
+		A64FEF081E39D8860094B54E /* LandsatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatError.swift; sourceTree = "<group>"; };
+		A64FEF0E1E39DCEA0094B54E /* NASATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64FEF101E39DCEB0094B54E /* NASATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASATests.swift; sourceTree = "<group>"; };
+		A64FEF121E39DCEB0094B54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A64FEF181E3A94C30094B54E /* ErrorCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCase.swift; sourceTree = "<group>"; };
+		A64FEF491E3B23B40094B54E /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
+		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
+		A657208E1E348A350016E88A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
+		A657208F1E348A350016E88A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
+		A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
+		A65720911E348A350016E88A /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
+		A65720921E348A350016E88A /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		A65720931E348A350016E88A /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
+		A65720941E348A350016E88A /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
+		A65720951E348A350016E88A /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		A65720961E348A350016E88A /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		A65720971E348A350016E88A /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
+		A65720981E348A350016E88A /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		A65720991E348A350016E88A /* spirit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spirit.jpg; sourceTree = "<group>"; };
+		A69786651E2EC8EB009CE3B2 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAppDelegate.swift; sourceTree = "<group>"; };
+		A697866D1E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A69786721E2EC8EB009CE3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A69786741E2EC8EB009CE3B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A697867A1E2EC983009CE3B2 /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		A6A3128A1E3122F9004D88C5 /* FoursquarePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquarePrice.swift; sourceTree = "<group>"; };
+		A6A3128C1E312D0B004D88C5 /* FoursquareSpecial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareSpecial.swift; sourceTree = "<group>"; };
+		A6A3128E1E312F15004D88C5 /* FoursquareFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareFriend.swift; sourceTree = "<group>"; };
+		A6A312901E3131A8004D88C5 /* FoursquareHereNow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareHereNow.swift; sourceTree = "<group>"; };
+		A6A312921E3132DC004D88C5 /* FoursquareUserMiniHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUserMiniHeader.swift; sourceTree = "<group>"; };
+		A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquarePhotoHeader.swift; sourceTree = "<group>"; };
+		A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareUserHeader.swift; sourceTree = "<group>"; };
+		A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController +.swift"; sourceTree = "<group>"; };
+		A6C1E9D61E3758E500EA3BB4 /* MKMapView +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView +.swift"; sourceTree = "<group>"; };
+		A6C1E9D81E37656100EA3BB4 /* CLPlacemark +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLPlacemark +.swift"; sourceTree = "<group>"; };
+		A6C403FF1E2F46B80069D460 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodeError.swift; sourceTree = "<group>"; };
+		A6C404041E2F494D0069D460 /* NASAAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
+		A6C404071E2F6C230069D460 /* APOD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		A6C4040A1E2F78820069D460 /* String + Date + Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Date + Bool.swift"; sourceTree = "<group>"; };
+		A6C4040C1E2F7A9C0069D460 /* LandsatImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatImage.swift; sourceTree = "<group>"; };
+		A6C4040E1E2F7E060069D460 /* LandsatImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatImageAsset.swift; sourceTree = "<group>"; };
+		A6C404101E2F7E580069D460 /* LandsatImageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandsatImageHeader.swift; sourceTree = "<group>"; };
+		A6C404121E2F87770069D460 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		A6C404151E2F9B410069D460 /* MarsRoverPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhoto.swift; sourceTree = "<group>"; };
+		A6C404171E2F9C2B0069D460 /* MarsRoverCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverCamera.swift; sourceTree = "<group>"; };
+		A6C404191E2F9E130069D460 /* MarsRover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
+		A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoHeader.swift; sourceTree = "<group>"; };
+		A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotoManifest.swift; sourceTree = "<group>"; };
+		A6EAA9D71E348CE2008D742B /* RoversDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversDataSource.swift; sourceTree = "<group>"; };
+		A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverPostcardDetailsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A64FEF0B1E39DCEA0094B54E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69786621E2EC8EB009CE3B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A61497421E366C1500690D31 /* Preheat.framework in Frameworks */,
+				A65720601E34857D0016E88A /* Nuke.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A614973A1E366BFE00690D31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A614973F1E366BFE00690D31 /* Preheat.framework */,
+				A61497411E366BFE00690D31 /* Preheat.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6333A2D1E319F660098171A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A61497391E366BFE00690D31 /* Preheat.xcodeproj */,
+				A65720421E3484890016E88A /* Nuke.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6333A431E3203A20098171A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A441E3203B20098171A /* LocationManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		A6333A4A1E324B670098171A /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A4B1E324B780098171A /* AppConstants.swift */,
+			);
+			name = AppConstants;
+			sourceTree = "<group>";
+		};
+		A63EC9D81E30F6DC001B684D /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				A63EC9D91E30F6F0001B684D /* FoursquareVenueHeader.swift */,
+				A63EC9DB1E30F809001B684D /* FoursquareStats.swift */,
+				A63EC9DD1E30F8D2001B684D /* FoursquareContact.swift */,
+				A63EC9DF1E30F95D001B684D /* FoursquareCategory.swift */,
+				A63EC9E11E30FA0B001B684D /* FoursquareIcon.swift */,
+				A63EC9E31E30FDE4001B684D /* FoursquareLocation.swift */,
+				A63EC9E51E3106D8001B684D /* FoursquareHours.swift */,
+				A63EC9E71E310A12001B684D /* FoursquareMenu.swift */,
+				A63EC9EA1E3110F1001B684D /* FoursquareResponse.swift */,
+				A6A3128A1E3122F9004D88C5 /* FoursquarePrice.swift */,
+				A6A3128C1E312D0B004D88C5 /* FoursquareSpecial.swift */,
+				A6A3128E1E312F15004D88C5 /* FoursquareFriend.swift */,
+				A6A312901E3131A8004D88C5 /* FoursquareHereNow.swift */,
+				A6A312921E3132DC004D88C5 /* FoursquareUserMiniHeader.swift */,
+				A6A312941E313403004D88C5 /* FoursquarePhotoHeader.swift */,
+				A6A312961E317EB3004D88C5 /* FoursquareUserHeader.swift */,
+				A6333A051E3181300098171A /* FoursquareTipsHeader.swift */,
+				A6333A071E3181ED0098171A /* FoursquareTips.swift */,
+				A6333A091E31838E0098171A /* FoursquareTipsItem.swift */,
+				A6333A0B1E3187330098171A /* ForesquareFollowersHeader.swift */,
+				A6333A0D1E3187680098171A /* ForesquareFollowers.swift */,
+				A6333A0F1E318ACA0098171A /* FoursquareUser.swift */,
+				A6333A111E318C090098171A /* FoursquareListMayorships.swift */,
+				A6333A131E318DA00098171A /* FoursquarePhoto.swift */,
+				A6333A151E318FE70098171A /* FoursquareCheckinHeader.swift */,
+				A6333A171E3193780098171A /* FoursquarePhotos.swift */,
+				A6333A191E3194510098171A /* FoursquareScores.swift */,
+				A6333A1B1E3195480098171A /* FoursquareCheckin.swift */,
+				A6333A1D1E3196A80098171A /* FoursquareComments.swift */,
+				A6333A1F1E3197520098171A /* FoursquareUsers.swift */,
+				A6333A221E3197C70098171A /* FoursquareGroups.swift */,
+				A6333A241E31990D0098171A /* FoursquareCheckins.swift */,
+				A6333A2E1E31A80B0098171A /* FoursquareMeta.swift */,
+				A6333A301E31AB8D0098171A /* FoursquareNotifications.swift */,
+				A6333A321E31ABFE0098171A /* FoursquareTipHeader.swift */,
+				A6333A341E31AE0F0098171A /* FoursquareTip.swift */,
+			);
+			name = Foursquare;
+			sourceTree = "<group>";
+		};
+		A64FEEFD1E38DE4C0094B54E /* SpaceSound */ = {
+			isa = PBXGroup;
+			children = (
+				A64FEEFE1E38DEC40094B54E /* Sound.swift */,
+				A64FEF001E38E43F0094B54E /* Response.swift */,
+			);
+			name = SpaceSound;
+			sourceTree = "<group>";
+		};
+		A64FEF0F1E39DCEB0094B54E /* NASATests */ = {
+			isa = PBXGroup;
+			children = (
+				A64FEF101E39DCEB0094B54E /* NASATests.swift */,
+				A64FEF121E39DCEB0094B54E /* Info.plist */,
+			);
+			path = NASATests;
+			sourceTree = "<group>";
+		};
+		A65720431E3484890016E88A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A657204F1E3484890016E88A /* Nuke.framework */,
+				A65720511E3484890016E88A /* Nuke.framework */,
+				A65720531E3484890016E88A /* Nuke.framework */,
+				A65720551E3484890016E88A /* Nuke.framework */,
+				A65720571E3484890016E88A /* Nuke iOS Tests.xctest */,
+				A65720591E3484890016E88A /* Nuke macOS Tests.xctest */,
+				A657205B1E3484890016E88A /* Nuke tvOS Tests.xctest */,
+				A657205D1E3484890016E88A /* Nuke iOS Tests Host.app */,
+				A657205F1E3484890016E88A /* Nuke iOS Performance Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A65720651E34889F0016E88A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A6EAA9D71E348CE2008D742B /* RoversDataSource.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		A657209A1E348A350016E88A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A64FEF491E3B23B40094B54E /* Screenshots */,
+				A657208E1E348A350016E88A /* curiosity.jpg */,
+				A657208F1E348A350016E88A /* opportunity.jpg */,
+				A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */,
+				A65720911E348A350016E88A /* SanFranciscoDisplay-Bold.otf */,
+				A65720921E348A350016E88A /* SanFranciscoDisplay-Heavy.otf */,
+				A65720931E348A350016E88A /* SanFranciscoDisplay-Light.otf */,
+				A65720941E348A350016E88A /* SanFranciscoDisplay-Medium.otf */,
+				A65720951E348A350016E88A /* SanFranciscoDisplay-Regular.otf */,
+				A65720961E348A350016E88A /* SanFranciscoDisplay-Semibold.otf */,
+				A65720971E348A350016E88A /* SanFranciscoDisplay-Thin.otf */,
+				A65720981E348A350016E88A /* SanFranciscoDisplay-Ultralight.otf */,
+				A65720991E348A350016E88A /* spirit.jpg */,
+			);
+			name = Resources;
+			path = NASA/Resources;
+			sourceTree = "<group>";
+		};
+		A697865C1E2EC8EB009CE3B2 = {
+			isa = PBXGroup;
+			children = (
+				A697867A1E2EC983009CE3B2 /* README.MD */,
+				A69786671E2EC8EB009CE3B2 /* NASA */,
+				A69786661E2EC8EB009CE3B2 /* Products */,
+				A6333A2D1E319F660098171A /* Frameworks */,
+				A657209A1E348A350016E88A /* Resources */,
+				A64FEF0F1E39DCEB0094B54E /* NASATests */,
+			);
+			sourceTree = "<group>";
+		};
+		A69786661E2EC8EB009CE3B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A69786651E2EC8EB009CE3B2 /* NASA.app */,
+				A64FEF0E1E39DCEA0094B54E /* NASATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A69786671E2EC8EB009CE3B2 /* NASA */ = {
+			isa = PBXGroup;
+			children = (
+				A65720651E34889F0016E88A /* DataSources */,
+				A6333A4A1E324B670098171A /* AppConstants */,
+				A6333A431E3203A20098171A /* Managers */,
+				A6C404141E2F8AAD0069D460 /* Controllers */,
+				A6C404091E2F785D0069D460 /* Helpers */,
+				A6C404061E2F6C0B0069D460 /* Model */,
+				A6C404011E2F48BE0069D460 /* Errors */,
+				A6C403FE1E2F46A30069D460 /* API */,
+				A69786681E2EC8EB009CE3B2 /* NASAAppDelegate.swift */,
+				A697866F1E2EC8EB009CE3B2 /* Assets.xcassets */,
+				A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */,
+				A697866C1E2EC8EB009CE3B2 /* Main.storyboard */,
+				A69786741E2EC8EB009CE3B2 /* Info.plist */,
+			);
+			path = NASA;
+			sourceTree = "<group>";
+		};
+		A6C403FE1E2F46A30069D460 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A6C403FF1E2F46B80069D460 /* APIClient.swift */,
+				A6C404041E2F494D0069D460 /* NASAAPIClient.swift */,
+				A63EC9D61E30E493001B684D /* FoursquareAPIClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		A6C404011E2F48BE0069D460 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A6C404021E2F48DD0069D460 /* HTTPStatusCodeError.swift */,
+				A64FEF041E39CE880094B54E /* APODError.swift */,
+				A64FEF061E39D24A0094B54E /* MarsRoverError.swift */,
+				A64FEF081E39D8860094B54E /* LandsatError.swift */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
+		A6C404061E2F6C0B0069D460 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A64FEEFD1E38DE4C0094B54E /* SpaceSound */,
+				A63EC9D81E30F6DC001B684D /* Foursquare */,
+				A6C404231E3004650069D460 /* LandsatImage */,
+				A6C404221E3004590069D460 /* APOD */,
+				A6C404211E30043C0069D460 /* MarsRover */,
+				A6C404121E2F87770069D460 /* JSON.swift */,
+				A6333A651E339B660098171A /* Responsable.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A6C404091E2F785D0069D460 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4040A1E2F78820069D460 /* String + Date + Bool.swift */,
+				A6333A481E3242C50098171A /* UIImage +.swift */,
+				A6C1E9CB1E372C3600EA3BB4 /* UIViewController +.swift */,
+				A6C1E9D61E3758E500EA3BB4 /* MKMapView +.swift */,
+				A6C1E9D81E37656100EA3BB4 /* CLPlacemark +.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		A6C404141E2F8AAD0069D460 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6333A461E321B9B0098171A /* APODViewController.swift */,
+				A6333A4D1E3374AA0098171A /* RoverViewController.swift */,
+				A6333A4F1E3375AB0098171A /* EyeViewController.swift */,
+				A6EAA9E11E34AB36008D742B /* RoverPostcardDetailsViewController.swift */,
+				A61497141E36420900690D31 /* RoverPhotosCollectionViewController.swift */,
+				A64FEEF91E38C5190094B54E /* LandsatAssetTableViewController.swift */,
+				A64FEEFB1E38D4A80094B54E /* LandsatImageViewController.swift */,
+				A64FEF021E38E5670094B54E /* SoundsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A6C404211E30043C0069D460 /* MarsRover */ = {
+			isa = PBXGroup;
+			children = (
+				A6C404151E2F9B410069D460 /* MarsRoverPhoto.swift */,
+				A6C404171E2F9C2B0069D460 /* MarsRoverCamera.swift */,
+				A6C404191E2F9E130069D460 /* MarsRover.swift */,
+				A6C4041B1E2FABB70069D460 /* MarsRoverPhotoHeader.swift */,
+				A6C4041D1E2FACF40069D460 /* MarsRoverPhotoManifest.swift */,
+				A6333A631E33986F0098171A /* MarsRoverResponseWithArray.swift */,
+				A64FEF181E3A94C30094B54E /* ErrorCase.swift */,
+			);
+			name = MarsRover;
+			sourceTree = "<group>";
+		};
+		A6C404221E3004590069D460 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				A6C404071E2F6C230069D460 /* APOD.swift */,
+			);
+			name = APOD;
+			sourceTree = "<group>";
+		};
+		A6C404231E3004650069D460 /* LandsatImage */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4040C1E2F7A9C0069D460 /* LandsatImage.swift */,
+				A6C4040E1E2F7E060069D460 /* LandsatImageAsset.swift */,
+				A6C404101E2F7E580069D460 /* LandsatImageHeader.swift */,
+			);
+			name = LandsatImage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A64FEF0D1E39DCEA0094B54E /* NASATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A64FEF151E39DCEB0094B54E /* Build configuration list for PBXNativeTarget "NASATests" */;
+			buildPhases = (
+				A64FEF0A1E39DCEA0094B54E /* Sources */,
+				A64FEF0B1E39DCEA0094B54E /* Frameworks */,
+				A64FEF0C1E39DCEA0094B54E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A64FEF141E39DCEB0094B54E /* PBXTargetDependency */,
+			);
+			name = NASATests;
+			productName = NASATests;
+			productReference = A64FEF0E1E39DCEA0094B54E /* NASATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A69786641E2EC8EB009CE3B2 /* NASA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69786771E2EC8EB009CE3B2 /* Build configuration list for PBXNativeTarget "NASA" */;
+			buildPhases = (
+				A69786611E2EC8EB009CE3B2 /* Sources */,
+				A69786621E2EC8EB009CE3B2 /* Frameworks */,
+				A69786631E2EC8EB009CE3B2 /* Resources */,
+				A65720641E34857D0016E88A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A65720631E34857D0016E88A /* PBXTargetDependency */,
+				A61497451E366C1500690D31 /* PBXTargetDependency */,
+			);
+			name = NASA;
+			productName = NASA;
+			productReference = A69786651E2EC8EB009CE3B2 /* NASA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A697865D1E2EC8EB009CE3B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = zzheads;
+				TargetAttributes = {
+					A64FEF0D1E39DCEA0094B54E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RS93W547X8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A69786641E2EC8EB009CE3B2;
+					};
+					A69786641E2EC8EB009CE3B2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RS93W547X8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A69786601E2EC8EB009CE3B2 /* Build configuration list for PBXProject "NASA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A697865C1E2EC8EB009CE3B2;
+			productRefGroup = A69786661E2EC8EB009CE3B2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A65720431E3484890016E88A /* Products */;
+					ProjectRef = A65720421E3484890016E88A /* Nuke.xcodeproj */;
+				},
+				{
+					ProductGroup = A614973A1E366BFE00690D31 /* Products */;
+					ProjectRef = A61497391E366BFE00690D31 /* Preheat.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A69786641E2EC8EB009CE3B2 /* NASA */,
+				A64FEF0D1E39DCEA0094B54E /* NASATests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A614973F1E366BFE00690D31 /* Preheat.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Preheat.framework;
+			remoteRef = A614973E1E366BFE00690D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A61497411E366BFE00690D31 /* Preheat.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Preheat.framework;
+			remoteRef = A61497401E366BFE00690D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657204F1E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A657204E1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720511E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A65720501E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720531E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A65720521E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720551E3484890016E88A /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = A65720541E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720571E3484890016E88A /* Nuke iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke iOS Tests.xctest";
+			remoteRef = A65720561E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A65720591E3484890016E88A /* Nuke macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke macOS Tests.xctest";
+			remoteRef = A65720581E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657205B1E3484890016E88A /* Nuke tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke tvOS Tests.xctest";
+			remoteRef = A657205A1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657205D1E3484890016E88A /* Nuke iOS Tests Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Nuke iOS Tests Host.app";
+			remoteRef = A657205C1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A657205F1E3484890016E88A /* Nuke iOS Performance Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke iOS Performance Tests.xctest";
+			remoteRef = A657205E1E3484890016E88A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A64FEF0C1E39DCEA0094B54E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69786631E2EC8EB009CE3B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65720A71E348A740016E88A /* curiosity.jpg in Resources */,
+				A65720A81E348A740016E88A /* opportunity.jpg in Resources */,
+				A65720A91E348A740016E88A /* SanFranciscoDisplay-Black.otf in Resources */,
+				A65720AA1E348A740016E88A /* SanFranciscoDisplay-Bold.otf in Resources */,
+				A65720AB1E348A740016E88A /* SanFranciscoDisplay-Heavy.otf in Resources */,
+				A65720AC1E348A740016E88A /* SanFranciscoDisplay-Light.otf in Resources */,
+				A64FEF4A1E3B23B40094B54E /* Screenshots in Resources */,
+				A65720AD1E348A740016E88A /* SanFranciscoDisplay-Medium.otf in Resources */,
+				A65720AE1E348A740016E88A /* SanFranciscoDisplay-Regular.otf in Resources */,
+				A65720AF1E348A740016E88A /* SanFranciscoDisplay-Semibold.otf in Resources */,
+				A65720B01E348A740016E88A /* SanFranciscoDisplay-Thin.otf in Resources */,
+				A65720B11E348A740016E88A /* SanFranciscoDisplay-Ultralight.otf in Resources */,
+				A65720B21E348A740016E88A /* spirit.jpg in Resources */,
+				A697867B1E2EC983009CE3B2 /* README.MD in Resources */,
+				A69786731E2EC8EB009CE3B2 /* LaunchScreen.storyboard in Resources */,
+				A69786701E2EC8EB009CE3B2 /* Assets.xcassets in Resources */,
+				A697866E1E2EC8EB009CE3B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A64FEF0A1E39DCEA0094B54E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64FEF111E39DCEB0094B54E /* NASATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69786611E2EC8EB009CE3B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6333A311E31AB8D0098171A /* FoursquareNotifications.swift in Sources */,
+				A6333A0C1E3187330098171A /* ForesquareFollowersHeader.swift in Sources */,
+				A6333A501E3375AB0098171A /* EyeViewController.swift in Sources */,
+				A6A312971E317EB3004D88C5 /* FoursquareUserHeader.swift in Sources */,
+				A6EAA9E21E34AB36008D742B /* RoverPostcardDetailsViewController.swift in Sources */,
+				A6C404051E2F494D0069D460 /* NASAAPIClient.swift in Sources */,
+				A64FEF091E39D8860094B54E /* LandsatError.swift in Sources */,
+				A6C404131E2F87770069D460 /* JSON.swift in Sources */,
+				A63EC9E61E3106D8001B684D /* FoursquareHours.swift in Sources */,
+				A6333A491E3242C50098171A /* UIImage +.swift in Sources */,
+				A6C404181E2F9C2B0069D460 /* MarsRoverCamera.swift in Sources */,
+				A6333A1E1E3196A80098171A /* FoursquareComments.swift in Sources */,
+				A6333A181E3193780098171A /* FoursquarePhotos.swift in Sources */,
+				A6A3128B1E3122F9004D88C5 /* FoursquarePrice.swift in Sources */,
+				A6333A4C1E324B780098171A /* AppConstants.swift in Sources */,
+				A6333A1C1E3195480098171A /* FoursquareCheckin.swift in Sources */,
+				A6333A4E1E3374AA0098171A /* RoverViewController.swift in Sources */,
+				A6C404111E2F7E580069D460 /* LandsatImageHeader.swift in Sources */,
+				A6333A121E318C090098171A /* FoursquareListMayorships.swift in Sources */,
+				A6A312951E313403004D88C5 /* FoursquarePhotoHeader.swift in Sources */,
+				A6333A231E3197C70098171A /* FoursquareGroups.swift in Sources */,
+				A6C4041A1E2F9E130069D460 /* MarsRover.swift in Sources */,
+				A6C4040F1E2F7E060069D460 /* LandsatImageAsset.swift in Sources */,
+				A6333A2F1E31A80B0098171A /* FoursquareMeta.swift in Sources */,
+				A6333A351E31AE0F0098171A /* FoursquareTip.swift in Sources */,
+				A64FEEFC1E38D4A80094B54E /* LandsatImageViewController.swift in Sources */,
+				A6C404081E2F6C230069D460 /* APOD.swift in Sources */,
+				A61497151E36420900690D31 /* RoverPhotosCollectionViewController.swift in Sources */,
+				A6333A331E31ABFE0098171A /* FoursquareTipHeader.swift in Sources */,
+				A6C1E9CC1E372C3600EA3BB4 /* UIViewController +.swift in Sources */,
+				A6C404161E2F9B410069D460 /* MarsRoverPhoto.swift in Sources */,
+				A63EC9E21E30FA0B001B684D /* FoursquareIcon.swift in Sources */,
+				A6A3128F1E312F15004D88C5 /* FoursquareFriend.swift in Sources */,
+				A6333A141E318DA00098171A /* FoursquarePhoto.swift in Sources */,
+				A6333A451E3203B20098171A /* LocationManager.swift in Sources */,
+				A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */,
+				A6333A251E31990D0098171A /* FoursquareCheckins.swift in Sources */,
+				A6A3128D1E312D0B004D88C5 /* FoursquareSpecial.swift in Sources */,
+				A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */,
+				A6C1E9D71E3758E500EA3BB4 /* MKMapView +.swift in Sources */,
+				A63EC9DE1E30F8D2001B684D /* FoursquareContact.swift in Sources */,
+				A6C4041E1E2FACF40069D460 /* MarsRoverPhotoManifest.swift in Sources */,
+				A6333A641E33986F0098171A /* MarsRoverResponseWithArray.swift in Sources */,
+				A6333A161E318FE70098171A /* FoursquareCheckinHeader.swift in Sources */,
+				A6333A661E339B660098171A /* Responsable.swift in Sources */,
+				A69786691E2EC8EB009CE3B2 /* NASAAppDelegate.swift in Sources */,
+				A64FEF011E38E43F0094B54E /* Response.swift in Sources */,
+				A6333A101E318ACA0098171A /* FoursquareUser.swift in Sources */,
+				A64FEEFF1E38DEC40094B54E /* Sound.swift in Sources */,
+				A64FEF051E39CE880094B54E /* APODError.swift in Sources */,
+				A63EC9DC1E30F809001B684D /* FoursquareStats.swift in Sources */,
+				A63EC9D71E30E493001B684D /* FoursquareAPIClient.swift in Sources */,
+				A6C4040B1E2F78820069D460 /* String + Date + Bool.swift in Sources */,
+				A64FEF191E3A94C30094B54E /* ErrorCase.swift in Sources */,
+				A64FEF071E39D24A0094B54E /* MarsRoverError.swift in Sources */,
+				A63EC9E81E310A12001B684D /* FoursquareMenu.swift in Sources */,
+				A6333A0E1E3187680098171A /* ForesquareFollowers.swift in Sources */,
+				A6333A061E3181300098171A /* FoursquareTipsHeader.swift in Sources */,
+				A63EC9E41E30FDE4001B684D /* FoursquareLocation.swift in Sources */,
+				A6C404031E2F48DD0069D460 /* HTTPStatusCodeError.swift in Sources */,
+				A64FEEFA1E38C5190094B54E /* LandsatAssetTableViewController.swift in Sources */,
+				A6333A201E3197520098171A /* FoursquareUsers.swift in Sources */,
+				A6C404001E2F46B80069D460 /* APIClient.swift in Sources */,
+				A6A312911E3131A8004D88C5 /* FoursquareHereNow.swift in Sources */,
+				A6333A1A1E3194510098171A /* FoursquareScores.swift in Sources */,
+				A6333A471E321B9B0098171A /* APODViewController.swift in Sources */,
+				A6A312931E3132DC004D88C5 /* FoursquareUserMiniHeader.swift in Sources */,
+				A6333A081E3181ED0098171A /* FoursquareTips.swift in Sources */,
+				A64FEF031E38E5670094B54E /* SoundsViewController.swift in Sources */,
+				A6EAA9D81E348CE2008D742B /* RoversDataSource.swift in Sources */,
+				A6C4040D1E2F7A9C0069D460 /* LandsatImage.swift in Sources */,
+				A6C1E9D91E37656100EA3BB4 /* CLPlacemark +.swift in Sources */,
+				A63EC9EB1E3110F1001B684D /* FoursquareResponse.swift in Sources */,
+				A6C4041C1E2FABB70069D460 /* MarsRoverPhotoHeader.swift in Sources */,
+				A63EC9E01E30F95D001B684D /* FoursquareCategory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A61497451E366C1500690D31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Preheat iOS";
+			targetProxy = A61497441E366C1500690D31 /* PBXContainerItemProxy */;
+		};
+		A64FEF141E39DCEB0094B54E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A69786641E2EC8EB009CE3B2 /* NASA */;
+			targetProxy = A64FEF131E39DCEB0094B54E /* PBXContainerItemProxy */;
+		};
+		A65720631E34857D0016E88A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nuke iOS";
+			targetProxy = A65720621E34857D0016E88A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A697866C1E2EC8EB009CE3B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A697866D1E2EC8EB009CE3B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A69786711E2EC8EB009CE3B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A69786721E2EC8EB009CE3B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A64FEF161E39DCEB0094B54E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = RS93W547X8;
+				INFOPLIST_FILE = NASATests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.NASATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA.app/NASA";
+			};
+			name = Debug;
+		};
+		A64FEF171E39DCEB0094B54E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = RS93W547X8;
+				INFOPLIST_FILE = NASATests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.NASATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA.app/NASA";
+			};
+			name = Release;
+		};
+		A69786751E2EC8EB009CE3B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+			};
+			name = Debug;
+		};
+		A69786761E2EC8EB009CE3B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A69786781E2EC8EB009CE3B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RS93W547X8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = NASA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.NASA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A69786791E2EC8EB009CE3B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RS93W547X8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = NASA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.NASA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A64FEF151E39DCEB0094B54E /* Build configuration list for PBXNativeTarget "NASATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A64FEF161E39DCEB0094B54E /* Debug */,
+				A64FEF171E39DCEB0094B54E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A69786601E2EC8EB009CE3B2 /* Build configuration list for PBXProject "NASA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69786751E2EC8EB009CE3B2 /* Debug */,
+				A69786761E2EC8EB009CE3B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69786771E2EC8EB009CE3B2 /* Build configuration list for PBXNativeTarget "NASA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69786781E2EC8EB009CE3B2 /* Debug */,
+				A69786791E2EC8EB009CE3B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A697865D1E2EC8EB009CE3B2 /* Project object */;
+}
