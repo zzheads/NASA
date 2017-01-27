@@ -34,7 +34,17 @@ class MarsRoverPhoto: NSObject, Responsable {
         }
     }
     
-    required init?(with json: JSON) {
+    init(id: Int, sol: Int, camera: MarsRoverCamera, img_src: String, earth_date: String, rover: MarsRover) {
+        self.id = id
+        self.sol = sol
+        self.camera = camera
+        self.img_src = img_src
+        self.earth_date = earth_date
+        self.rover = rover
+        super.init()
+    }
+    
+    required convenience init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let sol = json["sol"] as? Int,
@@ -45,15 +55,8 @@ class MarsRoverPhoto: NSObject, Responsable {
             else {
                 return nil
         }
-        
-        self.id = id
-        self.sol = sol
-        self.camera = camera
-        self.img_src = img_src
-        self.earth_date = earth_date
-        self.rover = rover
-        
-        super.init()
+
+        self.init(id: id, sol: sol, camera: camera, img_src: img_src, earth_date: earth_date, rover: rover)
     }
 }
 

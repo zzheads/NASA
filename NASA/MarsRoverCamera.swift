@@ -15,7 +15,16 @@ class MarsRoverCamera: NSObject, JSONDecodable {
     let full_name: String
     let type: NASAEndpoints.Rover.Camera?
     
-    required init?(with json: JSON) {
+    init(id: Int, name: String, rover_id: Int, full_name: String, type: NASAEndpoints.Rover.Camera?) {
+        self.id = id
+        self.name = name
+        self.rover_id = rover_id
+        self.full_name = full_name
+        self.type = type
+        super.init()
+    }
+    
+    required convenience init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let name = json["name"] as? String,
@@ -24,13 +33,7 @@ class MarsRoverCamera: NSObject, JSONDecodable {
             else {
                 return nil
         }
-        self.id = id
-        self.name = name
-        self.rover_id = rover_id
-        self.full_name = full_name
-        self.type = NASAEndpoints.Rover.Camera(rawValue: name)
-        
-        super.init()
+        self.init(id: id, name: name, rover_id: rover_id, full_name: full_name, type: NASAEndpoints.Rover.Camera(rawValue: name))
     }
 }
 

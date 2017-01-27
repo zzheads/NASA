@@ -18,7 +18,19 @@ class MarsRover: NSObject, JSONDecodable {
     let total_photos: Int
     let type: NASAEndpoints.Rover?
     
-    required init?(with json: JSON) {
+    init(id: Int, name: String, landing_date: String, launch_date: String, status: String, max_sol: Int, total_photos: Int, type: NASAEndpoints.Rover?) {
+        self.id = id
+        self.name = name
+        self.landing_date = landing_date
+        self.launch_date = launch_date
+        self.status = status
+        self.max_sol = max_sol
+        self.total_photos = total_photos
+        self.type = type
+        super.init()
+    }
+    
+    required convenience init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let name = json["name"] as? String,
@@ -30,16 +42,7 @@ class MarsRover: NSObject, JSONDecodable {
             else {
                 return nil
         }
-        self.id = id
-        self.name = name
-        self.landing_date = landing_date
-        self.launch_date = launch_date
-        self.status = status
-        self.max_sol = max_sol
-        self.total_photos = total_photos
-        self.type = NASAEndpoints.Rover(rawValue: name)
-        
-        super.init()
+        self.init(id: id, name: name, landing_date: landing_date, launch_date: launch_date, status: status, max_sol: max_sol, total_photos: total_photos, type: NASAEndpoints.Rover(rawValue: name))
     }
 }
 

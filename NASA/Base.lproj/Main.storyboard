@@ -23,7 +23,7 @@
                 <navigationController id="m7U-09-392" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" id="BWp-gg-Ccq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="BWp-gg-Ccq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,13 +82,13 @@
                                     <constraint firstAttribute="height" constant="44" id="MhI-G8-FfB"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Save to Gallery" width="152.5" style="done" id="thb-2y-G1b">
+                                    <barButtonItem title="Save to Gallery" style="done" id="thb-2y-G1b">
                                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="savePressed:" destination="lK3-OL-YeA" id="Nr6-pf-0fr"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Explanation" width="143" id="YhH-QE-dT0">
+                                    <barButtonItem title="Explanation" id="YhH-QE-dT0">
                                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="explanationPressed:" destination="lK3-OL-YeA" id="Xcy-vF-tiQ"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Sounds" id="sJR-OO-Hdh">
-                                <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0052426555189999998" green="0.29017603400000003" blue="0.4082992077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="lvp-7Y-mJw" kind="show" id="p0v-7G-m9H"/>
                                 </connections>
@@ -372,7 +372,7 @@
         <scene sceneID="reY-It-ZSA">
             <objects>
                 <collectionViewController id="I0v-vS-5xY" customClass="RoverPhotosCollectionViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="3Gv-q5-3A1">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3Gv-q5-3A1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.071670390665531158" green="0.05870046466588974" blue="0.16767171025276184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
