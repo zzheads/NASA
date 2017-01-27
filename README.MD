@@ -15,6 +15,10 @@ On the initial screen when apps loaded you can see APOD for yesterday. You can c
 You can see images media and youtube videos media as well. Every APOD have own explanation, which you can see pressing button "Explanation" on the bottom toolbar.
 Also you can save presented image in photo library (app will ask permissions for using photo library offcourse).
 
+<img src="/NASA/Resources/Screenshots/ss-03.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-04.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-05.png" width= "200">
+<img src="/NASA/Resources/Screenshots/ss-06.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-07.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-08.png" width= "200">
+<img src="/NASA/Resources/Screenshots/ss-09.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-10.png" width= "200"> 
+
 ## Mars Rover Postcard Maker:
 Using NASA Mars Imagery API you can get images asset for one of three current Mars rovers (Curiosity, Opportunity, Spirit), for selected or for all cameras, for selected Sol (Mars day).
 After that you can select any presented image for adding text on it, saving in photo library or sending it by email.
