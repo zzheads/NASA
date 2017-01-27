@@ -28,7 +28,7 @@ After that you can select any presented image for adding text on it, saving in p
 
 Also you can apply one or some filters from filters-preset-buttons.
 
-<img src="/NASA/Resources/Screenshots/ss-23.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-24.png" width= "200">
+<img src="/NASA/Resources/Screenshots/ss-24.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-25.png" width= "200">
 
 ## Eye-In-the-Sky: 
 Using NASA Earth Landsat8 Imagery API you can get images of choosen location. You can choose location using your current position, or by entered latitude+longitude values or by entering address or placemark of needed location. After location is chosen you see image asset for it, taken by Landsat8 (usually it take a pic of location every 16 days), so you can choose any and see it on datail view. You can save this image in photolibrary or send it by email as well.
@@ -40,13 +40,15 @@ Using NASA Earth Landsat8 Imagery API you can get images of choosen location. Yo
 There is one more half-implemented feature. On the 'Sounds' screen you can enter search phrase and get a list of available space sounds in the table view.
 There should be option to play these sounds, but application have to be authenticated by soundcloud.com service for that, but it does not yet. So you can not play sound right now.
 
-<img src="/NASA/Resources/Screenshots/ss-22.png" width= "200">
+<img src="/NASA/Resources/Screenshots/ss-23.png" width= "200">
 
 ### Third-party libraries used in application:
 1. [Nuke](https://github.com/kean/Nuke) - A powerful image loading and caching framework which allows for hassle-free image loading in your app - often in one line of code. 
 2. [Preheat](https://github.com/kean/Preheat) - Automates preheating (prefetching) of content in UITableView and UICollectionView.
 Both libraries was installed manually, very detailed [installation guide](https://github.com/kean/Nuke/blob/master/Documentation/Guides/Installation%20Guide.md)
-For using it in the project you just have to import needed library, like "#import Nuke"
+For using it in the project you just have to import needed library, like "#import Nuke".
+Nuke used in project for fast loading images with double-layers cache support.
+Preheat used for preheatting images when loading big array of images in collection view (in RoverPhotosCollectionViewController)
 
 <img src="/NASA/Assets.xcassets/NASA_logo.imageset/NASA_logo.png" width="80">
 This application uses [NASA API](https://api.nasa.gov/index.html)
