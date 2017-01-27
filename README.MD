@@ -5,7 +5,7 @@
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-orange.svg?style=flat" alt="Swift 3 compatible" /></a>
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/zzheads/zzheads-at-gmail-com) [![Build Status](https://travis-ci.org/Jintin/Swimat.svg?branch=master)](https://travis-ci.org/Jintin/Swimat)
 
-NASAApp is iOS application using NASA API's'. Application have 3 main features.
+NASAApp is iOS application using NASA API's', it's universal, for iPad/iPhone with iOS 9.0 atleast. Application have 3(4) main features.
 
 
 ## APOD
