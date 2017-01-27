@@ -134,7 +134,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Sounds" id="sJR-OO-Hdh">
-                                <color key="tintColor" red="0.0052426555189999998" green="0.29017603400000003" blue="0.4082992077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.38919836279999998" green="0.6858953834" blue="0.8150303364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="lvp-7Y-mJw" kind="show" id="p0v-7G-m9H"/>
                                 </connections>

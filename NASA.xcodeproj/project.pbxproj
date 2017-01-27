@@ -437,6 +437,13 @@
 			path = NASATests;
 			sourceTree = "<group>";
 		};
+		A64FEF1A1E3B20EE0094B54E /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Screenshots;
+			sourceTree = "<group>";
+		};
 		A65720431E3484890016E88A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +471,7 @@
 		A657209A1E348A350016E88A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A64FEF1A1E3B20EE0094B54E /* Screenshots */,
 				A657208E1E348A350016E88A /* curiosity.jpg */,
 				A657208F1E348A350016E88A /* opportunity.jpg */,
 				A65720901E348A350016E88A /* SanFranciscoDisplay-Black.otf */,
