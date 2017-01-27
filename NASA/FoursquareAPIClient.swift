@@ -9,6 +9,8 @@
 import Foundation
 import CoreLocation
 
+private let debugEnabled = false
+
 enum FoursquareEndpoints: Endpoint {
     
     static let CLIENT_ID = "44Y0RJDWFTW450C4SQD04CR31UERJEXHK1FMO1DYCLDAY5NK"
@@ -113,10 +115,14 @@ final class FoursquareAPIClient: APIClient {
     
     func fetch<T>(endpoint: FoursquareEndpoints, completion: @escaping (APIResult<T>) -> Void) where T: JSONDecodable {
         let request = endpoint.request
-        print("Request: \(request)")
+        if (debugEnabled) {
+            NSLog("Request: \(request)")
+        }
         fetch(request: request, parse: { json -> T? in
             let value = T(with: json)
-            //print("Parsed to \(T.self): \(value)")
+            if (debugEnabled) {
+                print("Parsed to \(T.self): \(value)")
+            }
             return value
         }, completion: completion)
     }

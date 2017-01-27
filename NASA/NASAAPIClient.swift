@@ -10,6 +10,8 @@ import Foundation
 import CoreLocation
 import UIKit
 
+private let debugEnabled = false
+
 enum NASAEndpoints: Endpoint {
     case APOD(date: Date?, hd: Bool?)
     case Earth(EarthEndpoint)
@@ -203,37 +205,8 @@ final class NASAAPIClient: NSObject, APIClient {
     
     func fetch<T>(endpoint: NASAEndpoints, completion: @escaping (APIResult<T>) -> Void) where T: JSONDecodable {
         fetch(request: endpoint.request, parse: { json -> T? in return T(with: json) }, completion: completion)
-        print("Fetching \(endpoint.request) to \(T.self)")
-    }
-
-    func fetch<T>(endpoints: [NASAEndpoints], delay: UInt32, progressShowing: ProgressShowing?, completion: @escaping (APIResultArray<T>) -> Void) where T: JSONDecodable {
-        var results: [T] = []
-        var errors: [Error] = []
-        
-        for endpoint in endpoints {
-            fetch(endpoint: endpoint) { (result: APIResult<T>) in
-                switch result {
-                case .Success(let item):
-                    results.append(item)
-                    if let progressShowing = progressShowing {
-                        progressShowing.set(progress: Double(results.count + errors.count)/Double(endpoints.count))
-                    }
-                case .Failure(let error):
-                    errors.append(error)
-                    if let progressShowing = progressShowing {
-                        progressShowing.set(progress: Double(results.count + errors.count)/Double(endpoints.count))
-                    }
-                }
-                if (endpoints.count == results.count + errors.count) {
-                    if (errors.isEmpty) {
-                        completion(APIResultArray<T>.Success(results))
-                    } else {
-                        completion(APIResultArray<T>.Failure(results, errors))
-                    }
-                    return 
-                }
-            }
-            usleep(delay)
+        if (debugEnabled) {
+            print("Fetching \(endpoint.request) to \(T.self)")
         }
     }
 }

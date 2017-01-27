@@ -44,6 +44,7 @@ class APODViewController: UIViewController {
                     self.webView.isHidden = false
                     self.apodImageView.isHidden = true
                     if let url = newValue.secureUrl {
+                        // if video is youtube video
                         if url.absoluteString.contains("youtube") {
                             self.webView.loadRequest(URLRequest(url: url))
                         } else {
@@ -72,6 +73,8 @@ class APODViewController: UIViewController {
         self.apiClient = NASAAPIClient(delegate: self, delegateQueue: nil)
         self.datePicker.setValue(UIColor.white, forKey: "textColor")
         self.datePicker.sendAction(Selector(("setHighlightsToday:")), to: nil, for: nil)
+        // setting maxDate on yesterday because in early hour of today in other time zone there might be 400 error, because there is no yet APOD for new date
+        // have to fix it, set it for today but in NASA time zone
         if let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) {
             self.datePicker.setDate(yesterday, animated: true)
         }
@@ -136,6 +139,8 @@ extension APODViewController {
     }
 }
 
+// tryed show progress of downloading using url session delegate
+// need to fix it later
 extension APODViewController: URLSessionDelegate, URLSessionDataDelegate, URLSessionTaskDelegate {
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         self.buffer.append(data)

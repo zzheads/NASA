@@ -59,6 +59,7 @@ class RoverViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // change current rover and camera only for first start of controller
         if (self.currentRover == nil) {
             self.pickerView.selectRow(0, inComponent: 0, animated: true)
             self.currentRover = self.rovers.first
@@ -76,6 +77,7 @@ class RoverViewController: UIViewController {
             if let enteredSol = self.dateTextField.text, let sol = Int(enteredSol) {
                 collectionViewController.sol = sol
             } else {
+                // sol = 0 for all photos
                 collectionViewController.sol = 0
             }
         }
@@ -120,7 +122,7 @@ extension RoverViewController: UIPickerViewDataSource {
 extension RoverViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
-        label.font = AppFont.sanFranciscoMedium(size: 14.0).font
+        label.font = AppFont.sanFranciscoMedium(size: 16.0).font
         label.textColor = AppColor.magentaLighten.color
         label.textAlignment = .center
         switch component {

@@ -40,9 +40,11 @@ extension SoundsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // playing sound doesnt work yet, because app needs to be authenticated bu soundcloud.com
+    // request for auth sent, but no response yet
+    // will do it later
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sound = self.sounds[indexPath.row]
-        print("\(sound.url), \(sound.streamUrl)")
         let playerItem = AVPlayerItem(url: sound.streamUrl)
         let player = AVPlayer(playerItem: playerItem)
         player.rate = 1.0

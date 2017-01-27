@@ -30,8 +30,6 @@ class LandsatAssetTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellReuseIdentifier)
-        
         self.apiClient.fetch(endpoint: NASAEndpoints.Earth(NASAEndpoints.EarthEndpoint.Asset(self.location, nil, nil))) { (result: APIResult<LandsatImageAsset>) in
             switch result {
             case .Success(let asset):
