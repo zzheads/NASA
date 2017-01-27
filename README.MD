@@ -7,7 +7,6 @@
 
 NASAApp is iOS application using NASA API's'. Application have 3 main features.
 
-<img src="/NASA/Resources/Screenshots/ss-02.png" width= "200">
 
 ## APOD
 APOD is Astronomy Picture of the Day. 
@@ -15,9 +14,9 @@ On the initial screen when apps loaded you can see APOD for yesterday. You can c
 You can see images media and youtube videos media as well. Every APOD have own explanation, which you can see pressing button "Explanation" on the bottom toolbar.
 Also you can save presented image in photo library (app will ask permissions for using photo library offcourse).
 
-<img src="/NASA/Resources/Screenshots/ss-03.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-04.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-05.png" width= "200">
-<img src="/NASA/Resources/Screenshots/ss-06.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-07.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-08.png" width= "200">
-<img src="/NASA/Resources/Screenshots/ss-09.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-10.png" width= "200"> 
+<img src="/NASA/Resources/Screenshots/ss-02.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-03.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-04.png" width= "200"> 
+<img src="/NASA/Resources/Screenshots/ss-05.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-06.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-07.png" width= "200"> 
+<img src="/NASA/Resources/Screenshots/ss-08.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-09.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-10.png" width= "200"> 
 
 ## Mars Rover Postcard Maker:
 Using NASA Mars Imagery API you can get images asset for one of three current Mars rovers (Curiosity, Opportunity, Spirit), for selected or for all cameras, for selected Sol (Mars day).
@@ -26,6 +25,10 @@ After that you can select any presented image for adding text on it, saving in p
 <img src="/NASA/Resources/Screenshots/ss-11.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-12.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-13.png" width= "200">
 <img src="/NASA/Resources/Screenshots/ss-14.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-15.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-16.png" width= "200">
 <img src="/NASA/Resources/Screenshots/ss-17.png" width= "200"> 
+
+Also you can apply one or some filters from filters-preset-buttons.
+
+<img src="/NASA/Resources/Screenshots/ss-23.png" width= "200"> <img src="/NASA/Resources/Screenshots/ss-24.png" width= "200">
 
 ## Eye-In-the-Sky: 
 Using NASA Earth Landsat8 Imagery API you can get images of choosen location. You can choose location using your current position, or by entered latitude+longitude values or by entering address or placemark of needed location. After location is chosen you see image asset for it, taken by Landsat8 (usually it take a pic of location every 16 days), so you can choose any and see it on datail view. You can save this image in photolibrary or send it by email as well.
