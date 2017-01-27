@@ -59,6 +59,7 @@
 		A64FEF111E39DCEB0094B54E /* NASATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF101E39DCEB0094B54E /* NASATests.swift */; };
 		A64FEF191E3A94C30094B54E /* ErrorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF181E3A94C30094B54E /* ErrorCase.swift */; };
 		A64FEF4A1E3B23B40094B54E /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = A64FEF491E3B23B40094B54E /* Screenshots */; };
+		A64FEF4C1E3B60990094B54E /* PhotoFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEF4B1E3B60990094B54E /* PhotoFilters.swift */; };
 		A65720601E34857D0016E88A /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; };
 		A65720611E34857D0016E88A /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A657204F1E3484890016E88A /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A65720A71E348A740016E88A /* curiosity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A657208E1E348A350016E88A /* curiosity.jpg */; };
@@ -276,6 +277,7 @@
 		A64FEF121E39DCEB0094B54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A64FEF181E3A94C30094B54E /* ErrorCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCase.swift; sourceTree = "<group>"; };
 		A64FEF491E3B23B40094B54E /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
+		A64FEF4B1E3B60990094B54E /* PhotoFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilters.swift; sourceTree = "<group>"; };
 		A65720421E3484890016E88A /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
 		A657208E1E348A350016E88A /* curiosity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curiosity.jpg; sourceTree = "<group>"; };
 		A657208F1E348A350016E88A /* opportunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opportunity.jpg; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				A6333A441E3203B20098171A /* LocationManager.swift */,
+				A64FEF4B1E3B60990094B54E /* PhotoFilters.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				A6333A0A1E31838E0098171A /* FoursquareTipsItem.swift in Sources */,
 				A6333A251E31990D0098171A /* FoursquareCheckins.swift in Sources */,
 				A6A3128D1E312D0B004D88C5 /* FoursquareSpecial.swift in Sources */,
+				A64FEF4C1E3B60990094B54E /* PhotoFilters.swift in Sources */,
 				A63EC9DA1E30F6F0001B684D /* FoursquareVenueHeader.swift in Sources */,
 				A6C1E9D71E3758E500EA3BB4 /* MKMapView +.swift in Sources */,
 				A63EC9DE1E30F8D2001B684D /* FoursquareContact.swift in Sources */,
