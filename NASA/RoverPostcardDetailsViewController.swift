@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Nuke
 import MessageUI
+import CoreImage
 
 class RoverPostcardDetailsViewController: UIViewController {
     var photo: MarsRoverPhoto?
@@ -19,18 +20,70 @@ class RoverPostcardDetailsViewController: UIViewController {
     @IBOutlet weak var sendEmailButton: UIBarButtonItem!
     @IBOutlet weak var undoButton: UIBarButtonItem!
     
+    lazy var filterButtons: [UIButton] = {
+        var buttons: [UIButton] = []
+        for filter in PhotoFilters.all {
+            let button = UIButton(type: .system)
+            button.setTitle(filter.rawValue, for: .normal)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.backgroundColor = AppColor.magenta.color
+            button.setTitleColor(.white, for: .normal)
+            button.titleLabel?.font = AppFont.sanFranciscoMedium(size: 14.0).font
+            button.layer.cornerRadius = 4
+            button.layer.masksToBounds = true
+            buttons.append(button)
+        }
+        return buttons
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.saveButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
         self.addTextButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
         self.sendEmailButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
         self.undoButton.setTitleTextAttributes([NSFontAttributeName: AppFont.sanFranciscoMedium(size: 14.0).font], for: .normal)
+    
+        let height = CGFloat(30.0)
+        let width = CGFloat(UIScreen.main.bounds.size.width - 40.0) / CGFloat(self.filterButtons.count) - 8.0
+        for i in 0..<self.filterButtons.count {
+            let button = self.filterButtons[i]
+            let x = 20.0 + (width + 8.0) * CGFloat(i)
+            self.view.addSubview(button)
+            NSLayoutConstraint.activate([
+                button.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 8),
+                button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: x),
+                button.heightAnchor.constraint(equalToConstant: height),
+                button.widthAnchor.constraint(equalToConstant: width)
+                ])
+            button.addTarget(self, action: #selector(self.filterButtonPressed(_:)), for: .touchUpInside)
+        }
         
         self.undoPressed(nil)
     }
 }
 
 extension RoverPostcardDetailsViewController {
+    func filterButtonPressed(_ sender: UIButton) {
+        guard
+            let image = self.imageView.image,
+            let title = sender.title(for: .normal),
+            let filter = PhotoFilters(rawValue: title)?.filter
+                else {
+                return
+        }
+        let inputImage = image.ciImage ?? CIImage(image: image)!
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        
+        let context = CIContext()
+        guard
+            let outputImage = filter.outputImage,
+            let cgImage = context.createCGImage(outputImage, from: outputImage.extent)
+            else {
+                NSLog("Filter applying error")
+                return
+        }
+        self.imageView.image = UIImage(cgImage: cgImage)
+    }
     
     @IBAction func savePressed(_ sender: Any) {
         if let image = self.imageView.image {

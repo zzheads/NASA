@@ -117,9 +117,15 @@ class RoverPhotosCollectionViewController: UICollectionViewController {
     }    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueID = segue.identifier else {
+            return
+        }
         let detailsController = segue.destination as! RoverPostcardDetailsViewController
-        let photo = sender as! MarsRoverPhoto
-        detailsController.photo = photo
+        switch segueID {
+        case "showRoverPic": detailsController.photo = sender as? MarsRoverPhoto
+        case "randomPic": detailsController.photo = self.dataSource.randomPic
+        default: break
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

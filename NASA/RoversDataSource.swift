@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Darwin
 import Nuke
 import UIKit
 
@@ -20,6 +21,13 @@ class RoversDataSource: NSObject {
         didSet {
             self.collectionView.reloadData()
         }
+    }
+    var randomPic: MarsRoverPhoto? {
+        if self.pics.isEmpty {
+            return nil
+        }
+        let random = arc4random_uniform(UInt32(self.pics.count))
+        return self.pics[Int(random)]
     }
     let collectionView: UICollectionView
     

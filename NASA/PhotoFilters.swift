@@ -12,53 +12,38 @@ import UIKit
 import Nuke
 
 enum PhotoFilters: String {
-    case colorClamp = "CIColorClamp"
-    case colorControls = "CIColorControls"
-    case photoEffectInstant = "CIPhotoEffectInstant"
-    case photoEffectProcess = "CIPhotoEffectProcess"
-    case photoEffectNoir = "CIPhotoEffectNoir"
-    case sepiaTone = "CISepiaTone"
+    case pixellate = "Pixellate"
+    case colorControls = "ColorControls"
+    case photoEffectInstant = "PhotoEffectInstant"
+    case photoEffectProcess = "PhotoEffectProcess"
+    case photoEffectNoir = "PhotoEffectNoir"
+    case sepiaTone = "SepiaTone"
 
+    static let all: [PhotoFilters] = [.pixellate, .colorControls, .photoEffectInstant, .photoEffectProcess, .photoEffectNoir, .sepiaTone]
+    
+    var name: String {
+        switch self {
+        case .pixellate: return "CIPixellate"
+        case .colorControls: return "CIColorControls"
+        case .photoEffectInstant: return "CIPhotoEffectInstant"
+        case .photoEffectProcess: return "CIPhotoEffectProcess"
+        case .photoEffectNoir: return "CIPhotoEffectNoir"
+        case .sepiaTone: return "CISepiaTone"
+        }
+    }
+        
     var defaultParameters: [String: Any]? {
         switch self {
-        case .colorClamp = return ["inputMinComponents": CIVector(x: 0.2, y: 0.2, z: 0.2, w: 0.2), "inputMaxComponents": CIVector(x: 0.9, y: 0.9, z: 0.9, w: 0.9)]
-        case .colorControls = "CIColorControls"
-        case .photoEffectInstant = "CIPhotoEffectInstant"
-        case .photoEffectProcess = "CIPhotoEffectProcess"
-        case .photoEffectNoir = "CIPhotoEffectNoir"
-        case .sepiaTone = "CISepiaTone"
+        case .pixellate: return nil
+        case .colorControls: return [kCIInputSaturationKey: 0.1]
+        case .photoEffectInstant: return nil
+        case .photoEffectProcess: return nil
+        case .photoEffectNoir: return nil
+        case .sepiaTone: return [kCIInputIntensityKey: 0.7]
         }
     }
     
     var filter: CIFilter {
-        return CIFilter(
+        return CIFilter(name: self.name, withInputParameters: self.defaultParameters)!
     }
-    
-    
-    
-    static let ColorClamp = "CIColorClamp"
-    static let ColorControls = "CIColorControls"
-    static let PhotoEffectInstant = "CIPhotoEffectInstant"
-    static let PhotoEffectProcess = "CIPhotoEffectProcess"
-    static let PhotoEffectNoir = "CIPhotoEffectNoir"
-    static let Sepia = "CISepiaTone"
-    
-    static func defaultFilters() -> [CIFilter] {
-        let colorClamp = CIFilter(name: PhotoFilter.ColorClamp)!
-        colorClamp.setValue(CIVector(x: 0.2, y: 0.2, z: 0.2, w: 0.2), forKey: "inputMinComponents")
-        colorClamp.setValue(CIVector(x: 0.9, y: 0.9, z: 0.9, w: 0.9), forKey: "inputMaxComponents")
-        
-        let colorControls = CIFilter(name: PhotoFilter.ColorControls)!
-        colorControls.setValue(0.1, forKey: kCIInputSaturationKey)
-        
-        let photoEffectInstant = CIFilter(name: PhotoFilter.PhotoEffectInstant)!
-        let photoEffectProcess = CIFilter(name: PhotoFilter.PhotoEffectProcess)!
-        let photoEffectNoir = CIFilter(name: PhotoFilter.PhotoEffectNoir)!
-        
-        let sepia = CIFilter(name: PhotoFilter.Sepia)!
-        sepia.setValue(0.7, forKey: kCIInputIntensityKey)
-        
-        return [colorClamp, colorControls, photoEffectInstant, photoEffectProcess, photoEffectNoir, sepia]
-    }
-
 }

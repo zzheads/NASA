@@ -23,7 +23,7 @@
                 <navigationController id="m7U-09-392" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="BWp-gg-Ccq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" id="BWp-gg-Ccq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -372,7 +372,7 @@
         <scene sceneID="reY-It-ZSA">
             <objects>
                 <collectionViewController id="I0v-vS-5xY" customClass="RoverPhotosCollectionViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3Gv-q5-3A1">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="3Gv-q5-3A1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.071670390665531158" green="0.05870046466588974" blue="0.16767171025276184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -402,6 +402,12 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Pics from Rover" id="zLq-5Y-ICH">
                         <barButtonItem key="backBarButtonItem" title=" " id="GAS-Xn-Eld"/>
+                        <barButtonItem key="rightBarButtonItem" title="Random picture" id="WMD-FW-1SY">
+                            <color key="tintColor" red="0.85756653549999995" green="0.83902394769999999" blue="0.87335842850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="86x-iW-QA6" kind="show" identifier="randomPic" id="JAY-oo-jGQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOp-8r-SEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -424,7 +430,7 @@
                                 <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b2O-8x-ybB">
-                                <rect key="frame" x="20" y="84" width="984" height="620"/>
+                                <rect key="frame" x="20" y="110" width="984" height="594"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="DUP-zi-obY">
                                 <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
@@ -463,11 +469,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="i1o-QS-ab8" firstAttribute="top" secondItem="DUP-zi-obY" secondAttribute="bottom" id="7Cu-6Y-uiU"/>
+                            <constraint firstItem="b2O-8x-ybB" firstAttribute="top" secondItem="ZFb-q1-k68" secondAttribute="bottom" constant="46" id="Ip9-4K-Yge"/>
                             <constraint firstAttribute="trailing" secondItem="DUP-zi-obY" secondAttribute="trailing" id="JSi-cH-9kJ"/>
                             <constraint firstAttribute="trailing" secondItem="b2O-8x-ybB" secondAttribute="trailing" constant="20" id="Kya-pi-Iql"/>
                             <constraint firstItem="dWq-GR-qQh" firstAttribute="leading" secondItem="aYE-X0-S20" secondAttribute="leading" id="WE2-fZ-891"/>
                             <constraint firstAttribute="trailing" secondItem="dWq-GR-qQh" secondAttribute="trailing" id="WIT-jA-cNd"/>
-                            <constraint firstItem="b2O-8x-ybB" firstAttribute="top" secondItem="ZFb-q1-k68" secondAttribute="bottom" constant="20" id="bIE-F6-jec"/>
                             <constraint firstItem="b2O-8x-ybB" firstAttribute="leading" secondItem="aYE-X0-S20" secondAttribute="leading" constant="20" id="bIO-wF-xFa"/>
                             <constraint firstItem="DUP-zi-obY" firstAttribute="leading" secondItem="aYE-X0-S20" secondAttribute="leading" id="czm-pX-CU0"/>
                             <constraint firstItem="dWq-GR-qQh" firstAttribute="top" secondItem="ZFb-q1-k68" secondAttribute="bottom" id="i8k-yc-NiL"/>
@@ -747,4 +753,7 @@
         <image name="ipad_background_hori_x2" width="2732" height="2048"/>
         <image name="ipad_background_port_x2" width="2048" height="2732"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JAY-oo-jGQ"/>
+    </inferredMetricsTieBreakers>
 </document>
