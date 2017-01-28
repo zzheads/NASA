@@ -1134,6 +1134,7 @@
 				A64FEF171E39DCEB0094B54E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A69786601E2EC8EB009CE3B2 /* Build configuration list for PBXProject "NASA" */ = {
 			isa = XCConfigurationList;
